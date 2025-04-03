@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/wg-sdk.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",
