@@ -56,6 +56,8 @@ import {
 	DataSourceConfiguration,
 	DataSourceKind,
 	FieldConfiguration,
+	Hook,
+	HookType,
 	Operation,
 	OperationExecutionEngine,
 	OperationType,
@@ -65,8 +67,6 @@ import {
 	ValueType,
 	WebhookConfiguration,
 	WunderGraphConfiguration,
-	Hook,
-	HookType,
 } from '@wundergraph/protobuf';
 import { SDK_VERSION } from '../version';
 import { AuthenticationProvider } from './authentication';
@@ -225,6 +225,13 @@ export interface AuthenticationConfig {
 	 * @default 600 (10 minutes)
 	 */
 	timeoutSeconds?: InputVariable<number>;
+
+	/**
+	 * Specifies the maximum length, in bytes, for the cookie value.
+	 * This property is optional and, if defined, should be a non-negative integer.
+	 * @default 4096
+	 */
+	maxLength?: number;
 }
 
 export interface TokenAuthProvider {
@@ -395,6 +402,7 @@ export interface ResolvedWunderGraphConfig {
 			secureCookieHashKey: ConfigurationVariable;
 			secureCookieBlockKey: ConfigurationVariable;
 			csrfTokenSecret: ConfigurationVariable;
+			maxLength: ConfigurationVariable;
 		};
 		timeoutSeconds: ConfigurationVariable;
 	};
@@ -579,6 +587,7 @@ const resolveConfig = async (
 				secureCookieHashKey: mapInputVariable(config.authentication?.cookieBased?.secureCookieHashKey || ''),
 				secureCookieBlockKey: mapInputVariable(config.authentication?.cookieBased?.secureCookieBlockKey || ''),
 				csrfTokenSecret: mapInputVariable(config.authentication?.cookieBased?.csrfTokenSecret || ''),
+				maxLength: mapInputVariable(config.authentication?.cookieBased?.maxLength || ''),
 			},
 			timeoutSeconds: mapInputVariable(config?.authentication?.cookieBased?.timeoutSeconds ?? 0),
 		},
@@ -1379,6 +1388,7 @@ const storedWunderGraphConfig = (config: ResolvedWunderGraphConfig, apiCount: nu
 					hashKey: config.authentication.cookieSecurity.secureCookieHashKey,
 					csrfSecret: config.authentication.cookieSecurity.csrfTokenSecret,
 					timeoutSeconds: config.authentication.timeoutSeconds,
+					maxLength: config.authentication.cookieSecurity.maxLength,
 				},
 				hooks: config.authentication.hooks,
 				jwksBased: {

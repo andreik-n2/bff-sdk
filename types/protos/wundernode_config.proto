@@ -46,6 +46,7 @@ message CookieBasedAuthentication {
 	ConfigurationVariable blockKey = 5;
 	ConfigurationVariable csrfSecret = 6;
 	ConfigurationVariable timeoutSeconds = 7;
+	ConfigurationVariable maxLength = 8;
 }
 
 message AuthProvider {
@@ -565,7 +566,7 @@ message ExperimentalConfiguration {
 }
 
 message ListenerOptions {
-	ConfigurationVariable host  = 1;
+	ConfigurationVariable host = 1;
 	ConfigurationVariable port = 2;
 }
 
@@ -615,8 +616,8 @@ message ServerOptions {
 message WebhookConfiguration {
 	// Name of the webhook.
 	string name = 1;
- // The path to the bundled file.
- // The path is relative to the bundle directory.
+	// The path to the bundled file.
+	// The path is relative to the bundle directory.
 	string filePath = 2;
 	WebhookVerifier verifier = 3;
 }
