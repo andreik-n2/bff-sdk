@@ -80,8 +80,8 @@ release:
 
     For breaking changes, please check the [migration](/docs/migrations) guidelines for more information.
   github:
-    owner: wundergraph
-    name: wundergraph
+    owner: andreik-n2
+    name: wg-sdk
 
 checksum:
   name_template: '{{ .ProjectName }}_{{ .Version }}_linux_checksums.txt'
