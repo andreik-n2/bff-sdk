@@ -1,6 +1,6 @@
 //language=handlebars
 export const template = `
-import type { ClientOperationErrors, GraphQLError } from '@wundergraph/sdk/client';
+import type { ClientOperationErrors, GraphQLError } from '@virgograph/sdk/client';
 
 export type OperationErrors = {
   {{#each tsOperations}}

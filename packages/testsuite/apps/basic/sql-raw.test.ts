@@ -21,7 +21,7 @@ describe('SQL raw', () => {
 			input: {
 				id: '2',
 				name: 'Jannik',
-				email: 'jannik@wundergraph.com',
+				email: 'jannik@virgograph.com',
 			},
 		});
 		expect(result.error).toBeUndefined();
@@ -51,13 +51,13 @@ describe('SQL raw', () => {
 		const result = await client.query({
 			operationName: 'rawsql/QueryRow',
 			input: {
-				email: 'jens@wundergraph.com',
+				email: 'jens@virgograph.com',
 			},
 		});
 		expect(result.error).toBeUndefined();
 		expect(result.data?.row[0].id).toEqual(1);
 		expect(result.data?.row[0].name).toEqual('Jens');
-		expect(result.data?.row[0].email).toEqual('jens@wundergraph.com');
+		expect(result.data?.row[0].email).toEqual('jens@virgograph.com');
 	});
 
 	it('query raw row inline', async () => {
@@ -68,6 +68,6 @@ describe('SQL raw', () => {
 		expect(result.error).toBeUndefined();
 		expect(result.data?.row[0].id).toEqual(2);
 		expect(result.data?.row[0].name).toEqual('Jannik');
-		expect(result.data?.row[0].email).toEqual('jannik@wundergraph.com');
+		expect(result.data?.row[0].email).toEqual('jannik@virgograph.com');
 	});
 });

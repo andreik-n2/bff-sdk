@@ -20,7 +20,7 @@ Make sure you have enabled the `jwt` session strategy. You can find more informa
 Install WunderGraph:
 
 ```bash
-npm install @wundergraph/sdk @wundergraph/nextjs swr
+npm install @virgograph/sdk @virgograph/nextjs swr
 ```
 
 Add the following WunderGraph commands to your package.json
@@ -52,8 +52,8 @@ Now add the following code to `wundergraph.config.ts`.
 We're using our SpaceX test API for the sake of this example, but you could also add your existing database or APIs
 
 ```ts
-import { configureWunderGraphApplication, cors, introspect, templates } from '@wundergraph/sdk';
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { configureWunderGraphApplication, cors, introspect, templates } from '@virgograph/sdk';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
 
@@ -99,7 +99,7 @@ This also assumes that you have installed NextAuth in `pages/api/auth/[...nextau
 Now add the following code to `wundergraph.operations.ts`.
 
 ```ts
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from './generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({
@@ -120,7 +120,7 @@ We enabled authentication for all operations.
 Now add the following code to `wundergraph.server.ts`.
 
 ```ts
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({}));
 ```

@@ -5,11 +5,11 @@ import {
 	OperationsDefinition,
 	SubscriptionRequestOptions,
 	UploadRequestOptions,
-} from '@wundergraph/sdk/client';
+} from '@virgograph/sdk/client';
 import { Key, SWRConfiguration, SWRResponse } from 'swr';
 import { SWRMutationConfiguration, SWRMutationResponse } from 'swr/mutation';
-import { ResponseError } from '@wundergraph/sdk/client';
-import type { WithInput, ExtractProfileName, ExtractMeta } from '@wundergraph/sdk/client';
+import { ResponseError } from '@virgograph/sdk/client';
+import type { WithInput, ExtractProfileName, ExtractMeta } from '@virgograph/sdk/client';
 
 export type QueryFetcher<Operations extends OperationsDefinition> = {
 	<

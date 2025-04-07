@@ -8,7 +8,7 @@ WunderGraph supports a variety of data sources. They can be configured in the `w
 ## Usage
 
 ```ts
-import { configureWunderGraphApplication, introspect } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, introspect } from '@virgograph/sdk';
 
 const countries = introspect.graphql({
   apiNamespace: 'countries',

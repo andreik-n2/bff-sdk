@@ -10,7 +10,7 @@ This template should help get you started developing with Svelte Query and TypeS
 
 ```ts
 // In lib/wundergraph
-import { createSvelteClient } from '@wundergraph/svelte-query';
+import { createSvelteClient } from '@virgograph/svelte-query';
 import { createClient } from '../../.wundergraph/generated/client';
 import type { Operations } from '../../.wundergraph/generated/client';
 

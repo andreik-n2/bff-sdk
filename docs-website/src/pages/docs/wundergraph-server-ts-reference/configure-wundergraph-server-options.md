@@ -101,7 +101,7 @@ export default configureWunderGraphServer(() => ({
 ### Configure options with custom environment variables
 
 ```typescript
-import { configureWunderGraphServer, EnvironmentVariable, LoggerLevel } from '@wundergraph/sdk/server'
+import { configureWunderGraphServer, EnvironmentVariable, LoggerLevel } from '@virgograph/sdk/server'
 
 export default configureWunderGraphServer(() => ({
   options: {
@@ -124,7 +124,7 @@ This configuration illustrates what options you will get when options are not pr
 By using default environment variables names you could stick with Wundergraph Default behaviour but supply different default values.
 
 ```typescript
-import { configureWunderGraphServer, EnvironmentVariable, LoggerLevel, WgEnv } from '@wundergraph/sdk/server'
+import { configureWunderGraphServer, EnvironmentVariable, LoggerLevel, WgEnv } from '@virgograph/sdk/server'
 
 // use WgEnv enum to set variable names
 export default configureWunderGraphServer(() => ({

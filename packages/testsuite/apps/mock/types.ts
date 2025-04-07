@@ -1,4 +1,4 @@
-import { TestServers } from '@wundergraph/sdk/testing';
+import { TestServers } from '@virgograph/sdk/testing';
 
 export interface TestContext {
 	ts: TestServers;

@@ -1,17 +1,16 @@
 import useSWR, { useSWRConfig } from 'swr';
 import useSWRMutation from 'swr/mutation';
 
-import { OperationsDefinition, LogoutOptions, Client, ResponseError } from '@wundergraph/sdk/client';
-import { serialize } from '@wundergraph/sdk/internal';
+import { Client, LogoutOptions, OperationsDefinition, ResponseError } from '@virgograph/sdk/client';
+import { serialize } from '@virgograph/sdk/internal';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import {
-	QueryFetcher,
 	MutationFetcher,
+	QueryFetcher,
 	SubscribeToOptions,
-	UseSubscribeToProps,
-	UseQueryHook,
-	UseUserOptions,
 	UseMutationHook,
+	UseQueryHook,
+	UseSubscribeToProps,
 	UseSubscriptionHook,
 	UseUploadHook,
 	UseUserHook,
@@ -64,6 +63,7 @@ export const createHooks = <Operations extends OperationsDefinition>(client: Cli
 		const key = liveQuery ? { operationName, input, liveQuery } : { operationName, input };
 		const _key = serialize(key);
 
+		//@ts-ignore
 		const response = useSWR(enabled ? key : null, !liveQuery ? queryFetcher : null, swrConfig);
 
 		const onSuccess = useCallback(

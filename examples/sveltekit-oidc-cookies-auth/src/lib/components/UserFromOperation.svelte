@@ -20,4 +20,4 @@
 		</dl>
 	</div>
 </div>
-<p>This data was called using the createQuery function from @wundergraph/svelte-client</p>
+<p>This data was called using the createQuery function from @virgograph/svelte-client</p>

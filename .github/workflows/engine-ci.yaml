@@ -55,7 +55,7 @@ jobs:
       - name: Install Protoc
         uses: abelfodil/protoc-action@v1
         with:
-          protoc-version: '21.5'
+          protoc-version: '29.3'
 
       - name: Start MinIO container
         run: docker run -d --rm --name=minio --health-cmd "curl http://localhost:9000/minio/health/live" -e MINIO_ROOT_USER=minio -e MINIO_ROOT_PASSWORD=minio123 -p 9000:9000 -p 9090:9090 quay.io/minio/minio:RELEASE.2023-03-20T20-16-18Z server /data --console-address ":9090"
@@ -71,10 +71,10 @@ jobs:
         run: git diff --no-ext-diff --exit-code
 
       - name: Linters
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@v7
         with:
           # keep in sync with local version
-          version: v1.52.2
+          version: v2.0.2
           args: --timeout 3m
 
       - name: Run unit and integration tests

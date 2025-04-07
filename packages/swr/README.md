@@ -1,6 +1,6 @@
 # WunderGraph SWR Integration
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/swr.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/swr.svg)
 
 This package provides a type-safe integration of [SWR](https://swr.vercel.app/) with WunderGraph.
 SWR is a React Hooks library for data fetching. With just one hook, you can significantly simplify the data fetching logic in your project. And it also covered in all aspects of speed, correctness, and stability to help you build better experiences.
@@ -10,7 +10,7 @@ SWR is a React Hooks library for data fetching. With just one hook, you can sign
 ## Getting Started
 
 ```shell
-npm install @wundergraph/swr swr@2.0.0
+npm install @virgograph/swr swr@2.0.0
 ```
 
 Before you can use the hooks, you need to modify your code generation to include the base typescript client.
@@ -34,7 +34,7 @@ Second, run `wunderctl generate` to generate the code.
 Now you can use the hooks.
 
 ```ts
-import { createHooks } from '@wundergraph/swr';
+import { createHooks } from '@virgograph/swr';
 import { createClient, Operations } from './components/generated/client';
 
 const { useQuery, useMutation, useSubscription, useUser, useFileUpload, useAuth } = createHooks<Operations>(
@@ -80,8 +80,8 @@ In order to use [conditional-fetching](https://swr.vercel.app/docs/conditional-f
 You can configure the hooks globally by using the [SWRConfig](https://swr.vercel.app/docs/global-configuration) context.
 
 In case the context configuration isn't working, it's likely due to multiple versions of SWR being installed.
-To resolve this you can import SWRConfig directly from `@wundergraph/swr` to make sure the same instance is used.
+To resolve this you can import SWRConfig directly from `@virgograph/swr` to make sure the same instance is used.
 
 ```ts
-import { SWRConfig, useSWRConfig } from '@wundergraph/swr';
+import { SWRConfig, useSWRConfig } from '@virgograph/swr';
 ```

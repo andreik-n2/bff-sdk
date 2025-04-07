@@ -68,7 +68,7 @@ We use a Postgres database, Auth0 for authentication and Stripe for payments.
 ### Configure WunderGraph
 
 ```ts {% filename="wundergraph.config.ts" %}
-import { configureWunderGraphApplication, introspect, authProviders, EnvironmentVariable } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, introspect, authProviders, EnvironmentVariable } from '@virgograph/sdk';
 import operations from './wundergraph.operations';
 import server from './wundergraph.server';
 

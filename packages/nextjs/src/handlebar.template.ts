@@ -1,7 +1,7 @@
 //language=handlebars
 export const handlebarTemplate = `
-import { createWunderGraphNext as createWunderGraphNextInternal, createHooks, WithWunderGraphOptions, SSRCache } from '@wundergraph/nextjs';
-import { User } from '@wundergraph/sdk/client';
+import { createWunderGraphNext as createWunderGraphNextInternal, createHooks, WithWunderGraphOptions, SSRCache } from '@virgograph/nextjs';
+import { User } from '@virgograph/sdk/client';
 import { createClient, Operations, UserRole } from './client';
 
 export interface WunderGraphPageProps {

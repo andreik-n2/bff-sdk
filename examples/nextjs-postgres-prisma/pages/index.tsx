@@ -6,7 +6,7 @@ const Home: NextPage = () => {
 		operationName: 'UserByEmail',
 		liveQuery: true,
 		input: {
-			email: 'jens@wundergraph.com',
+			email: 'jens@virgograph.com',
 		},
 	});
 	return (

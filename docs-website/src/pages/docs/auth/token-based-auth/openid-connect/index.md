@@ -78,7 +78,7 @@ When using the WunderGraph Next.js integration, you can set the token using the 
 
 ```tsx {% filename="_app.tsx" %}
 import { Middleware } from 'swr';
-import { useAuthMiddleware } from '@wundergraph/nextjs';
+import { useAuthMiddleware } from '@virgograph/nextjs';
 import { withWunderGraph } from '../components/generated/nextjs';
 import { getToken } from 'your/auth/client';
 

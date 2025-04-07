@@ -10,7 +10,7 @@ export default defineConfig({
 		target: 'esnext',
 	},
 	optimizeDeps: {
-		include: ['@wundergraph/solid-query', '@wundergraph/sdk/client'],
+		include: ['@virgograph/solid-query', '@virgograph/sdk/client'],
 		esbuildOptions: {
 			target: 'es2020',
 		},

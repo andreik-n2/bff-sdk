@@ -97,7 +97,7 @@ All you have to do is to implement the business logic of your BFF.
 ### Configure WunderGraph
 
 ```ts {% filename="wundergraph.config.ts" %}
-import { configureWunderGraphApplication, introspect, authProviders, EnvironmentVariable } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, introspect, authProviders, EnvironmentVariable } from '@virgograph/sdk';
 import operations from './wundergraph.operations';
 import server from './wundergraph.server';
 

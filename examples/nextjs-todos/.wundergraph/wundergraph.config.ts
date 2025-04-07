@@ -1,5 +1,5 @@
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
-import { authProviders, configureWunderGraphApplication, cors, introspect, templates } from '@wundergraph/sdk';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
+import { authProviders, configureWunderGraphApplication, cors, introspect, templates } from '@virgograph/sdk';
 import operations from './wundergraph.operations';
 import server from './wundergraph.server';
 

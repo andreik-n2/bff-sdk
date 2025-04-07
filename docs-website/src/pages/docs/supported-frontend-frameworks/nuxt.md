@@ -11,7 +11,7 @@ import type { DehydratedState, VueQueryPluginOptions } from '@tanstack/vue-query
 import { VueQueryPlugin, QueryClient, hydrate, dehydrate } from '@tanstack/vue-query';
 import { useState } from '#imports';
 
-import { createHooks } from '@wundergraph/vue-query';
+import { createHooks } from '@virgograph/vue-query';
 import { createClient, Operations } from '../.wundergraph/components/generated/client';
 
 export default defineNuxtPlugin((nuxt) => {

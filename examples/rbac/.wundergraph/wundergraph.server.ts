@@ -1,4 +1,4 @@
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 import type { Role } from './generated/wundergraph.server';
 
 export default configureWunderGraphServer(() => ({

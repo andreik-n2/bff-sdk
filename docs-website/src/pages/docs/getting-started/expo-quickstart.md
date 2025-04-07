@@ -57,7 +57,7 @@ Open `metro.config.js` and add the following code:
 
 ```js
 const { getDefaultConfig } = require('expo/metro-config');
-const { wgMetroConfig } = require('@wundergraph/metro-config');
+const { wgMetroConfig } = require('@virgograph/metro-config');
 
 const defaultConfig = getDefaultConfig(__dirname);
 
@@ -106,7 +106,7 @@ Open `src/lib/wundergraph.ts`, you will see the following code:
 ```ts
 import { createClient, Operations } from '../generated/client';
 
-import { createHooks } from '@wundergraph/swr';
+import { createHooks } from '@virgograph/swr';
 
 export const client = createClient();
 

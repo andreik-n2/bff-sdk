@@ -12,7 +12,7 @@ Additionally, we're enabling caching for the `Albums` Query.
 
 ```ts
 // wundergraph.operations.ts
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from './generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({
@@ -46,7 +46,7 @@ On the `Albums` Query, we're overriding the default polling interval to 1 second
 
 ```ts
 // wundergraph.operations.ts
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from './generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({

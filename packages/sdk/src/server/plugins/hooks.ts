@@ -1,4 +1,4 @@
-import { FastifyPluginAsync, RawReplyDefaultExpression, RouteHandlerMethod } from 'fastify';
+import { FastifyPluginAsync, FastifyRequest, RawReplyDefaultExpression, RouteHandlerMethod } from 'fastify';
 import {
 	ClientRequestHeaders,
 	HooksConfiguration,
@@ -11,14 +11,13 @@ import {
 	WunderGraphRequest,
 	WunderGraphResponse,
 } from '../types';
-import { OperationType, WunderGraphConfiguration } from '@wundergraph/protobuf';
+import { OperationType, WunderGraphConfiguration } from '@virgograph/protobuf';
 import { RawRequestDefaultExpression, RawServerDefault } from 'fastify/types/utils';
 import { Headers } from '@whatwg-node/fetch';
-import { FastifyRequest } from 'fastify';
 import { trace } from '@opentelemetry/api';
 import { Attributes } from '../trace/attributes';
 import { attachErrorToSpan } from '../trace/util';
-import { InternalIntergration, InternalHookConfig } from '../../integrations/types';
+import { InternalHookConfig, InternalIntergration } from '../../integrations/types';
 import { hookID } from '../util';
 import { ServerError } from '../error';
 
@@ -69,6 +68,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 	};
 
 	await fastify.register(async (fastify) => {
+		//@ts-ignore
 		fastify.addHook('preHandler', (request, reply, done) => {
 			if (request.ctx.user === undefined) {
 				request.log.error("User context doesn't exist");
@@ -79,9 +79,11 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 		// authentication
 		if (config.authentication?.postAuthentication) {
+			//@ts-ignore
 			fastify.post<any, GlobalHooksRouteConfig>(
 				'/authentication/postAuthentication',
 				{ config: { kind: 'global-hook', category: 'authentication', hookName: 'postAuthentication' } },
+				//@ts-ignore
 				async (request, reply) => {
 					try {
 						await config.authentication?.postAuthentication?.(request.ctx);
@@ -102,9 +104,11 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		}
 
 		if (config.authentication?.mutatingPostAuthentication) {
+			//@ts-ignore
 			fastify.post<any, GlobalHooksRouteConfig>(
 				'/authentication/mutatingPostAuthentication',
 				{ config: { kind: 'global-hook', category: 'authentication', hookName: 'mutatingPostAuthentication' } },
+				//@ts-ignore
 				async (request, reply) => {
 					try {
 						const out = await config.authentication?.mutatingPostAuthentication?.(request.ctx);
@@ -127,9 +131,11 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		}
 
 		if (config.authentication?.revalidate) {
+			//@ts-ignore
 			fastify.post<any, GlobalHooksRouteConfig>(
 				'/authentication/revalidateAuthentication',
 				{ config: { kind: 'global-hook', category: 'authentication', hookName: 'postLogout' } },
+				//@ts-ignore
 				async (request, reply) => {
 					try {
 						const out = await config.authentication?.revalidate?.(request.ctx);
@@ -152,9 +158,11 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		}
 
 		if (config.authentication?.postLogout) {
+			//@ts-ignore
 			fastify.post<any, GlobalHooksRouteConfig>(
 				'/authentication/postLogout',
 				{ config: { kind: 'global-hook', category: 'authentication', hookName: 'postLogout' } },
+				//@ts-ignore
 				async (request, reply) => {
 					try {
 						const out = await config.authentication?.postLogout?.(request.ctx);
@@ -181,6 +189,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 	// httpTransport
 
+	//@ts-ignore
 	fastify.post<
 		{
 			Body: {
@@ -193,6 +202,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 	>(
 		'/global/httpTransport/onOriginRequest',
 		{ config: { kind: 'global-hook', category: 'httpTransport', hookName: 'onOriginRequest' } },
+		//@ts-ignore
 		async (request, reply) => {
 			reply.type('application/json').code(200);
 			try {
@@ -233,6 +243,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		}
 	);
 
+	//@ts-ignore
 	fastify.post<
 		{
 			Body: {
@@ -245,6 +256,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 	>(
 		'/global/httpTransport/onOriginResponse',
 		{ config: { kind: 'global-hook', category: 'httpTransport', hookName: 'onOriginResponse' } },
+		//@ts-ignore
 		async (request, reply) => {
 			reply.type('application/json').code(200);
 			try {
@@ -294,6 +306,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 			const matches = Array.isArray(config.match) ? config.match : [config.match];
 			for (const match of matches) {
 				const id = hookID(match);
+				//@ts-ignore
 				fastify.post<
 					{
 						Body: {
@@ -306,6 +319,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 				>(
 					`/global/httpTransport/onOriginTransport/${id}`,
 					{ config: { kind: 'global-hook', category: 'httpTransport', hookName: onOriginTransportHookName } },
+					//@ts-ignore
 					async (request, reply) => {
 						reply.type('application/json');
 						let result: Response | null | undefined;
@@ -361,6 +375,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 	// wsTransport
 	if (config.global?.wsTransport?.onConnectionInit) {
+		//@ts-ignore
 		fastify.post<
 			{
 				Body: {
@@ -372,6 +387,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		>(
 			`/global/wsTransport/onConnectionInit`,
 			{ config: { kind: 'global-hook', category: 'wsTransport', hookName: 'onConnectionInit' } },
+			//@ts-ignore
 			async (request, reply) => {
 				reply.type('application/json').code(200);
 				try {
@@ -438,6 +454,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 			RawReplyDefaultExpression<RawServerDefault>,
 			{ Body: { response: BodyResponse; input: any } }
 		> =>
+		//@ts-ignore
 		async (request, reply) => {
 			reply.type('application/json').code(200);
 			try {
@@ -642,6 +659,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		operations.forEach((operationName) => {
 			const mockResolveOp = operationHooks?.[operationName]?.mockResolve;
 			if (mockResolveOp) {
+				//@ts-ignore
 				fastify.post<any, HooksRouteConfig>(
 					`/operation/${operationName}/mockResolve`,
 					{ config: { operationName, kind: 'hook', hookName: 'mockResolve' } },
@@ -651,6 +669,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 			const preResolveOp = operationHooks?.[operationName]?.preResolve;
 			if (preResolveOp) {
+				//@ts-ignore
 				fastify.post<any, HooksRouteConfig>(
 					`/operation/${operationName}/preResolve`,
 					{ config: { operationName, kind: 'hook', hookName: 'preResolve' } },
@@ -660,6 +679,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 			const postResolveOp = operationHooks?.[operationName]?.postResolve;
 			if (postResolveOp) {
+				//@ts-ignore
 				fastify.post<any, HooksRouteConfig>(
 					`/operation/${operationName}/postResolve`,
 					{ config: { operationName, kind: 'hook', hookName: 'postResolve' } },
@@ -669,6 +689,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 			const mutatingPreResolveOp = operationHooks?.[operationName]?.mutatingPreResolve;
 			if (mutatingPreResolveOp) {
+				//@ts-ignore
 				fastify.post<any, HooksRouteConfig>(
 					`/operation/${operationName}/mutatingPreResolve`,
 					{ config: { operationName, kind: 'hook', hookName: 'mutatingPreResolve' } },
@@ -678,6 +699,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 			const mutatingPostResolveOp = operationHooks?.[operationName]?.mutatingPostResolve;
 			if (mutatingPostResolveOp) {
+				//@ts-ignore
 				fastify.post<any, HooksRouteConfig>(
 					`/operation/${operationName}/mutatingPostResolve`,
 					{ config: { operationName, kind: 'hook', hookName: 'mutatingPostResolve' } },
@@ -687,6 +709,7 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 
 			const customResolveOp = operationHooks?.[operationName]?.customResolve;
 			if (customResolveOp) {
+				//@ts-ignore
 				fastify.post<any, HooksRouteConfig>(
 					`/operation/${operationName}/customResolve`,
 					{ config: { operationName, kind: 'hook', hookName: 'customResolve' } },
@@ -697,51 +720,61 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 	}
 
 	const preUpload = (providerName: string, profileName: string, handler: any) => {
+		//@ts-ignore
 		fastify.post<{
 			Body: {
 				file: WunderGraphFile;
 				meta: any;
 			};
-		}>(`/upload/${providerName}/${profileName}/preUpload`, async (request, reply) => {
-			reply.type('application/json').code(200);
-			try {
-				const result = await handler({
-					...requestContext(request),
-					file: request.body.file,
-					meta: request.body.meta,
-				});
-				return result || {};
-			} catch (err) {
-				request.log.error(err);
-				reply.code(500);
-				return { error: err };
+		}>(
+			`/upload/${providerName}/${profileName}/preUpload`,
+			//@ts-ignore
+			async (request, reply) => {
+				reply.type('application/json').code(200);
+				try {
+					const result = await handler({
+						...requestContext(request),
+						file: request.body.file,
+						meta: request.body.meta,
+					});
+					return result || {};
+				} catch (err) {
+					request.log.error(err);
+					reply.code(500);
+					return { error: err };
+				}
 			}
-		});
+		);
 	};
 
 	const postUpload = (providerName: string, profileName: string, handler: any) => {
+		//@ts-ignore
 		fastify.post<{
 			Body: {
 				file: WunderGraphFile;
 				meta: any;
 				error: Error;
 			};
-		}>(`/upload/${providerName}/${profileName}/postUpload`, async (request, reply) => {
-			reply.type('application/json').code(200);
-			try {
-				const result = await handler({
-					...requestContext(request),
-					file: request.body.file,
-					meta: request.body.meta,
-					error: request.body.error,
-				});
-				return result || {};
-			} catch (err) {
-				request.log.error(err);
-				reply.code(500);
-				return { error: err };
+		}>(
+			`/upload/${providerName}/${profileName}/postUpload`,
+			//@ts-ignore
+			async (request, reply) => {
+				reply.type('application/json').code(200);
+				try {
+					const result = await handler({
+						...requestContext(request),
+						file: request.body.file,
+						meta: request.body.meta,
+						error: request.body.error,
+					});
+					return result || {};
+				} catch (err) {
+					request.log.error(err);
+					reply.code(500);
+					return { error: err };
+				}
 			}
-		});
+		);
 	};
 
 	function registerUploadHooks(hooks: UploadHooks): number {
@@ -791,8 +824,10 @@ const FastifyHooksPlugin: FastifyPluginAsync<FastifyHooksOptions> = async (fasti
 		fastify.log.debug(`Registered (${registered}) upload hooks`);
 	}
 
+	//@ts-ignore
 	fastify.addHook('onRequest', async (req, resp) => {
 		if (req.telemetry) {
+			//@ts-ignore
 			const routeConfig = req.routeConfig as GlobalHooksRouteConfig | HooksRouteConfig | undefined;
 			const span = trace.getSpan(req.telemetry.context);
 			if (span) {

@@ -1,6 +1,6 @@
 import { z } from 'zod';
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
-import { authProviders, configureWunderGraphApplication, cors, EnvironmentVariable, templates } from '@wundergraph/sdk';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
+import { authProviders, configureWunderGraphApplication, cors, EnvironmentVariable, templates } from '@virgograph/sdk';
 
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';

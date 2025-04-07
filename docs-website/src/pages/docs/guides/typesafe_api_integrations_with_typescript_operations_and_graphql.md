@@ -160,7 +160,7 @@ Custom errors are defined by extending the `OperationError` class and passed to 
 
 ```typescript
 // .wundergraph/operations/math/divide.ts
-import { OperationError } from '@wundergraph/sdk/operations';
+import { OperationError } from '@virgograph/sdk/operations';
 import { createOperation, z } from '../generated/wundergraph.factory';
 
 export class DividedByZero extends OperationError {
@@ -189,7 +189,7 @@ export default createOperation.query({
 Now, when we call this operation with `b` being `0`, we'll get the following error:
 
 ```typescript
-import { ReponseError } from '@wundergraph/sdk/client';
+import { ReponseError } from '@virgograph/sdk/client';
 import { createClient } from '../generated/client';
 
 const client = createClient();

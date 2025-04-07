@@ -54,9 +54,9 @@ set -e
 # CI, but helps when testing locally
 rm -fr .wundergraph/generated .wundergraph/cache
 
-# Replace @wundergraph dependencies with workspace
+# Replace @virgograph dependencies with workspace
 if test ${update_package_json} = "yes"; then
-    sed -i.bak -E 's/(@wundergraph\/.*": ")\^[0-9\.]+/\1workspace:*/g' package.json
+    sed -i.bak -E 's/(@virgograph\/.*": ")\^[0-9\.]+/\1workspace:*/g' package.json
     rm -fr package.json.bak
 
     # We're replacing modules with workspace copies, need to use

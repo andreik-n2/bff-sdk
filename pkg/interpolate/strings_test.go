@@ -63,7 +63,7 @@ func TestStringInterpolator_Interpolate(t *testing.T) {
 		"findManyusers": [
 			{
 				"id": 1,
-				"email": "jens@wundergraph.com",
+				"email": "jens@virgograph.com",
 				"name": "jens",
 				"messages": [
 					{
@@ -74,7 +74,7 @@ func TestStringInterpolator_Interpolate(t *testing.T) {
 			},
 			{
 				"id": 2,
-				"email": "jens@wundergraph.com",
+				"email": "jens@virgograph.com",
 				"name": true,
 				"messages": [
 					{
@@ -106,7 +106,7 @@ func TestStringInterpolator_Interpolate(t *testing.T) {
 		"findManyusers": [
 			{
 				"id": 1,
-				"email": "jens@wundergraph.com",
+				"email": "jens@virgograph.com",
 				"name": "jens",
 				"messages": [
 					{
@@ -117,7 +117,7 @@ func TestStringInterpolator_Interpolate(t *testing.T) {
 			},
 			{
 				"id": 2,
-				"email": "jens@wundergraph.com",
+				"email": "jens@virgograph.com",
 				"name": "true",
 				"messages": [
 					{
@@ -168,7 +168,7 @@ func BenchmarkStringInterpolator_Interpolate(b *testing.B) {
 		"findManyusers": [
 			{
 				"id": 1,
-				"email": "jens@wundergraph.com",
+				"email": "jens@virgograph.com",
 				"name": "jens",
 				"messages": [
 					{
@@ -179,7 +179,7 @@ func BenchmarkStringInterpolator_Interpolate(b *testing.B) {
 			},
 			{
 				"id": 2,
-				"email": "jens@wundergraph.com",
+				"email": "jens@virgograph.com",
 				"name": true,
 				"messages": [
 					{

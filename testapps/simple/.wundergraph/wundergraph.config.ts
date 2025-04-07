@@ -1,6 +1,6 @@
-import type { WunderGraphConfig } from '@wundergraph/sdk';
-import { graphql } from '@wundergraph/sdk/datasources';
-import { dynamicTransport } from '@wundergraph/sdk/advanced-hooks';
+import type { WunderGraphConfig } from '@virgograph/sdk';
+import { graphql } from '@virgograph/sdk/datasources';
+import { dynamicTransport } from '@virgograph/sdk/advanced-hooks';
 
 import { weather } from './weather-datasource';
 

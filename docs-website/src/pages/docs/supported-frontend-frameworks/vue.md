@@ -21,7 +21,7 @@ app.mount('#app');
 Create the hooks :
 
 ```ts
-import { createHooks } from '@wundergraph/vue-query';
+import { createHooks } from '@virgograph/vue-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

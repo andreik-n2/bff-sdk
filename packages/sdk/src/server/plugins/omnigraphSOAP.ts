@@ -51,9 +51,11 @@ const FastifySoapGraphQLPlugin: FastifyPluginAsync<SoapServerConfig> = async (fa
 	// prepare queries executor from schema with soap directives
 	const executor = createExecutorFromSchemaAST(schema, loggedFetch(fetchLogger, fetchFn as typeof fetch));
 
+	//@ts-ignore
 	fastify.route({
 		method: ['GET', 'POST'],
 		url: config.mountPath,
+		//@ts-ignore
 		async handler(req, reply) {
 			const request = {
 				body: req.body,

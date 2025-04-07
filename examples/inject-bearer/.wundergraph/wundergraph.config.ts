@@ -5,8 +5,8 @@ import {
 	EnvironmentVariable,
 	introspect,
 	templates,
-} from '@wundergraph/sdk';
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+} from '@virgograph/sdk';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
 

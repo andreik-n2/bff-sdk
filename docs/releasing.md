@@ -31,16 +31,16 @@ and [release-it](https://github.com/release-it/release-it) only for tagging.
 
 ### Wunderctl Wrapper
 
-The NPM package `@wundergraph/wunderctl` is a wrapper for the wunderctl binary. We release it with the wunderctl Go
+The NPM package `@virgograph/wunderctl` is a wrapper for the wunderctl binary. We release it with the wunderctl Go
 binary to make the deployment of both applications atomic. **Don't publish** this package with Lerna.
 The package is released automatically as soon as the wunderctl binary is published.
 
 ### SDK
 
-The [`@wundergraph/sdk`](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk) package is required for all
+The [`@virgograph/sdk`](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk) package is required for all
 WunderGraph applications. After installing this package, it will download the compatible `wunderctl` version. This
 relationship makes it necessary to release the wunderctl binary first before upgrading
-the [`@wundergraph/wunderctl`](https://github.com/wundergraph/wundergraph/tree/main/packages/wunderctl) package.
+the [`@virgograph/wunderctl`](https://github.com/wundergraph/wundergraph/tree/main/packages/wunderctl) package.
 
 ## How to select the release version?
 

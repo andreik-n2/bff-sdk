@@ -32,6 +32,7 @@ export const useAuthMiddleware: AuthMiddleware = (useSWRNext, getToken) => {
 			return fetcher?.(...args);
 		};
 
+		//@ts-ignore
 		return useSWRNext(key, fetcherWithAuth, config) as any;
 	};
 };

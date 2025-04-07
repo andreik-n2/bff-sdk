@@ -877,6 +877,7 @@ export interface CookieBasedAuthentication {
   blockKey: ConfigurationVariable | undefined;
   csrfSecret: ConfigurationVariable | undefined;
   timeoutSeconds: ConfigurationVariable | undefined;
+  maxLength: ConfigurationVariable | undefined;
 }
 
 export interface AuthProvider {
@@ -1853,6 +1854,7 @@ function createBaseCookieBasedAuthentication(): CookieBasedAuthentication {
     blockKey: undefined,
     csrfSecret: undefined,
     timeoutSeconds: undefined,
+    maxLength: undefined,
   };
 }
 
@@ -1878,6 +1880,9 @@ export const CookieBasedAuthentication = {
     }
     if (message.timeoutSeconds !== undefined) {
       ConfigurationVariable.encode(message.timeoutSeconds, writer.uint32(58).fork()).ldelim();
+    }
+    if (message.maxLength !== undefined) {
+      ConfigurationVariable.encode(message.maxLength, writer.uint32(66).fork()).ldelim();
     }
     return writer;
   },
@@ -1938,6 +1943,13 @@ export const CookieBasedAuthentication = {
 
           message.timeoutSeconds = ConfigurationVariable.decode(reader, reader.uint32());
           continue;
+        case 8:
+          if (tag !== 66) {
+            break;
+          }
+
+          message.maxLength = ConfigurationVariable.decode(reader, reader.uint32());
+          continue;
       }
       if ((tag & 7) === 4 || tag === 0) {
         break;
@@ -1960,6 +1972,7 @@ export const CookieBasedAuthentication = {
       blockKey: isSet(object.blockKey) ? ConfigurationVariable.fromJSON(object.blockKey) : undefined,
       csrfSecret: isSet(object.csrfSecret) ? ConfigurationVariable.fromJSON(object.csrfSecret) : undefined,
       timeoutSeconds: isSet(object.timeoutSeconds) ? ConfigurationVariable.fromJSON(object.timeoutSeconds) : undefined,
+      maxLength: isSet(object.maxLength) ? ConfigurationVariable.fromJSON(object.maxLength) : undefined,
     };
   },
 
@@ -1988,6 +2001,9 @@ export const CookieBasedAuthentication = {
     if (message.timeoutSeconds !== undefined) {
       obj.timeoutSeconds = ConfigurationVariable.toJSON(message.timeoutSeconds);
     }
+    if (message.maxLength !== undefined) {
+      obj.maxLength = ConfigurationVariable.toJSON(message.maxLength);
+    }
     return obj;
   },
 
@@ -2013,6 +2029,9 @@ export const CookieBasedAuthentication = {
       : undefined;
     message.timeoutSeconds = (object.timeoutSeconds !== undefined && object.timeoutSeconds !== null)
       ? ConfigurationVariable.fromPartial(object.timeoutSeconds)
+      : undefined;
+    message.maxLength = (object.maxLength !== undefined && object.maxLength !== null)
+      ? ConfigurationVariable.fromPartial(object.maxLength)
       : undefined;
     return message;
   },

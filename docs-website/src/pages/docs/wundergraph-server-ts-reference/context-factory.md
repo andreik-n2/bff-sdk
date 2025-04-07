@@ -9,7 +9,7 @@ to instantiate and release custom contexts for every incoming request:
 
 ```typescript
 // wundergraph.server.ts
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 
 class GlobalContext {}
 
@@ -23,7 +23,7 @@ class RequestContext {
   }
 }
 
-declare module '@wundergraph/sdk/server' {
+declare module '@virgograph/sdk/server' {
   export interface CustomContext {
     global: GlobalContext;
     request: RequestContext;

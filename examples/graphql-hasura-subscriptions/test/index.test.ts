@@ -1,6 +1,6 @@
 import { afterAll, beforeAll, describe, expect, test } from '@jest/globals';
 
-import { ClientOperationErrors, ClientResponse } from '@wundergraph/sdk/client';
+import { ClientOperationErrors, ClientResponse } from '@virgograph/sdk/client';
 
 import { TodosSubscriptionResponseData } from '../.wundergraph/generated/models';
 import { createTestServer } from '../.wundergraph/generated/testing';

@@ -4,12 +4,12 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/bff-sdk.git"
   },
   "homepage": "https://wundergraph.com",
   "author": {
     "name": "WunderGraph Maintainers",
-    "email": "info@wundergraph.com"
+    "email": "info@virgograph.com"
   },
   "bugs": {
     "url": "https://github.com/wundergraph/wundergraph/issues"
@@ -26,8 +26,8 @@
   "dependencies": {
     "@octokit/webhooks-types": "^6.10.0",
     "@types/node": "^18.16.0",
-    "@wundergraph/golang-client": "workspace:*",
-    "@wundergraph/sdk": "workspace:*",
+    "@virgograph/golang-client": "workspace:*",
+    "@virgograph/sdk": "workspace:*",
     "graphql": "^16.3.0",
     "openai": "^3.3.0",
     "pg": "^8.7.3",

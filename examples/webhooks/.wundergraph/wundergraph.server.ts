@@ -4,7 +4,7 @@ import {
 	EnvironmentVariable,
 	GithubWebhookVerifier,
 	WebhookVerifierKind,
-} from '@wundergraph/sdk/server';
+} from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({
 	webhooks: {

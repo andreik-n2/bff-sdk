@@ -40,7 +40,7 @@ you're able to call these from the GraphQL resolvers.
 
 ```typescript
 // wundergraph.server.ts
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 import type { GraphQLExecutionContext } from './generated/wundergraph.server';
 import {
   buildSchema,
@@ -81,7 +81,7 @@ export default configureWunderGraphServer(() => ({
 
 ```typescript
 // wundergraph.server.ts
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 import type { GraphQLExecutionContext } from './generated/wundergraph.server';
 import {
   buildSchema,

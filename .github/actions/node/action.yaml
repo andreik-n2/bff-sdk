@@ -23,9 +23,9 @@ runs:
     - name: Install Protoc
       uses: abelfodil/protoc-action@v1
       with:
-        protoc-version: '21.5'
+        protoc-version: '29.3'
 
-    - uses: pnpm/action-setup@v2.2.4
+    - uses: pnpm/action-setup@v2.4.1
       id: pnpm-install
       with:
         version: 8.6.2

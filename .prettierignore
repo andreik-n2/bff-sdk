@@ -40,6 +40,8 @@ testapps/default/.wundergraph/operations/weather/GetCityById.graphql
 testapps/default/.wundergraph/operations/weather/GetCityByName.graphql
 packages/testsuite/apps/basic/.wundergraph/operations/weather/GetCityById.graphql
 packages/testsuite/apps/basic/.wundergraph/operations/weather/GetCityByName.graphql
-
+packages/svelte-query/.svelte-kit/__package__
 examples/sveltekit-oidc-cookies-auth
 examples/sveltekit-todos
+
+vendor

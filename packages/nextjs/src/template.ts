@@ -12,10 +12,10 @@ import {
 	TypeScriptResponseDataModels,
 	TypeScriptResponseModels,
 	TypeScriptEnumModels,
-} from '@wundergraph/sdk';
-import { configurationHash, modelImports } from '@wundergraph/sdk/internal/codegen';
-import { OperationType } from '@wundergraph/protobuf';
-import {} from '@wundergraph/sdk/dist/configure';
+} from '@virgograph/sdk';
+import { configurationHash, modelImports } from '@virgograph/sdk/internal/codegen';
+import { OperationType } from '@virgograph/protobuf';
+import {} from '@virgograph/sdk/dist/configure';
 
 export class NextJsTemplate implements Template {
 	generate(generationConfig: CodeGenerationConfig): Promise<TemplateOutputFile[]> {

@@ -56,7 +56,7 @@ describe('Client', () => {
 			const scope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.matchHeader('X-Test', 'test')
 				.matchHeader('X-Test-From-Constructor', 'extra-header')
 				.get('/operations/Weather')
@@ -99,7 +99,7 @@ describe('Client', () => {
 			const scope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/operations/Weather')
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -125,7 +125,7 @@ describe('Client', () => {
 			const scope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/operations/Weather')
 				.query({
 					wg_api_hash: '123',
@@ -159,7 +159,7 @@ describe('Client', () => {
 			const scope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/operations/Weather')
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -201,7 +201,7 @@ describe('Client', () => {
 			const scope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/operations/Weather')
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -292,7 +292,7 @@ describe('Client', () => {
 
 			const csrfScope = nock('https://api.com')
 				.matchHeader('accept', 'text/plain')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/auth/cookie/csrf')
 				.reply(200, 'csrf');
 
@@ -300,7 +300,7 @@ describe('Client', () => {
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
 				.matchHeader('x-csrf-token', 'csrf')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.post('/operations/CreateWeather')
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -326,7 +326,7 @@ describe('Client', () => {
 
 			const csrfScope = nock('https://api.com')
 				.matchHeader('accept', 'text/plain')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/auth/cookie/csrf')
 				.reply(200, 'csrf');
 
@@ -334,7 +334,7 @@ describe('Client', () => {
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
 				.matchHeader('x-csrf-token', 'csrf')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.post('/operations/CreateWeather')
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -360,14 +360,14 @@ describe('Client', () => {
 
 			const csrfScope = nock('https://api.com')
 				.matchHeader('accept', 'text/plain')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/auth/cookie/csrf')
 				.reply(200, 'csrf');
 
 			const apiScope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.post('/operations/CreateWeather', { lat: 1 })
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -394,14 +394,14 @@ describe('Client', () => {
 
 			const csrfScope = nock('https://api.com')
 				.matchHeader('accept', 'text/plain')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.get('/auth/cookie/csrf')
 				.reply(200, 'csrf');
 
 			const apiScope = nock('https://api.com')
 				.matchHeader('accept', 'application/json')
 				.matchHeader('content-type', 'application/json')
-				.matchHeader('WG-SDK-Version', '1.0.0')
+				.matchHeader('bff-sdk-Version', '1.0.0')
 				.post('/operations/CreateWeather')
 				.query({ wg_api_hash: '123' })
 				.once()
@@ -438,14 +438,14 @@ describe('Client', () => {
 
 		const csrfScope = nock('https://api.com')
 			.matchHeader('accept', 'text/plain')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/auth/cookie/csrf')
 			.reply(200, 'csrf');
 
 		const apiScope = nock('https://api.com')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.post('/operations/CreateWeather')
 			.query({ wg_api_hash: '123' })
 			.once()
@@ -471,14 +471,14 @@ describe('Client', () => {
 
 		const csrfScope = nock('https://api.com')
 			.matchHeader('accept', 'text/plain')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/auth/cookie/csrf')
 			.reply(200, 'csrf');
 
 		const apiScope = nock('https://api.com')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.post('/operations/CreateWeather')
 			.query({ wg_api_hash: '123' })
 			.once()
@@ -505,14 +505,14 @@ describe('Client', () => {
 
 		const csrfScope = nock('https://api.com')
 			.matchHeader('accept', 'text/plain')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/auth/cookie/csrf')
 			.reply(200, 'csrf');
 
 		const apiScope = nock('https://api.com')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.post('/operations/CreateWeather')
 			.query({ wg_api_hash: '123' })
 			.once()
@@ -538,14 +538,14 @@ describe('Client', () => {
 
 		const csrfScope = nock('https://api.com')
 			.matchHeader('accept', 'text/plain')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/auth/cookie/csrf')
 			.reply(200, 'csrf');
 
 		const apiScope = nock('https://api.com')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.post('/operations/CreateWeather')
 			.query({ wg_api_hash: '123' })
 			.once()

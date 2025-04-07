@@ -13,7 +13,7 @@ describe('Test User and Nodes', () => {
 			input: {
 				data: {
 					name: 'Jens',
-					email: 'jens@wundergraph.com',
+					email: 'jens@virgograph.com',
 					Filter: {
 						create: {
 							node_created_after: new Date(2020, 0, 2).toISOString(),
@@ -26,7 +26,7 @@ describe('Test User and Nodes', () => {
 		const result = await wg.client().query({
 			operationName: 'UserByEmail',
 			input: {
-				email: 'jens@wundergraph.com',
+				email: 'jens@virgograph.com',
 			},
 		});
 		expect(result.error).toBeFalsy();

@@ -8,7 +8,7 @@ The Next.js client uses [SWR](/docs/clients-reference/swr) under the hood.
 ## Installation
 
 ```bash
-npm i @wundergraph/nextjs swr
+npm i @virgograph/nextjs swr
 ```
 
 ## Configuration
@@ -16,7 +16,7 @@ npm i @wundergraph/nextjs swr
 Add `NextJsTemplate` to your WunderGraph configuration:
 
 ```typescript
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 
 // wundergraph.config.ts
 configureWunderGraphApplication({
@@ -173,8 +173,8 @@ export default withWunderGraph(Home);
 You can configure the hooks globally by using the [SWRConfig](https://swr.vercel.app/docs/global-configuration) context.
 
 In case the context configuration isn't working, it's likely due to multiple versions of SWR being installed or due to how PNPM or Yarn PnP link packages.
-To resolve this you can import SWR directly from `@wundergraph/nextjs` to make sure the same instance is used.
+To resolve this you can import SWR directly from `@virgograph/nextjs` to make sure the same instance is used.
 
 ```ts
-import { SWRConfig, useSWRConfig } from '@wundergraph/nextjs';
+import { SWRConfig, useSWRConfig } from '@virgograph/nextjs';
 ```

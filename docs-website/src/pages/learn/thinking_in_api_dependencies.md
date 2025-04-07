@@ -13,7 +13,7 @@ Let's add a few more "API dependencies" to our application and discuss the desig
 
 ```typescript
 // wundergraph.config.ts
-import { introspect, configureWunderGraphApplication } from '@wundergraph/sdk';
+import { introspect, configureWunderGraphApplication } from '@virgograph/sdk';
 const spaceX = introspect.graphql({
   apiNamespace: 'spacex',
   url: 'https://spacex-api.fly.dev/graphql/',

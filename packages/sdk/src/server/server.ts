@@ -1,9 +1,9 @@
 import closeWithGrace from 'close-with-grace';
-import { Headers, fetch } from '@whatwg-node/fetch';
+import { fetch, Headers } from '@whatwg-node/fetch';
 import process from 'node:process';
 import { AsyncLocalStorage } from 'node:async_hooks';
 import Fastify, { FastifyInstance } from 'fastify';
-import { ORM } from '@wundergraph/orm';
+import { ORM } from '@virgograph/orm';
 import { pino } from 'pino';
 import path from 'path';
 import fs from 'fs';
@@ -12,8 +12,13 @@ import { resolveConfigurationVariable } from '../configure/variables';
 import { onParentProcessExit } from '../utils/process';
 import { customGqlServerMountPath } from './util';
 
-import { EngineConfiguration, InternedString, WunderGraphConfiguration } from '@wundergraph/protobuf';
-import { ConfigurationVariableKind, DataSourceKind } from '@wundergraph/protobuf';
+import {
+	ConfigurationVariableKind,
+	DataSourceKind,
+	EngineConfiguration,
+	InternedString,
+	WunderGraphConfiguration,
+} from '@virgograph/protobuf';
 import type { WebhooksConfig } from '../webhooks/types';
 import type { HooksRouteConfig } from './plugins/hooks';
 import type { WebHookRouteConfig } from './plugins/webhooks';
@@ -25,6 +30,7 @@ import type {
 	WunderGraphHooksAndServerConfig,
 	WunderGraphServerConfig,
 } from './types';
+import { CreateServerOptions, TracerConfig } from './types';
 import type { LoadOperationsOutput } from '../graphql/operations';
 import FastifyFunctionsPlugin from './plugins/functions';
 import { WgEnv } from '../configure/options';
@@ -35,7 +41,6 @@ import { NamespacingExecutor } from '../orm';
 import type { OperationsAsyncContext } from './operations-context';
 import configureTracerProvider from './trace/trace';
 import { propagation } from '@opentelemetry/api';
-import { CreateServerOptions, TracerConfig } from './types';
 import { loadTraceConfigFromWgConfig } from './trace/config';
 import { TelemetryPluginOptions } from './plugins/telemetry';
 import { createLogger } from './logger';
@@ -295,11 +300,13 @@ export const createServer = async ({
 	 * Custom request logging to not log all requests with INFO level.
 	 */
 
+	//@ts-ignore
 	fastify.addHook('onRequest', (req, reply, done) => {
 		req.log.debug({ req }, 'received request');
 		done();
 	});
 
+	//@ts-ignore
 	fastify.addHook('onResponse', (req, reply, done) => {
 		req.log.debug({ res: reply, url: req.raw.url, responseTime: reply.getResponseTime() }, 'request completed');
 		done();
@@ -307,9 +314,11 @@ export const createServer = async ({
 
 	fastify.decorateRequest('ctx', null);
 
+	//@ts-ignore
 	fastify.route({
 		method: 'GET',
 		url: '/health',
+		//@ts-ignore
 		handler: function (request, reply) {
 			reply.code(200).send({ status: 'ok' });
 		},
@@ -335,6 +344,7 @@ export const createServer = async ({
 	/**
 	 * Calls per event registration. We use it for debugging only.
 	 */
+	//@ts-ignore
 	fastify.addHook('onRoute', (routeOptions) => {
 		const routeConfig = routeOptions.config as HooksRouteConfig | WebHookRouteConfig | undefined;
 		if (routeConfig?.kind === 'hook') {
@@ -401,6 +411,7 @@ export const createServer = async ({
 		 * Calls on every request. We use it to do pre-init stuff e.g. create the request context and operations client
 		 * Registering this handler will only affect child plugins
 		 */
+		//@ts-ignore
 		fastify.addHook<{ Body: FastifyRequestBody }>('preHandler', async (req, reply) => {
 			// clientRequest represents the original client request that was sent initially to the WunderNode.
 			const clientRequest = createClientRequest(req.body);
@@ -428,6 +439,7 @@ export const createServer = async ({
 			};
 		});
 
+		//@ts-ignore
 		fastify.addHook<{ Body: FastifyRequestBody }>('onResponse', async (req) => {
 			await releaseContext(req.ctx.context);
 		});
@@ -607,11 +619,13 @@ export const createServer = async ({
 		closeWithGrace({ delay: 500 }, handler);
 	}
 
+	//@ts-ignore
 	fastify.addHook('onClose', async () => {
 		if (serverConfig.context?.global?.release) {
 			await serverConfig.context.global.release(globalContext);
 		}
 	});
 
-	return fastify;
+	//@ts-ignore
+	return fastify as FastifyInstance;
 };

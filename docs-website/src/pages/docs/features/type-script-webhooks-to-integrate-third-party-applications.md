@@ -12,7 +12,7 @@ For example, you might want to receive message when a User has starred your repo
 ```typescript
 // .wundergraph/webhooks/github.ts
 
-import type { WebhookHttpEvent, WebhookHttpResponse } from '@wundergraph/sdk/server';
+import type { WebhookHttpEvent, WebhookHttpResponse } from '@virgograph/sdk/server';
 import { createWebhook } from '../generated/wundergraph.webhooks';
 
 export default createWebhook<
@@ -42,7 +42,7 @@ You have access to the original client request.
 ```typescript
 // .wundergraph/webhooks/github.ts
 
-import type { Webhook } from '@wundergraph/sdk/server';
+import type { Webhook } from '@virgograph/sdk/server';
 import { createWebhook } from '../generated/wundergraph.webhooks';
 
 export default createWebhook({
@@ -75,7 +75,7 @@ You can call internal operations from webhooks.
 ```typescript
 // .wundergraph/webhooks/github.ts
 
-import type { Webhook } from '@wundergraph/sdk/server';
+import type { Webhook } from '@virgograph/sdk/server';
 import { createWebhook } from '../generated/wundergraph.webhooks';
 
 export default createWebhook({
@@ -107,7 +107,7 @@ For Github, you can use our verifier in the SDK that implements the [validation]
 ```typescript
 // .wundergraph/wundergraph.server.ts
 
-import { configureWunderGraphServer, EnvironmentVariable, GithubWebhookVerifier } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer, EnvironmentVariable, GithubWebhookVerifier } from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({
   webhooks: {
@@ -128,7 +128,7 @@ You can use our generic HMAC verifier to validate other webhooks as well.
 ```typescript
 // .wundergraph/wundergraph.server.ts
 
-import { configureWunderGraphServer, EnvironmentVariable, GithubWebhookVerifier } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer, EnvironmentVariable, GithubWebhookVerifier } from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({
   webhooks: {

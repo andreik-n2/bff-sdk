@@ -1,4 +1,4 @@
-import { createHooks } from '@wundergraph/solid-query';
+import { createHooks } from '@virgograph/solid-query';
 import { createClient, Operations } from '../generated/client';
 
 const client = createClient();

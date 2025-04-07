@@ -1,6 +1,6 @@
 # WunderGraph Solid Query Integration
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/solid-query.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/solid-query.svg)
 
 This package provides a type-safe integration of [Solid Query](https://tanstack.com/query/v4/docs/solid/overview) with WunderGraph.
 Solid Query is a data fetching library for Solid.js.
@@ -10,7 +10,7 @@ Solid Query is a data fetching library for Solid.js.
 ## Getting Started
 
 ```shell
-npm install @wundergraph/solid-query @tanstack/solid-query
+npm install @virgograph/solid-query @tanstack/solid-query
 ```
 
 Before you can use the hooks, you need to modify your code generation to include the base typescript client.
@@ -34,7 +34,7 @@ Second, run `wunderctl generate` to generate the code.
 Now you can configure the hooks. Create a new file, for example `lib/wundergraph.ts` and add the following code:
 
 ```ts
-import { createHooks } from '@wundergraph/solid-query';
+import { createHooks } from '@virgograph/solid-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

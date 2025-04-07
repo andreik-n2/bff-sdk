@@ -1,5 +1,5 @@
 import { GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({
 	hooks: {
@@ -9,7 +9,7 @@ export default configureWunderGraphServer(() => ({
 					const user = await operations.query({
 						operationName: 'UserByEmail',
 						input: {
-							email: 'jens@wundergraph.com',
+							email: 'jens@virgograph.com',
 						},
 					});
 

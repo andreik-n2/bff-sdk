@@ -8,12 +8,12 @@ This example shows the bare minimum configuration to get WunderGraph up and runn
 
 ## Configuration
 
-The example uses `@wundergraph/metro-config` to configure Metro to work with WunderGraph.
+The example uses `@virgograph/metro-config` to configure Metro to work with WunderGraph.
 
 ```js
 // metro.config.js
 // Learn more https://docs.expo.io/guides/customizing-metro
-const { wgMetroConfig } = require('@wundergraph/metro-config');
+const { wgMetroConfig } = require('@virgograph/metro-config');
 const { getDefaultConfig } = require('expo/metro-config');
 
 const config = getDefaultConfig(__dirname);

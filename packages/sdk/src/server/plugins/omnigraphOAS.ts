@@ -27,9 +27,11 @@ export interface OpenApiServerConfig {
 const FastifyOASGraphQLPlugin: FastifyPluginAsync<OpenApiServerConfig> = async (fastify, config) => {
 	const schema = executableSchema(config.schema, fastify.log, config.upstreamURL, config.globalFetch);
 
+	//@ts-ignore
 	fastify.route({
 		method: ['GET', 'POST'],
 		url: config.mountPath,
+		//@ts-ignore
 		async handler(req, reply) {
 			const request = {
 				body: req.body,

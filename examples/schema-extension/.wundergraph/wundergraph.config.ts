@@ -1,4 +1,4 @@
-import { configureWunderGraphApplication, cors, introspect } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, cors, introspect } from '@virgograph/sdk';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
 

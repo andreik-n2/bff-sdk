@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { OperationExecutionEngine, OperationType } from '@wundergraph/protobuf';
+import { OperationExecutionEngine, OperationType } from '@virgograph/protobuf';
 import { PostmanBuilder } from './builder';
 import { GraphQLOperation } from '../graphql/operations';
 

@@ -94,7 +94,7 @@ The user info endpoint is used to obtain the claims of the user. It can be used 
 ```json {% filename="response.json" %}
 {
   "id": "1234567890",
-  "email": "user@wundergraph.com"
+  "email": "user@virgograph.com"
 }
 ```
 

@@ -1,5 +1,5 @@
-import { configureWunderGraphGeneration, templates } from '@wundergraph/sdk';
-import { rustClient } from '@wundergraph/rust-client';
+import { configureWunderGraphGeneration, templates } from '@virgograph/sdk';
+import { rustClient } from '@virgograph/rust-client';
 
 export default configureWunderGraphGeneration({
 	codeGenerators: [

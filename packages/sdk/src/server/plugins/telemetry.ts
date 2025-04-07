@@ -17,6 +17,7 @@ declare module 'fastify' {
 	interface FastifyRequest extends FastifyRequestContext {
 		telemetry?: FastifyTelemetry;
 	}
+
 	interface FastifyInstance {
 		tracer?: Tracer;
 	}
@@ -39,6 +40,7 @@ const FastifyTelemetryPlugin: FastifyPluginAsync<TelemetryPluginOptions> = async
 		return url.path === '/health' || url.path === '/favicon.ico';
 	};
 
+	//@ts-ignore
 	fastify.addHook('onRequest', async (req, resp) => {
 		const url = uri.parse(req.url);
 
@@ -74,6 +76,7 @@ const FastifyTelemetryPlugin: FastifyPluginAsync<TelemetryPluginOptions> = async
 		});
 	});
 
+	//@ts-ignore
 	fastify.addHook('onResponse', async (req, resp) => {
 		if (req.telemetry) {
 			req.telemetry.parentSpan.setAttributes({
@@ -85,12 +88,14 @@ const FastifyTelemetryPlugin: FastifyPluginAsync<TelemetryPluginOptions> = async
 		}
 	});
 
+	//@ts-ignore
 	fastify.addHook('onError', async (req, resp, err) => {
 		if (req.telemetry) {
 			attachErrorToSpan(req.telemetry.parentSpan, err);
 		}
 	});
 
+	//@ts-ignore
 	fastify.addHook('onClose', async () => {
 		await options.provider.forceFlush();
 		await options.provider.shutdown();

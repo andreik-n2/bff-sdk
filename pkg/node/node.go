@@ -51,7 +51,7 @@ func New(ctx context.Context, info BuildInfo, wundergraphDir string, log *zap.Lo
 		ctx:            ctx,
 		configCh:       make(chan *WunderNodeConfig),
 		pool:           pool.New(),
-		log:            log.With(zap.String("component", "@wundergraph/node")),
+		log:            log.With(zap.String("component", "@virgograph/node")),
 		WundergraphDir: wundergraphDir,
 		apiClient: &fasthttp.Client{
 			ReadTimeout:              time.Second * 10,

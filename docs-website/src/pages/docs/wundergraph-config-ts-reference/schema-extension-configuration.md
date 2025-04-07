@@ -302,7 +302,7 @@ And the record looks like this:
 ```
 id |        email         |       name       |                contact                |           updatedat           |           lastlogin
 ----+----------------------+------------------+---------------------------------------+-------------------------------+-------------------------------
-  1 | jens@wundergraph.com | Jens@WunderGraph | {"type": "mobile", "phone": "001001"} | 2022-10-31 14:06:40.256307+00 | 2022-10-31 14:06:40.257071+00
+  1 | jens@virgograph.com | Jens@WunderGraph | {"type": "mobile", "phone": "001001"} | 2022-10-31 14:06:40.256307+00 | 2022-10-31 14:06:40.257071+00
 ```
 
 To be able to query the `contact` column, we can use the following configuration:

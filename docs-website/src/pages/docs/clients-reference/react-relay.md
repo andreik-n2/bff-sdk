@@ -5,7 +5,7 @@ description: Reference documentation for the WunderGraph React Relay client.
 
 # WunderGraph Relay Integration
 
-![@wundergraph/react-relay](https://img.shields.io/npm/v/@wundergraph/react-relay.svg)
+![@virgograph/react-relay](https://img.shields.io/npm/v/@virgograph/react-relay.svg)
 
 This package provides a type-safe integration of [react-relay](https://relay.dev/) with WunderGraph.
 Relay is a JavaScript framework for building data-driven React applications, efficiently fetching and managing data from GraphQL APIs. It optimizes network requests, simplifies client-side data management, and enables performant, scalable apps.
@@ -33,7 +33,7 @@ npx create-wundergraph-app my-project --example vite-react-relay
 Install WunderGraph Relay sdk into your project
 
 ```sh
-npm install @wundergraph/react-relay
+npm install @virgograph/react-relay
 ```
 
 Make sure you have set your code generation to include the base typescript client.
@@ -68,7 +68,7 @@ In your relay config add the `persistConfig` option and make sure the `persisted
 WunderGraph will use the `persisted.json` file to generate the necessary Relay code. Now you can use the WunderGraph Relay provider & utility functions.
 
 ```ts
-import { createWunderGraphRelayApp } from '@wundergraph/react-relay';
+import { createWunderGraphRelayApp } from '@virgograph/react-relay';
 import { createClient } from '../generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

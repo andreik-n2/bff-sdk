@@ -1,5 +1,5 @@
-import { configureWunderGraphApplication, cors, EnvironmentVariable, introspect, templates } from '@wundergraph/sdk';
-import { golangClient } from '@wundergraph/golang-client';
+import { configureWunderGraphApplication, cors, EnvironmentVariable, introspect, templates } from '@virgograph/sdk';
+import { golangClient } from '@virgograph/golang-client';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
 

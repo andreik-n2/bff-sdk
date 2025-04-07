@@ -1,6 +1,6 @@
 # WunderGraph Vue Query Integration
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/vue-query.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/vue-query.svg)
 
 This package provides a type-safe integration of [Vue Query](https://tanstack.com/query/v4/docs/vue/overview) with WunderGraph.
 Vue Query is a data fetching library for Vue. With just one hook, you can significantly simplify the data fetching logic in your project. And it also covered in all aspects of speed, correctness, and stability to help you build better experiences.
@@ -10,7 +10,7 @@ Vue Query is a data fetching library for Vue. With just one hook, you can signif
 ## Getting Started
 
 ```shell
-npm install @wundergraph/vue-query @tanstack/vue-query
+npm install @virgograph/vue-query @tanstack/vue-query
 ```
 
 Before you can use the hooks, you need to modify your code generation to include the base typescript client.
@@ -34,7 +34,7 @@ Second, run `wunderctl generate` to generate the code.
 Now you can configure the hooks. Create a new file, for example `lib/wundergraph.ts` and add the following code:
 
 ```ts
-import { createHooks } from '@wundergraph/vue-query';
+import { createHooks } from '@virgograph/vue-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

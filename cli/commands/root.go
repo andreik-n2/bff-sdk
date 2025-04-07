@@ -231,7 +231,7 @@ var rootCmd = &cobra.Command{
 
 		log = logging.
 			New(rootFlags.PrettyLogs, rootFlags.DebugMode, zapLogLevelSetter).
-			With(zap.String("component", "@wundergraph/wunderctl"))
+			With(zap.String("component", "@virgograph/wunderctl"))
 
 		err = godotenv.Load(DotEnvFile)
 		if err != nil {

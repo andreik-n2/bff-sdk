@@ -44,7 +44,7 @@ if [ ${create_branch} = "yes" ]; then
 fi
 
 
-jq ".dependencies += {\"@wundergraph/wunderctl\": \"workspace:^${wunderctl_version}\"}" ${SDK_PACKAGE_JSON} > ${TMP_PACKAGE_JSON}
+jq ".dependencies += {\"@virgograph/wunderctl\": \"workspace:^${wunderctl_version}\"}" ${SDK_PACKAGE_JSON} > ${TMP_PACKAGE_JSON}
 mv -f ${TMP_PACKAGE_JSON} ${SDK_PACKAGE_JSON}
 pnpm i
 git add pnpm-lock.yaml ${SDK_PACKAGE_JSON}

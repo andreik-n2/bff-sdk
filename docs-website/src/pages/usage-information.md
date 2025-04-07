@@ -45,8 +45,8 @@ The ID is completely anonymous and does not contain any personal information.
 You can view exactly what is being collected by running a WunderGraph command with the flag `wunderctl up --telemetry-debug` or globally with an environment variable `WG_TELEMETRY_DEBUG=1`. The data will be printed out to the stdout stream as `info` log level.
 
 ```json
-{"level":"info","time":1670675762208,"msg":"Telemetry client info","hostname":"pop-os","pid":38159,"component":"@wundergraph/wunderctl","clientInfo":{"osName":"LINUX","cpuCount":32,"wunderctlVersion":"dev","anonymousID":"2Ie8ynG6f1hTKs3EVjItsy0DBcn"}}
-{"level":"info","time":1670675762208,"msg":"Telemetry Metric","hostname":"pop-os","pid":38159,"component":"@wundergraph/wunderctl","Name":"WUNDERCTL_WUNDERCTL_GENERATE_CMD_USAGE","Value":1}
+{"level":"info","time":1670675762208,"msg":"Telemetry client info","hostname":"pop-os","pid":38159,"component":"@virgograph/wunderctl","clientInfo":{"osName":"LINUX","cpuCount":32,"wunderctlVersion":"dev","anonymousID":"2Ie8ynG6f1hTKs3EVjItsy0DBcn"}}
+{"level":"info","time":1670675762208,"msg":"Telemetry Metric","hostname":"pop-os","pid":38159,"component":"@virgograph/wunderctl","Name":"WUNDERCTL_WUNDERCTL_GENERATE_CMD_USAGE","Value":1}
 ```
 
 An example telemetry event looks like this:

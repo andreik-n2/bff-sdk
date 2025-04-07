@@ -1,5 +1,5 @@
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
-import { getHttpResponseError } from '@wundergraph/sdk/client';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
+import { getHttpResponseError } from '@virgograph/sdk/client';
 
 export default configureWunderGraphServer(() => ({
 	hooks: {

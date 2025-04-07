@@ -36,9 +36,11 @@ const FastifyGraphQLPlugin: FastifyPluginAsync<GraphQLServerConfig> = async (fas
 	const schema = await config.schema;
 	const baseContext = await config.baseContext;
 
+	//@ts-ignore
 	fastify.route({
 		method: ['GET', 'POST'],
 		url: config.routeUrl,
+		//@ts-ignore
 		async handler(req, reply) {
 			const request = {
 				body: req.body,

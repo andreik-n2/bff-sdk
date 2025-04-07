@@ -1,7 +1,7 @@
-import { configureWunderGraphApplication, cors, introspect, templates } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, cors, introspect, templates } from '@virgograph/sdk';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 
 const weather = introspect.graphql({
 	apiNamespace: 'weather',

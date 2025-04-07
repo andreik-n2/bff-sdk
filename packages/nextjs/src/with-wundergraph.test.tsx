@@ -1,12 +1,12 @@
 import { render, screen, waitFor } from '@testing-library/react';
-import { Client, ClientConfig } from '@wundergraph/sdk/client';
+import { Client, ClientConfig } from '@virgograph/sdk/client';
 
 import nock from 'nock';
 import fetch from 'node-fetch';
 import React from 'react';
 
-import { serialize } from '@wundergraph/sdk/internal';
-import { userSWRKey } from '@wundergraph/swr';
+import { serialize } from '@virgograph/sdk/internal';
+import { userSWRKey } from '@virgograph/swr';
 import { SWRConfig } from 'swr';
 import { useWunderGraphContext } from './context';
 import { createWunderGraphNext } from './create-wundergraph';
@@ -42,7 +42,7 @@ const nockQuery = (operationName = 'Weather', wgParams = {}) => {
 	return nock('https://api.com')
 		.matchHeader('accept', 'application/json')
 		.matchHeader('content-type', 'application/json')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.get('/operations/' + operationName)
 		.query({ wg_api_hash: '123', ...wgParams });
 };

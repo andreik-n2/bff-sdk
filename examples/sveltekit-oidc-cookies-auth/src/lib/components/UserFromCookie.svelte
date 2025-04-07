@@ -22,4 +22,4 @@
 		</dl>
 	</div>
 </div>
-<p>This data was called using the getUser function from @wundergraph/svelte-client</p>
+<p>This data was called using the getUser function from @virgograph/svelte-client</p>

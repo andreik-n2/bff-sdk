@@ -9,7 +9,7 @@ React Query is a data fetching library for React. With just one hook, you can si
 ## Installation
 
 ```shell
-npm install @wundergraph/react-query @tanstack/react-query
+npm install @virgograph/react-query @tanstack/react-query
 ```
 
 ## Configuration
@@ -33,7 +33,7 @@ configureWunderGraphApplication({
 Now you can configure the hooks. Create a new file, for example `lib/wundergraph.ts` and add the following code:
 
 ```ts
-import { createHooks } from '@wundergraph/react-query';
+import { createHooks } from '@virgograph/react-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

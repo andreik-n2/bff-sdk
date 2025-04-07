@@ -10,7 +10,7 @@ If you test the SDK locally, add this to your `tsconfig.json`. This will improve
 {
   "compilerOptions": {
     "paths": {
-      "@wundergraph/sdk": ["<path-to-the-sdk>/src"]
+      "@virgograph/sdk": ["<path-to-the-sdk>/src"]
     }
   }
 }

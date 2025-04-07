@@ -5,7 +5,7 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 export default defineConfig({
 	plugins: [svelte()],
 	optimizeDeps: {
-		include: ['@wundergraph/svelte-query', '@wundergraph/sdk/client'],
+		include: ['@virgograph/svelte-query', '@virgograph/sdk/client'],
 		esbuildOptions: {
 			target: 'es2020',
 		},

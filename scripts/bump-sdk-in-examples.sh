@@ -35,7 +35,7 @@ done
 sdk_version=$(cat packages/sdk/package.json | jq -r '.version')
 printf "{\"name\": \"examples\"}" > examples/package.json
 printf "packages:\n  - '*'" > examples/pnpm-workspace.yaml
-cd examples && pnpm up -r "@wundergraph/*@latest" && cd -
+cd examples && pnpm up -r "@virgograph/*@latest" && cd -
 git checkout -f pnpm-workspace.yaml pnpm-lock.yaml
 
 if [ ${create_branch} = "yes" ]; then

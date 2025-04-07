@@ -1,4 +1,4 @@
-import { AuthProvider, AuthProviderKind, OpenIDConnectQueryParameter } from '@wundergraph/protobuf';
+import { AuthProvider, AuthProviderKind, OpenIDConnectQueryParameter } from '@virgograph/protobuf';
 import { InputVariable, mapInputVariable } from './variables';
 
 export interface AuthenticationProvider {

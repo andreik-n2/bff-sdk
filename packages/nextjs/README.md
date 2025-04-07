@@ -1,6 +1,6 @@
 # Wundergraph Next.js integration
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/nextjs.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/nextjs.svg)
 
 WunderGraph codegen template plugin to add deep Next.js integration.
 
@@ -9,14 +9,14 @@ WunderGraph codegen template plugin to add deep Next.js integration.
 ## Getting Started
 
 ```shell
-npm install @wundergraph/nextjs swr
+npm install @virgograph/nextjs swr
 ```
 
 ### 1. Register the codegen template
 
 ```ts
 // .wundergraph/wundergraph.config.ts
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 
 configureWunderGraphApplication({
   // ...

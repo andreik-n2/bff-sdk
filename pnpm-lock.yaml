@@ -262,8 +262,8 @@ importers:
 
   packages/golang-client:
     dependencies:
-      '@wundergraph/protobuf':
-        specifier: workspace:^0.118.2
+      '@virgograph/protobuf':
+        specifier: workspace:^0.121.0
         version: link:../protobuf
       execa:
         specifier: 5.1.1
@@ -293,8 +293,8 @@ importers:
       '@types/object-hash':
         specifier: ^1.3.4
         version: 1.3.4
-      '@wundergraph/sdk':
-        specifier: workspace:^0.184.2
+      '@virgograph/sdk':
+        specifier: workspace:^0.186.0
         version: link:../sdk
       typescript:
         specifier: ^5.1.6
@@ -333,10 +333,10 @@ importers:
 
   packages/nextjs:
     dependencies:
-      '@wundergraph/protobuf':
-        specifier: workspace:^0.118.2
+      '@virgograph/protobuf':
+        specifier: workspace:^0.121.0
         version: link:../protobuf
-      '@wundergraph/swr':
+      '@virgograph/swr':
         specifier: workspace:*
         version: link:../swr
       handlebars:
@@ -370,7 +370,7 @@ importers:
       '@types/react':
         specifier: ^18.0.6
         version: 18.0.35
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       jest:
@@ -507,7 +507,7 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.6
         version: 18.0.8
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       jest:
@@ -565,7 +565,7 @@ importers:
       '@types/relay-runtime':
         specifier: ^14.1.10
         version: 14.1.10
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       jest:
@@ -598,8 +598,8 @@ importers:
 
   packages/rust-client:
     dependencies:
-      '@wundergraph/protobuf':
-        specifier: workspace:^0.118.2
+      '@virgograph/protobuf':
+        specifier: workspace:^0.121.0
         version: link:../protobuf
       execa:
         specifier: 5.1.1
@@ -629,8 +629,8 @@ importers:
       '@types/object-hash':
         specifier: ^1.3.4
         version: 1.3.4
-      '@wundergraph/sdk':
-        specifier: workspace:^0.184.2
+      '@virgograph/sdk':
+        specifier: workspace:^0.186.0
         version: link:../sdk
       typescript:
         specifier: ^5.1.6
@@ -698,21 +698,21 @@ importers:
       '@prisma/generator-helper':
         specifier: ^3.9.2
         version: 3.15.2
+      '@virgograph/orm':
+        specifier: workspace:*
+        version: link:../orm
+      '@virgograph/protobuf':
+        specifier: workspace:^0.121.0
+        version: link:../protobuf
+      '@virgograph/wunderctl':
+        specifier: workspace:^0.181.0
+        version: link:../wunderctl
       '@whatwg-node/fetch':
         specifier: ^0.9.13
         version: 0.9.13
-      '@wundergraph/orm':
-        specifier: workspace:*
-        version: link:../orm
-      '@wundergraph/protobuf':
-        specifier: workspace:^0.118.2
-        version: link:../protobuf
       '@wundergraph/straightforward':
         specifier: ^4.2.5
         version: 4.2.5
-      '@wundergraph/wunderctl':
-        specifier: workspace:^0.180.0
-        version: link:../wunderctl
       axios:
         specifier: ^0.26.1
         version: 0.26.1(debug@4.3.4)
@@ -752,6 +752,9 @@ importers:
       graphql-helix:
         specifier: ^1.13.0
         version: 1.13.0(graphql@16.6.0)
+      graphql-scalars:
+        specifier: 1.22.4
+        version: 1.22.4(patch_hash=ngndi4ac2m7jiobiqhmho5ah7q)(graphql@16.6.0)
       handlebars:
         specifier: ^4.7.7
         version: 4.7.7
@@ -930,7 +933,7 @@ importers:
       '@types/node-fetch':
         specifier: 2.6.2
         version: 2.6.2
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       babel-jest:
@@ -996,7 +999,7 @@ importers:
       '@types/node-fetch':
         specifier: 2.6.2
         version: 2.6.2
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       jest:
@@ -1054,7 +1057,7 @@ importers:
       '@types/react-dom':
         specifier: ^18.0.6
         version: 18.0.8
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       jest:
@@ -1099,10 +1102,10 @@ importers:
       '@opentelemetry/otlp-transformer':
         specifier: ^0.39.1
         version: 0.39.1(@opentelemetry/api@1.4.1)
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
-      '@wundergraph/wunderctl':
+      '@virgograph/wunderctl':
         specifier: workspace:*
         version: link:../wunderctl
       graphql:
@@ -1118,7 +1121,7 @@ importers:
       '@prisma/client':
         specifier: ^4.15.0
         version: 4.15.0(prisma@4.15.0)
-      '@wundergraph/rust-client':
+      '@virgograph/rust-client':
         specifier: workspace:^
         version: link:../rust-client
       execa:
@@ -1178,7 +1181,7 @@ importers:
       '@types/node-fetch':
         specifier: 2.6.2
         version: 2.6.2
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../sdk
       jest:
@@ -1248,10 +1251,10 @@ importers:
       '@types/node':
         specifier: ^18.16.0
         version: 18.16.0
-      '@wundergraph/golang-client':
+      '@virgograph/golang-client':
         specifier: workspace:*
         version: link:../../packages/golang-client
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
       graphql:
@@ -1294,13 +1297,13 @@ importers:
       '@rnx-kit/metro-resolver-symlinks':
         specifier: ^0.1.27
         version: 0.1.27
-      '@wundergraph/metro-config':
+      '@virgograph/metro-config':
         specifier: workspace:*
         version: link:../../packages/metro-config
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
-      '@wundergraph/swr':
+      '@virgograph/swr':
         specifier: workspace:*
         version: link:../../packages/swr
       expo:
@@ -1340,10 +1343,10 @@ importers:
 
   testapps/nextauth:
     dependencies:
-      '@wundergraph/nextjs':
+      '@virgograph/nextjs':
         specifier: workspace:*
         version: link:../../packages/nextjs
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
       graphql:
@@ -1401,16 +1404,16 @@ importers:
       '@tanstack/react-query':
         specifier: ^4.20.4
         version: 4.20.4(react-dom@18.2.0)(react@18.2.0)
-      '@wundergraph/nextjs':
+      '@virgograph/nextjs':
         specifier: workspace:*
         version: link:../../packages/nextjs
-      '@wundergraph/react-query':
+      '@virgograph/react-query':
         specifier: workspace:*
         version: link:../../packages/react-query
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
-      '@wundergraph/swr':
+      '@virgograph/swr':
         specifier: workspace:*
         version: link:../../packages/swr
       next:
@@ -1456,13 +1459,13 @@ importers:
 
   testapps/nextjs-integrations:
     dependencies:
-      '@wundergraph/nextjs':
+      '@virgograph/nextjs':
         specifier: workspace:*
         version: link:../../packages/nextjs
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
-      '@wundergraph/swr':
+      '@virgograph/swr':
         specifier: workspace:*
         version: link:../../packages/swr
       next:
@@ -1514,19 +1517,19 @@ importers:
       '@tanstack/react-query':
         specifier: ^4.20.4
         version: 4.20.4(react-dom@18.2.0)(react@18.2.0)
-      '@wundergraph/nextjs':
+      '@virgograph/nextjs':
         specifier: workspace:*
         version: link:../../packages/nextjs
-      '@wundergraph/react-query':
+      '@virgograph/react-query':
         specifier: workspace:*
         version: link:../../packages/react-query
-      '@wundergraph/react-relay':
+      '@virgograph/react-relay':
         specifier: workspace:*
         version: link:../../packages/react-relay
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
-      '@wundergraph/swr':
+      '@virgograph/swr':
         specifier: workspace:*
         version: link:../../packages/swr
       next:
@@ -1593,7 +1596,7 @@ importers:
       '@types/node':
         specifier: ^18.16.0
         version: 18.16.0
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: file:packages/sdk
       graphql:
@@ -1603,7 +1606,7 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
     dependenciesMeta:
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         injected: true
 
   testapps/rust:
@@ -1611,7 +1614,7 @@ importers:
       '@types/node':
         specifier: ^18.16.0
         version: 18.16.16
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
       graphql:
@@ -1621,7 +1624,7 @@ importers:
         specifier: ^5.1.6
         version: 5.1.6
     devDependencies:
-      '@wundergraph/rust-client':
+      '@virgograph/rust-client':
         specifier: workspace:^
         version: link:../../packages/rust-client
 
@@ -1630,22 +1633,22 @@ importers:
       '@types/node':
         specifier: ^18.16.0
         version: 18.16.0
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
       graphql:
         specifier: ^16.3.0
         version: 16.6.0
       typescript:
-        specifier: ^5.1.6
-        version: 5.1.6
+        specifier: ^5.8.3
+        version: 5.8.3
 
   testapps/vite:
     dependencies:
-      '@wundergraph/sdk':
+      '@virgograph/sdk':
         specifier: workspace:*
         version: link:../../packages/sdk
-      '@wundergraph/swr':
+      '@virgograph/swr':
         specifier: workspace:*
         version: link:../../packages/swr
       react:
@@ -4953,13 +4956,13 @@ packages:
       '@types/node': 18.16.16
       chalk: 4.1.2
       cosmiconfig: 8.2.0
-      cosmiconfig-typescript-loader: 4.2.0(@types/node@18.16.16)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.1.6)
+      cosmiconfig-typescript-loader: 4.2.0(@types/node@18.16.16)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.8.3)
       lodash.isplainobject: 4.0.6
       lodash.merge: 4.6.2
       lodash.uniq: 4.5.0
       resolve-from: 5.0.0
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
-      typescript: 5.1.6
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
+      typescript: 5.8.3
     transitivePeerDependencies:
       - '@swc/core'
       - '@swc/wasm'
@@ -6035,7 +6038,7 @@ packages:
       '@graphql-mesh/types': 0.96.0(@graphql-mesh/store@0.96.0)(@graphql-tools/utils@9.2.1)(graphql@16.6.0)(tslib@2.6.2)
       '@graphql-tools/delegate': 10.0.3(graphql@16.6.0)
       '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
-      '@whatwg-node/fetch': 0.9.13
+      '@whatwg-node/fetch': 0.9.14
       dset: 3.1.3
       graphql: 16.6.0
       js-yaml: 4.1.0
@@ -8083,7 +8086,7 @@ packages:
       '@graphql-mesh/utils': 0.96.0(@graphql-mesh/cross-helpers@0.4.1)(@graphql-mesh/types@0.96.0)(@graphql-tools/utils@9.2.1)(graphql@16.6.0)(tslib@2.6.2)
       '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
       '@json-schema-tools/meta-schema': 1.7.0
-      '@whatwg-node/fetch': 0.9.13
+      '@whatwg-node/fetch': 0.9.14
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
       dset: 3.1.3
@@ -13486,7 +13489,7 @@ packages:
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
 
-  /cosmiconfig-typescript-loader@4.2.0(@types/node@18.16.16)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.1.6):
+  /cosmiconfig-typescript-loader@4.2.0(@types/node@18.16.16)(cosmiconfig@8.2.0)(ts-node@10.9.1)(typescript@5.8.3):
     resolution: {integrity: sha512-NkANeMnaHrlaSSlpKGyvn2R4rqUDeE/9E5YHx+b4nwo0R8dZyAqcih8/gxpCZvqWP9Vf6xuLpMSzSgdVEIM78g==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -13497,8 +13500,8 @@ packages:
     dependencies:
       '@types/node': 18.16.16
       cosmiconfig: 8.2.0
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
-      typescript: 5.1.6
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
+      typescript: 5.8.3
     dev: true
 
   /cosmiconfig@5.2.1:
@@ -18251,7 +18254,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18291,7 +18294,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18331,7 +18334,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18371,7 +18374,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18411,7 +18414,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18451,7 +18454,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18491,7 +18494,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -18531,7 +18534,7 @@ packages:
       pretty-format: 29.7.0
       slash: 3.0.0
       strip-json-comments: 3.1.1
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -23597,7 +23600,7 @@ packages:
     dependencies:
       lilconfig: 2.0.6
       postcss: 8.4.31
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
       yaml: 1.10.2
     dev: false
 
@@ -23614,7 +23617,7 @@ packages:
         optional: true
     dependencies:
       lilconfig: 2.0.6
-      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.1.6)
+      ts-node: 10.9.1(@types/node@18.16.16)(typescript@5.8.3)
       yaml: 1.10.2
     dev: true
 
@@ -27175,7 +27178,7 @@ packages:
       yn: 3.1.1
     dev: true
 
-  /ts-node@10.9.1(@types/node@18.16.16)(typescript@5.1.6):
+  /ts-node@10.9.1(@types/node@18.16.16)(typescript@5.8.3):
     resolution: {integrity: sha512-NtVysVPkxxrwFGUUxGYhfux8k78pQB3JqYBXlLRZgdGUqTO5wU/UyHop5p70iEbGhB7q5KmiZiU0Y3KlJrScEw==}
     hasBin: true
     peerDependencies:
@@ -27201,7 +27204,7 @@ packages:
       create-require: 1.1.1
       diff: 4.0.2
       make-error: 1.3.6
-      typescript: 5.1.6
+      typescript: 5.8.3
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
 
@@ -27568,6 +27571,11 @@ packages:
 
   /typescript@5.1.6:
     resolution: {integrity: sha512-zaWCozRZ6DLEWAWFrVDz1H6FVXzUSfTy5FUMWsQlU8Ym5JP9eO4xkTIROFCQvhQf61z6O/G6ugw3SgAnvvm+HA==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+  /typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
     engines: {node: '>=14.17'}
     hasBin: true
 
@@ -28958,7 +28966,7 @@ packages:
 
   file:packages/sdk:
     resolution: {directory: packages/sdk, type: directory}
-    name: '@wundergraph/sdk'
+    name: '@virgograph/sdk'
     hasBin: true
     requiresBuild: true
     dependencies:
@@ -28982,6 +28990,9 @@ packages:
       '@opentelemetry/sdk-trace-node': 1.17.1(@opentelemetry/api@1.6.0)
       '@opentelemetry/semantic-conventions': 1.17.1
       '@prisma/generator-helper': 3.15.2
+      '@virgograph/orm': link:packages/orm
+      '@virgograph/protobuf': link:packages/protobuf
+      '@virgograph/wunderctl': link:packages/wunderctl
       '@whatwg-node/fetch': 0.9.14
       '@wundergraph/orm': link:packages/orm
       '@wundergraph/protobuf': link:packages/protobuf
@@ -29000,6 +29011,7 @@ packages:
       get-port: 5.1.1
       graphql: 16.6.0
       graphql-helix: 1.13.0(graphql@16.6.0)
+      graphql-scalars: 1.22.4(patch_hash=ngndi4ac2m7jiobiqhmho5ah7q)(graphql@16.6.0)
       handlebars: 4.7.8
       https-proxy-agent: 5.0.1
       ix: 5.0.0

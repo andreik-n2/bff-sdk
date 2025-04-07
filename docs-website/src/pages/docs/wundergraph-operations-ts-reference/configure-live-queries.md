@@ -10,7 +10,7 @@ so your server can be stateless and scale horizontally.
 
 ```ts
 // wundergraph.operations.ts
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from './generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({

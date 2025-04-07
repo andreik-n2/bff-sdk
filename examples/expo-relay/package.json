@@ -15,8 +15,8 @@
     "build:wundergraph": "wunderctl generate"
   },
   "dependencies": {
-    "@wundergraph/react-relay": "^0.4.33",
-    "@wundergraph/sdk": "^0.184.2",
+    "@virgograph/react-relay": "^0.4.33",
+    "@virgograph/sdk": "^0.184.2",
     "expo": "~48.0.15",
     "expo-status-bar": "~1.4.4",
     "react": "18.2.0",
@@ -29,7 +29,7 @@
     "@types/react": "~18.0.14",
     "@types/react-relay": "^14.1.3",
     "@types/relay-runtime": "^14.1.10",
-    "@wundergraph/metro-config": "^0.0.1",
+    "@virgograph/metro-config": "^0.0.1",
     "babel-plugin-relay": "^15.0.0",
     "concurrently": "^8.0.1",
     "graphql": "^16.6.0",

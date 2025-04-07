@@ -15,7 +15,7 @@ To use it, declare a function that returns your context type and pass it to `cre
 
 ```typescript
 // wundergraph.server.ts
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 
 export class MyContext {
   cleanup() {
@@ -29,7 +29,7 @@ export class MyContext {
   }
 }
 
-declare module '@wundergraph/sdk/server' {
+declare module '@virgograph/sdk/server' {
   export interface CustomContext {
     request: MyContext;
   }
@@ -80,7 +80,7 @@ export default createOperation.query({
 As well as from webhooks:
 
 ```typescript
-import type { WebhookHttpEvent, WebhookHttpResponse } from '@wundergraph/sdk/server';
+import type { WebhookHttpEvent, WebhookHttpResponse } from '@virgograph/sdk/server';
 import { createWebhook } from '../generated/wundergraph.webhooks';
 
 export default createWebhook<WebhookHttpEvent, WebhookHttpResponse>({
@@ -148,7 +148,7 @@ class MyRequestContext {
     constructor(private ctx: MyGlobalContext)
 }
 
-declare module '@wundergraph/sdk/server' {
+declare module '@virgograph/sdk/server' {
 	export interface CustomContext {
     global: MyGlobalContext;
 		request: MyContext;

@@ -1,7 +1,7 @@
 import { CodeGenOutWriter, collectAllTemplates, CodeGenerator, Template, TemplateOutputFile } from './index';
 import { Api } from '../definition';
 import { CodeGenerationConfig } from '../configure';
-import { ConfigurationVariableKind, OperationExecutionEngine, OperationType } from '@wundergraph/protobuf';
+import { ConfigurationVariableKind, OperationExecutionEngine, OperationType } from '@virgograph/protobuf';
 import { mapInputVariable } from '../configure/variables';
 
 class FakeTemplate implements Template {
@@ -887,6 +887,7 @@ export const RunTemplateTest = async (...templates: Template[]) => {
 						secureCookieHashKey: mapInputVariable(''),
 						secureCookieBlockKey: mapInputVariable(''),
 						csrfTokenSecret: mapInputVariable(''),
+						maxLength: mapInputVariable(''),
 					},
 					timeoutSeconds: mapInputVariable(0),
 					customClaims: {},

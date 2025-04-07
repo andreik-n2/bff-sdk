@@ -1,6 +1,6 @@
 import { beforeAll, describe, expect, it } from 'vitest';
 import { createTestServer } from './.wundergraph/generated/testing';
-import { InputValidationError } from '@wundergraph/sdk/client';
+import { InputValidationError } from '@virgograph/sdk/client';
 
 const wg = createTestServer({
 	dir: __dirname,

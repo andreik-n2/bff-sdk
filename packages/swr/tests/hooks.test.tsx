@@ -2,13 +2,13 @@ import { act, waitFor, screen, render } from '@testing-library/react';
 import React from 'react';
 import { SWRConfig, unstable_serialize } from 'swr';
 
-import { Client, ClientConfig } from '@wundergraph/sdk/client';
+import { Client, ClientConfig } from '@virgograph/sdk/client';
 import nock from 'nock';
 import fetch from 'node-fetch';
 
 import { createHooks } from '../src';
-import { InputValidationError } from '@wundergraph/sdk/client';
-import { serialize } from '@wundergraph/sdk/internal';
+import { InputValidationError } from '@virgograph/sdk/client';
+import { serialize } from '@virgograph/sdk/internal';
 
 export function sleep(time: number) {
 	return new Promise<void>((resolve) => setTimeout(resolve, time));
@@ -88,7 +88,7 @@ const nockQuery = (operationName = 'Weather', wgParams = {}) => {
 	return nock('https://api.com')
 		.matchHeader('accept', 'application/json')
 		.matchHeader('content-type', 'application/json')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.get('/operations/' + operationName)
 		.query({ wg_api_hash: '123', ...wgParams });
 };
@@ -96,13 +96,13 @@ const nockQuery = (operationName = 'Weather', wgParams = {}) => {
 const nockMutation = (operationName = 'SetName', wgParams = {}, authenticated = false) => {
 	const csrfScope = nock('https://api.com')
 		.matchHeader('accept', 'text/plain')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.get('/auth/cookie/csrf')
 		.reply(200, 'csrf');
 	const mutation = nock('https://api.com')
 		.matchHeader('accept', 'application/json')
 		.matchHeader('content-type', 'application/json')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.post('/operations/' + operationName, wgParams)
 		.query({ wg_api_hash: '123' });
 
@@ -506,10 +506,10 @@ describe('SWR - useUser', () => {
 		const scope = nock('https://api.com')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/auth/user')
 			.query({ wg_api_hash: '123' })
-			.reply(200, { email: 'info@wundergraph.com' });
+			.reply(200, { email: 'info@virgograph.com' });
 
 		function Page() {
 			const { data, ...rest } = useUser();
@@ -520,7 +520,7 @@ describe('SWR - useUser', () => {
 		renderWithGlobalCache(<Page />);
 
 		await waitFor(() => {
-			screen.getByText('info@wundergraph.com');
+			screen.getByText('info@virgograph.com');
 		});
 
 		scope.done();

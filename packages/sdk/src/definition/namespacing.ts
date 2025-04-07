@@ -23,7 +23,7 @@ import {
 	SingleTypeField,
 	TypeConfiguration,
 	TypeField,
-} from '@wundergraph/protobuf';
+} from '@virgograph/protobuf';
 import { isRootType } from '../graphql/configuration';
 
 const wellKnownGlobalTypeNames: string[] = [

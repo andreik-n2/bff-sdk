@@ -29,7 +29,7 @@ the main configuration file of WunderGraph.
 
 ```typescript
 // wundergraph.config.ts
-import { introspect, configureWunderGraphApplication } from '@wundergraph/sdk';
+import { introspect, configureWunderGraphApplication } from '@virgograph/sdk';
 const spaceX = introspect.graphql({
   apiNamespace: 'spacex',
   url: 'https://spacex-api.fly.dev/graphql/',

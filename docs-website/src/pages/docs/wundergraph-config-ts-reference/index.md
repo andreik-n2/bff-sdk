@@ -12,7 +12,7 @@ Example configuration:
 
 ```typescript
 // wundergraph.config.ts
-import { configureWunderGraphApplication, cors, EnvironmentVariable, introspect, templates } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, cors, EnvironmentVariable, introspect, templates } from '@virgograph/sdk';
 import server from './wundergraph.server';
 import operations from './wundergraph.operations';
 

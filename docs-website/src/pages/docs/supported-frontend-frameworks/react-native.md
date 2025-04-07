@@ -8,7 +8,7 @@ WunderGraph has official support for React Native. You can use the WunderGraph T
 ## Installation
 
 ```bash
-npm i @wundergraph/metro-config
+npm i @virgograph/metro-config
 ```
 
 ## Configuration
@@ -18,7 +18,7 @@ Add the following to your `metro.config.js`:
 ```js
 // metro.config.js
 // Learn more https://docs.expo.io/guides/customizing-metro
-const { wgMetroConfig } = require('@wundergraph/metro-config');
+const { wgMetroConfig } = require('@virgograph/metro-config');
 const { getDefaultConfig } = require('expo/metro-config');
 
 const config = getDefaultConfig(__dirname);

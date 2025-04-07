@@ -33,5 +33,5 @@ curl -N http://localhost:9991/operations/Users
 ## Create User
 
 ```shell
-curl -d '{"email":"test@wundergraph.com","name":"Test","payload": {"type":"mobile","phone":"12345"}}' -H "Content-Type: application/json" -X POST http://localhost:9991/operations/User
+curl -d '{"email":"test@virgograph.com","name":"Test","payload": {"type":"mobile","phone":"12345"}}' -H "Content-Type: application/json" -X POST http://localhost:9991/operations/User
 ```

@@ -31,7 +31,7 @@ Create a new `client` folder inside your `packages` folder (or any other folder 
     "build": "tsup"
   },
   "dependencies": {
-    "@wundergraph/sdk": "^0.149.1"
+    "@virgograph/sdk": "^0.149.1"
   },
   "devDependencies": {
     "tsup": "^6.7.0",

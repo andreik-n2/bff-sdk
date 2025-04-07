@@ -8,7 +8,7 @@ const seed = async () => {
 	const user = await client.query({
 		operationName: 'UserByEmail',
 		input: {
-			email: 'jens@wundergraph.com',
+			email: 'jens@virgograph.com',
 		},
 	});
 	if (user?.data?.db_findFirstUser) {
@@ -43,7 +43,7 @@ const seed = async () => {
 		input: {
 			data: {
 				name: 'Jens',
-				email: 'jens@wundergraph.com',
+				email: 'jens@virgograph.com',
 				Filter: {
 					create: {
 						node_created_after: new Date(2020, 0, 2).toISOString(),

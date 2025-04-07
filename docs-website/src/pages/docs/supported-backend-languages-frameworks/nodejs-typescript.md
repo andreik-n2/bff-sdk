@@ -42,7 +42,7 @@ const createUser = async () => {
     input: {
       name: 'Jens',
       bio: 'Founder@WunderGraph',
-      email: 'jens@wundergraph.com',
+      email: 'jens@virgograph.com',
     },
   });
   console.dir(out);

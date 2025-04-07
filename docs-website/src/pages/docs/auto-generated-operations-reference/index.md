@@ -27,7 +27,7 @@ By default, WunderGraph generates Operations avoiding recursion and internal fie
 
 ```typescript
 // .wundergraph/wundergraph.generate.ts
-import { configureWunderGraphGeneration } from '@wundergraph/sdk';
+import { configureWunderGraphGeneration } from '@virgograph/sdk';
 
 export default configureWunderGraphGeneration({
   codeGenerators: [], // abbreviated for brevity
@@ -43,7 +43,7 @@ export default configureWunderGraphGeneration({
 ```
 
 ```typescript
-import { configureWunderGraphApplication, introspect } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, introspect } from '@virgograph/sdk';
 import generate from './wundergraph.generate';
 
 const federated = introspect.federation({

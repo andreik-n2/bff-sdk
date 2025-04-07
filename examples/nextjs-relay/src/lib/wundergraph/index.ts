@@ -1,4 +1,4 @@
-import { createWunderGraphRelayApp } from '@wundergraph/react-relay';
+import { createWunderGraphRelayApp } from '@virgograph/react-relay';
 import { createClient } from '../../../.wundergraph/generated/client';
 
 const client = createClient();

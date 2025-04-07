@@ -1,5 +1,5 @@
-import { ResponseError } from '@wundergraph/sdk/client';
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { ResponseError } from '@virgograph/sdk/client';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 import { GraphQLEnumType, GraphQLList, GraphQLNonNull, GraphQLObjectType, GraphQLSchema, GraphQLString } from 'graphql';
 
 const testEnum = new GraphQLEnumType({
@@ -26,7 +26,7 @@ export class MyContext {
 	}
 }
 
-declare module '@wundergraph/sdk/server' {
+declare module '@virgograph/sdk/server' {
 	export interface CustomContext {
 		request: MyContext;
 	}

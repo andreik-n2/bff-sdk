@@ -64,7 +64,7 @@ export class Client {
 	constructor(protected options: ClientConfig) {
 		this.baseHeaders = options.sdkVersion
 			? {
-					'WG-SDK-Version': options.sdkVersion,
+					'bff-sdk-Version': options.sdkVersion,
 			  }
 			: {};
 

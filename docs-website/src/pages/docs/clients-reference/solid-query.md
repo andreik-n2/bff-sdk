@@ -9,7 +9,7 @@ Solid Query is a data fetching library for Solid.js.
 ## Installation
 
 ```shell
-npm install @wundergraph/solid-query @tanstack/solid-query
+npm install @virgograph/solid-query @tanstack/solid-query
 ```
 
 ## Configuration
@@ -33,7 +33,7 @@ configureWunderGraphApplication({
 Now you can configure the hooks. Create a new file, for example `lib/wundergraph.ts` and add the following code:
 
 ```ts
-import { createHooks } from '@wundergraph/solid-query';
+import { createHooks } from '@virgograph/solid-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

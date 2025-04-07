@@ -33,9 +33,10 @@ type Bundler struct {
 	outDir                string
 	outExtension          map[string]string
 	fileLoaders           []string
-	buildResult           *api.BuildResult
-	onAfterBundle         func(buildErr error, rebuild bool) error
-	onWatch               func(paths []string)
+	buildContext          api.BuildContext
+	//buildResult           *api.BuildResult
+	onAfterBundle func(buildErr error, rebuild bool) error
+	onWatch       func(paths []string)
 
 	newWatchPath chan *watcher.WatchPath
 }
@@ -102,10 +103,10 @@ func entryPoints(config Config) []api.EntryPoint {
 	return entries
 }
 
-func (b *Bundler) buildErr() error {
+func (b *Bundler) buildErr(errors []api.Message) error {
 	var err error
 
-	for _, message := range b.buildResult.Errors {
+	for _, message := range errors {
 		file := "????"
 		line := 0
 		column := 0
@@ -123,43 +124,55 @@ func (b *Bundler) buildErr() error {
 }
 
 func (b *Bundler) Bundle() error {
-	if b.buildResult != nil {
-		buildResult := b.buildResult.Rebuild()
-		b.buildResult = &buildResult
-		if len(b.buildResult.Errors) != 0 {
+	if b.buildContext != nil {
+		buildResult := b.buildContext.Rebuild()
+		if len(buildResult.Errors) != 0 {
 			b.log.Error("Build failed",
 				zap.String("bundlerName", b.name),
-				zap.Any("errors", b.buildResult.Errors),
+				zap.Any("errors", buildResult.Errors),
 			)
 			if b.onAfterBundle != nil {
-				return b.onAfterBundle(b.buildErr(), true)
+				return b.onAfterBundle(b.buildErr(buildResult.Errors), true)
 			}
-			return b.buildErr()
+			return b.buildErr(buildResult.Errors)
 		}
 
 		b.log.Debug("Build successful", zap.String("bundlerName", b.name))
 
 		if b.onAfterBundle != nil {
-			return b.onAfterBundle(b.buildErr(), true)
+			return b.onAfterBundle(b.buildErr(buildResult.Errors), true)
 		}
 	} else {
-		buildResult := b.initialBuild()
-		b.buildResult = &buildResult
-		if len(b.buildResult.Errors) != 0 {
+		buildCtx, ctxError := b.initialBuildContext()
+		if ctxError != nil && len(ctxError.Errors) != 0 {
 			b.log.Error("Initial Build failed",
 				zap.String("bundlerName", b.name),
-				zap.Any("errors", b.buildResult.Errors),
+				zap.Any("errors", ctxError.Errors),
 			)
 			if b.onAfterBundle != nil {
-				return b.onAfterBundle(b.buildErr(), false)
+				return b.onAfterBundle(b.buildErr(ctxError.Errors), false)
 			}
-			return b.buildErr()
+			return b.buildErr(ctxError.Errors)
 		}
+
+		buildResult := buildCtx.Rebuild()
+		if len(buildResult.Errors) != 0 {
+			b.log.Error("Initial Build failed",
+				zap.String("bundlerName", b.name),
+				zap.Any("errors", buildResult.Errors),
+			)
+			if b.onAfterBundle != nil {
+				return b.onAfterBundle(b.buildErr(buildResult.Errors), false)
+			}
+			return b.buildErr(buildResult.Errors)
+		}
+
+		b.buildContext = buildCtx
 
 		b.log.Debug("Initial Build successful", zap.String("bundlerName", b.name))
 
 		if b.onAfterBundle != nil {
-			return b.onAfterBundle(b.buildErr(), false)
+			return b.onAfterBundle(b.buildErr(buildResult.Errors), false)
 		}
 	}
 
@@ -170,7 +183,7 @@ func (b *Bundler) Watch(ctx context.Context) {
 	if len(b.watchPaths) == 0 {
 		return
 	}
-	if b.buildResult.Rebuild == nil {
+	if b.buildContext == nil {
 		return
 	}
 	if len(b.watchPaths) > 0 {
@@ -180,7 +193,7 @@ func (b *Bundler) Watch(ctx context.Context) {
 			zap.Any("watchPaths", b.watchPaths),
 			zap.Strings("fileLoaders", b.fileLoaders),
 		)
-		b.watch(ctx, b.buildResult.Rebuild)
+		b.watch(ctx)
 	}
 }
 
@@ -192,17 +205,17 @@ func (b *Bundler) BundleAndWatch(ctx context.Context) {
 			zap.String("outFile", b.outFile),
 			zap.Strings("fileLoaders", b.fileLoaders),
 		)
-		b.watch(ctx, b.buildResult.Rebuild)
+		b.watch(ctx)
 	}
 }
 
-func (b *Bundler) initialBuild() api.BuildResult {
+func (b *Bundler) initialBuildContext() (api.BuildContext, *api.ContextError) {
 	options := api.BuildOptions{
-		Outfile:             b.outFile,
-		Outdir:              b.outDir,
-		OutExtension:        b.outExtension,
-		Bundle:              true,
-		Incremental:         true,
+		Outfile:      b.outFile,
+		Outdir:       b.outDir,
+		OutExtension: b.outExtension,
+		Bundle:       true,
+		//Incremental:         true,
 		EntryPointsAdvanced: b.entryPoints,
 		Platform:            api.PlatformNode,
 		Sourcemap:           api.SourceMapLinked,
@@ -300,14 +313,13 @@ func (b *Bundler) initialBuild() api.BuildResult {
 	for _, loader := range b.fileLoaders {
 		options.Loader[loader] = api.LoaderText
 	}
-	result := api.Build(options)
 
-	return result
+	return api.Context(options)
 }
 
-func (b *Bundler) watch(ctx context.Context, rebuild func() api.BuildResult) {
+func (b *Bundler) watch(ctx context.Context) {
 	watcherCtx, cancel := context.WithCancel(ctx)
-	b.runWatcher(watcherCtx, rebuild)
+	b.runWatcher(watcherCtx)
 
 	for {
 		select {
@@ -318,12 +330,12 @@ func (b *Bundler) watch(ctx context.Context, rebuild func() api.BuildResult) {
 			b.watchPaths = append(b.watchPaths, watchPath)
 			cancel()
 			watcherCtx, cancel = context.WithCancel(ctx)
-			b.runWatcher(watcherCtx, rebuild)
+			b.runWatcher(watcherCtx)
 		}
 	}
 }
 
-func (b *Bundler) runWatcher(ctx context.Context, rebuild func() api.BuildResult) {
+func (b *Bundler) runWatcher(ctx context.Context) {
 	w := watcher.NewWatcher(b.name, &watcher.Config{
 		IgnorePaths: b.ignorePaths,
 		WatchPaths:  b.watchPaths,
@@ -334,10 +346,10 @@ func (b *Bundler) runWatcher(ctx context.Context, rebuild func() api.BuildResult
 			if b.onWatch != nil {
 				b.onWatch(paths)
 			}
-			result := rebuild()
-			b.buildResult = &result
+
+			buildResult := b.buildContext.Rebuild()
 			if b.onAfterBundle != nil {
-				if err := b.onAfterBundle(b.buildErr(), true); err != nil {
+				if err := b.onAfterBundle(b.buildErr(buildResult.Errors), true); err != nil {
 					b.log.Error("Bundler build error on watch", zap.Error(err), zap.String("bundlerName", b.name))
 				}
 			}

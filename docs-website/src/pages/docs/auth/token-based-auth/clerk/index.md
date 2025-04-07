@@ -54,7 +54,7 @@ Open `pages/_app.tsx` and add the `useWunderGraphClerk` middleware to the `withW
 ```tsx {% filename="pages/_app.tsx" %}
 import { Middleware } from 'swr';
 import { useAuth } from '@clerk/nextjs';
-import { useAuthMiddleware } from '@wundergraph/nextjs';
+import { useAuthMiddleware } from '@virgograph/nextjs';
 import { withWunderGraph } from '../components/generated/nextjs';
 
 export const useWunderGraphClerk: Middleware = (useSWRNext) => {

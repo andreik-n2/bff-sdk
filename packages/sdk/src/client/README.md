@@ -8,13 +8,13 @@ Use it to build your own 3rd party integration with WunderGraph.
 ## Getting Started
 
 ```shell
-npm install @wundergraph/sdk
+npm install @virgograph/sdk
 ```
 
 ### Create the client
 
 ```ts
-import { Client } from '@wundergraph/sdk/client';
+import { Client } from '@virgograph/sdk/client';
 
 const client = new Client({
   applicationHash: '1f7dac83',
@@ -36,7 +36,7 @@ npm i node-fetch
 ```
 
 ```ts
-import { Client } from '@wundergraph/sdk/client';
+import { Client } from '@virgograph/sdk/client';
 import fetch from 'node-fetch';
 
 const client = new Client({
@@ -197,7 +197,7 @@ Every error contain the HTTP response status code as `statusCode` property.
 For common errors like 401, 400, 500, we provide built in Error classes that can be used to identify the error more conveniently. Those errors are available to GraphQL and TypeScript operations.
 
 ```ts
-import { AuthorizationError, InputValidationError, InternalError } from '@wundergraph/sdk/client';
+import { AuthorizationError, InputValidationError, InternalError } from '@virgograph/sdk/client';
 
 if (error instanceof AuthorizationError) {
   // 401
@@ -233,7 +233,7 @@ All known and custom errors have a `code` property that can be used to identify 
 If you want to create customer errors for TypeScript operations, you can extend the `OperationError` base class and throw it in your handler.
 
 ```ts
-import { ReponseError } from '@wundergraph/sdk/client';
+import { ReponseError } from '@virgograph/sdk/client';
 import { createClient } from '../.wundergraph/generated/client';
 
 const client = createClient();

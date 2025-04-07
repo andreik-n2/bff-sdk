@@ -23,7 +23,7 @@ Here's an example of how the `wundergraph.operations.ts` file could look like:
 
 ```ts
 // wundergraph.operations.ts
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from './generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({

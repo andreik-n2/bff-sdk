@@ -1,4 +1,4 @@
-import type { Webhook, WebhookHttpEvent, WebhookHttpResponse } from '@wundergraph/sdk/server';
+import type { Webhook, WebhookHttpEvent, WebhookHttpResponse } from '@virgograph/sdk/server';
 
 const webhook: Webhook<
 	WebhookHttpEvent<{ myBodyVar: string }, { myQueryVar: string }, { myHeaderVar: string }>,

@@ -16,7 +16,7 @@ WunderGraph is extremely fast executing GraphQL Operations and is therefore a gr
 To add a Apollo Federation data source, edit `.wundergraph/wundergraph.config.ts` and introspect the SubGraphs like the config below.
 
 ```typescript
-import { configureWunderGraphApplication, introspect } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, introspect } from '@virgograph/sdk';
 
 const federatedApi = introspect.federation({
   apiNamespace: 'federated',

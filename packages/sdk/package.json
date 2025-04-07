@@ -1,6 +1,6 @@
 {
-  "name": "@wundergraph/sdk",
-  "version": "0.184.2",
+  "name": "@virgograph/sdk",
+  "version": "0.186.0",
   "license": "Apache-2.0",
   "exports": {
     ".": {
@@ -140,7 +140,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/bff-sdk.git"
   },
   "homepage": "https://wundergraph.com",
   "author": {
@@ -194,6 +194,7 @@
     "@omnigraph/json-schema": "0.96.0",
     "@omnigraph/openapi": "0.96.0",
     "@omnigraph/soap": "0.96.0",
+    "graphql-scalars": "1.22.4",
     "@opentelemetry/api": "^1.4.1",
     "@opentelemetry/core": "^1.13.0",
     "@opentelemetry/exporter-trace-otlp-proto": "^0.39.1",
@@ -202,11 +203,11 @@
     "@opentelemetry/sdk-trace-node": "^1.13.0",
     "@opentelemetry/semantic-conventions": "^1.13.0",
     "@prisma/generator-helper": "^3.9.2",
-    "@whatwg-node/fetch": "^0.9.13",
-    "@wundergraph/orm": "workspace:*",
-    "@wundergraph/protobuf": "workspace:^0.118.2",
+    "@virgograph/orm": "workspace:*",
+    "@virgograph/protobuf": "workspace:^0.121.0",
     "@wundergraph/straightforward": "^4.2.5",
-    "@wundergraph/wunderctl": "workspace:^0.180.0",
+    "@virgograph/wunderctl": "workspace:^0.181.0",
+    "@whatwg-node/fetch": "^0.9.13",
     "axios": "^0.26.1",
     "axios-retry": "^3.3.1",
     "close-with-grace": "^1.1.0",

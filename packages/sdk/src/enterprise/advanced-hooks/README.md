@@ -13,9 +13,9 @@ This enables use cases like:
 
 ```typescript
 // wundergraph.config.ts
-import type { WunderGraphConfig } from '@wundergraph/sdk';
-import { dynamicTransport } from '@wundergraph/sdk/advanced-hooks';
-import { graphql } from '@wundergraph/sdk/datasources';
+import type { WunderGraphConfig } from '@virgograph/sdk';
+import { dynamicTransport } from '@virgograph/sdk/advanced-hooks';
+import { graphql } from '@virgograph/sdk/datasources';
 
 const transport = dynamicTransport({
   match: [
@@ -41,7 +41,7 @@ export default {
 
 ```typescript
 // wundergraph.server.ts
-import { configureWunderGraphServer } from '@wundergraph/sdk';
+import { configureWunderGraphServer } from '@virgograph/sdk';
 import config from './wundergraph.config';
 
 export default configureWunderGraphServer(() => ({
@@ -55,7 +55,7 @@ export default configureWunderGraphServer(() => ({
 ### Injecting headers
 
 ```ts
-import { dynamicTransport } from '@wundergraph/sdk/advanced-hooks';
+import { dynamicTransport } from '@virgograph/sdk/advanced-hooks';
 
 const transport = dynamicTransport({
   match: {
@@ -82,7 +82,7 @@ const transport = dynamicTransport({
 ### Fetch and merge multiple requests
 
 ```ts
-import { dynamicTransport, mergeGraphQLRequests } from '@wundergraph/sdk/advanced-hooks';
+import { dynamicTransport, mergeGraphQLRequests } from '@virgograph/sdk/advanced-hooks';
 
 const transport = dynamicTransport({
   match: {

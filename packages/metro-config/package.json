@@ -1,5 +1,5 @@
 {
-  "name": "@wundergraph/metro-config",
+  "name": "@virgograph/metro-config",
   "version": "0.0.1",
   "license": "Apache-2.0",
   "description": "WunderGraph Metro Config for React Native and Expo",
@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/bff-sdk.git"
   },
   "dependencies": {
     "event-source-polyfill": "^1.0.31",
@@ -35,7 +35,7 @@
   "homepage": "https://wundergraph.com",
   "author": {
     "name": "WunderGraph Maintainers",
-    "email": "info@wundergraph.com"
+    "email": "info@virgograph.com"
   },
   "keywords": [
     "expo",

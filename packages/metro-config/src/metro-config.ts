@@ -14,12 +14,12 @@ export const wgMetroConfig = (config: MetroConfig) => {
 			...config.resolver,
 			resolveRequest: (context, moduleName, platform) => {
 				// React Native doesn't support exports field in package.json, so we resolve it manually.
-				if (moduleName.startsWith('@wundergraph/sdk/client')) {
-					return context.resolveRequest(context, '@wundergraph/sdk/dist/client', platform);
+				if (moduleName.startsWith('@virgograph/sdk/client')) {
+					return context.resolveRequest(context, '@virgograph/sdk/dist/client', platform);
 				}
 
-				if (moduleName.startsWith('@wundergraph/sdk/internal')) {
-					return context.resolveRequest(context, '@wundergraph/sdk/dist/internal', platform);
+				if (moduleName.startsWith('@virgograph/sdk/internal')) {
+					return context.resolveRequest(context, '@virgograph/sdk/dist/internal', platform);
 				}
 
 				if (config.resolver?.resolveRequest) {

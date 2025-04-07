@@ -14,7 +14,7 @@ import type {
 	MutationHookWithoutInput,
 	SubscriptionHook,
 	SubscriptionHookWithoutInput,
-} from "@wundergraph/sdk/server";
+} from "@virgograph/sdk/server";
 import type { User } from "./wundergraph.server"
 import { InternalOperationsClient } from "./wundergraph.internal.operations.client";
 

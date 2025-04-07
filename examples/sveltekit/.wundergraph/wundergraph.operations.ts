@@ -1,4 +1,4 @@
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from '../src/lib/.wundergraph/generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({

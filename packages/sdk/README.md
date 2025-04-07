@@ -2,7 +2,7 @@
 
 # WunderGraph SDK
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/sdk.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/sdk.svg)
 [![Star us on GitHub](https://img.shields.io/github/stars/wundergraph/wundergraph?color=FFD700&label=Stars&logo=Github)](https://github.com/wundergraph/wundergraph)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/wundergraph/wundergraph/blob/main/CONTRIBUTING.md)
 [![License Apache 2](https://img.shields.io/badge/license-Apache%202-blue)](https://github.com/wundergraph/wundergraph/blob/main/LICENSE)
@@ -50,7 +50,7 @@ Here's how WunderGraph works:
 ```typescript
 // .wundergraph/wundergraph.config.ts
 
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 
 // introspect a PostgreSQL database
 const pg = introspect.postgresql({
@@ -213,8 +213,8 @@ Now, the only thing our community is missing is you!
 
 # Exports
 
-- [@wundergraph/sdk/client](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/client)
-- [@wundergraph/sdk/internal](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/internal)
-- [@wundergraph/sdk/internal/logger](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/logger)
-- [@wundergraph/sdk/server](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/server)
-- [@wundergraph/sdk/testing](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/testing)
+- [@virgograph/sdk/client](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/client)
+- [@virgograph/sdk/internal](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/internal)
+- [@virgograph/sdk/internal/logger](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/logger)
+- [@virgograph/sdk/server](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/server)
+- [@virgograph/sdk/testing](https://github.com/wundergraph/wundergraph/tree/main/packages/sdk/src/testing)

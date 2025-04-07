@@ -38,7 +38,7 @@ if test ${target} = "workspace"; then
 		echo "  - '!examples/nuxt'" >> pnpm-workspace.yaml
 
     # Replace dependencies with workspace
-    find examples -name package.json -exec sed -i.bak -E 's/(@wundergraph\/.*": ")\^[0-9\.]+/\1workspace:*/g' {} \;
+    find examples -name package.json -exec sed -i.bak -E 's/(@virgograph\/.*": ")\^[0-9\.]+/\1workspace:*/g' {} \;
     find examples -name package.json.bak -exec rm {} \;
     pnpm install --no-frozen-lockfile
 fi

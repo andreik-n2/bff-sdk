@@ -33,7 +33,7 @@ Here's how you can do this:
 ```typescript
 // wundergraph.config.ts
 
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 
 configureWunderGraphApplication({
   application: myApplication,

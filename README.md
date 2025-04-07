@@ -56,7 +56,7 @@ Here's how WunderGraph works:
 ```typescript
 // .wundergraph/wundergraph.config.ts
 
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 
 // introspect a PostgreSQL database
 const pg = introspect.postgresql({

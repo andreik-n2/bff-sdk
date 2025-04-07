@@ -1,7 +1,7 @@
 import { Middleware } from 'swr';
 import { createClient } from '../.wundergraph/generated/client';
 import { useAuth } from '@clerk/nextjs';
-import { useAuthMiddleware } from '@wundergraph/nextjs';
+import { useAuthMiddleware } from '@virgograph/nextjs';
 
 export const client = createClient();
 

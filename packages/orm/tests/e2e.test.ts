@@ -100,6 +100,7 @@ describe('e2e', () => {
 			namespace: 'foo',
 		});
 
+		//@ts-ignore
 		const result = await query('getCityByName')
 			.select('id', 'name', 'coord.x', 'coord.y', 'coord.zs')
 			.where({ name: 'abc', coord: { required: '', zs: { foo: 'bar' } } })

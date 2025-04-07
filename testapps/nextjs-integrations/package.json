@@ -4,12 +4,12 @@
   "version": "0.1.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/bff-sdk.git"
   },
   "homepage": "https://wundergraph.com",
   "author": {
     "name": "WunderGraph Maintainers",
-    "email": "info@wundergraph.com"
+    "email": "info@virgograph.com"
   },
   "bugs": {
     "url": "https://github.com/wundergraph/wundergraph/issues"
@@ -26,9 +26,9 @@
     "start": "next start --port 3003"
   },
   "dependencies": {
-    "@wundergraph/nextjs": "workspace:*",
-    "@wundergraph/sdk": "workspace:*",
-    "@wundergraph/swr": "workspace:*",
+    "@virgograph/nextjs": "workspace:*",
+    "@virgograph/sdk": "workspace:*",
+    "@virgograph/swr": "workspace:*",
     "next": "^14.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",

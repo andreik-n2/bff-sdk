@@ -1,4 +1,4 @@
-import { configureWunderGraphOperations, enableCaching } from '@wundergraph/sdk';
+import { configureWunderGraphOperations, enableCaching } from '@virgograph/sdk';
 
 export default configureWunderGraphOperations({
 	operations: {

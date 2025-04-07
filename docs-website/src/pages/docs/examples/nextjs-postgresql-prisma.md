@@ -76,7 +76,7 @@ const seed = async () => {
   const user = await client.query({
     operationName: 'UserByEmail',
     input: {
-      email: 'jens@wundergraph.com',
+      email: 'jens@virgograph.com',
     },
   });
   if (user?.data?.db_findFirstUser) {
@@ -87,7 +87,7 @@ const seed = async () => {
     input: {
       name: 'Jens',
       bio: 'Founder@WunderGraph',
-      email: 'jens@wundergraph.com',
+      email: 'jens@virgograph.com',
       title: 'Welcome to WunderGraph!',
       content: 'This is WunderGraph =)',
       published: true,
@@ -101,7 +101,7 @@ seed();
 
 ## Learn more
 
-- [@wundergraph/react-query reference](/docs/clients-reference/react-query)
+- [@virgograph/react-query reference](/docs/clients-reference/react-query)
 - [React Query documentation](https://tanstack.com/query/v4/docs/overview)
 - [Next.js client documentation](/docs/clients-reference/nextjs)
 

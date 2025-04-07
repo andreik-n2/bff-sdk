@@ -1,7 +1,7 @@
 import { waitFor, screen, render, fireEvent } from '@testing-library/vue';
 import { QueryCache, QueryClient, useQueryClient, VueQueryPlugin } from '@tanstack/vue-query';
 
-import { Client, ClientConfig, OperationsDefinition, ResponseError } from '@wundergraph/sdk/client';
+import { Client, ClientConfig, OperationsDefinition, ResponseError } from '@virgograph/sdk/client';
 import nock from 'nock';
 import fetch from 'node-fetch';
 
@@ -78,7 +78,7 @@ const nockQuery = (operationName = 'Weather', wgParams = {}) => {
 	return nock('https://api.com')
 		.matchHeader('accept', 'application/json')
 		.matchHeader('content-type', 'application/json')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.get(`/operations/${operationName}`)
 		.query({ wg_api_hash: '123', ...wgParams });
 };
@@ -86,13 +86,13 @@ const nockQuery = (operationName = 'Weather', wgParams = {}) => {
 const nockMutation = (operationName = 'SetName', wgParams = {}, authenticated = false) => {
 	const csrfScope = nock('https://api.com')
 		.matchHeader('accept', 'text/plain')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.get('/auth/cookie/csrf')
 		.reply(200, 'csrf');
 	const mutation = nock('https://api.com')
 		.matchHeader('accept', 'application/json')
 		.matchHeader('content-type', 'application/json')
-		.matchHeader('WG-SDK-Version', '1.0.0')
+		.matchHeader('bff-sdk-Version', '1.0.0')
 		.post(`/operations/${operationName}`, wgParams)
 		.query({ wg_api_hash: '123' });
 
@@ -285,13 +285,13 @@ describe('Vue Query - useMutation', () => {
 			})
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.post('/operations/SetNameWithoutAuth', { name: 'Rick Astley' })
 			.query({ wg_api_hash: '123' })
 			.reply(200, { data: { id: '1', name: 'Rick Astley' } })
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/operations/Weather')
 			.query({ wg_api_hash: '123' })
 			.reply(200, { data: { id: '1', name: 'Rick Astley' } });
@@ -358,7 +358,7 @@ describe('Vue Query - useSubscription', () => {
 	it('should subscribe', async () => {
 		// web streams not supported in node-fetch, we use subscribeOnce to test
 		const scope = nock('https://api.com')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
 			.get('/operations/Countdown')
@@ -420,10 +420,10 @@ describe('Vue Query - useUser', () => {
 		const scope = nock('https://api.com')
 			.matchHeader('accept', 'application/json')
 			.matchHeader('content-type', 'application/json')
-			.matchHeader('WG-SDK-Version', '1.0.0')
+			.matchHeader('bff-sdk-Version', '1.0.0')
 			.get('/auth/user')
 			.query({ wg_api_hash: '123' })
-			.reply(200, { email: 'info@wundergraph.com' });
+			.reply(200, { email: 'info@virgograph.com' });
 
 		const component = defineComponent({
 			setup() {
@@ -439,7 +439,7 @@ describe('Vue Query - useUser', () => {
 		renderWithPlugin(component);
 
 		await waitFor(() => {
-			screen.getByText('info@wundergraph.com');
+			screen.getByText('info@virgograph.com');
 		});
 
 		scope.done();

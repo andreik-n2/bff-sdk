@@ -1,4 +1,4 @@
-import { authProviders, configureWunderGraphApplication, cors, introspect, templates, EnvironmentVariable } from '@wundergraph/sdk';
+import { authProviders, configureWunderGraphApplication, cors, introspect, templates, EnvironmentVariable } from '@virgograph/sdk';
 import operations from './wundergraph.operations';
 import server from './wundergraph.server';
 

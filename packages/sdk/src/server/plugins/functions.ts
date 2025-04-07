@@ -1,6 +1,6 @@
 import { FastifyPluginAsync } from 'fastify';
 import path from 'path';
-import type { ORM } from '@wundergraph/orm';
+import type { ORM } from '@virgograph/orm';
 
 import type { TypeScriptOperationFile } from '../../graphql/operations';
 import type { NodeJSOperation } from '../../operations';
@@ -57,6 +57,7 @@ const FastifyFunctionsPlugin: FastifyPluginAsync<FastifyFunctionsOptions> = asyn
 			if (!maybeImplementation) {
 				continue;
 			}
+			//@ts-ignore
 			fastify.route<{ Body: FastifyRequestBody }, FunctionRouteConfig>({
 				url: routeUrl,
 				method: ['POST'],
@@ -64,6 +65,7 @@ const FastifyFunctionsPlugin: FastifyPluginAsync<FastifyFunctionsOptions> = asyn
 					kind: 'function',
 					functionName: operation.operation_name,
 				},
+				//@ts-ignore
 				handler: async (req, reply) => {
 					let requestContext;
 					const implementation = maybeImplementation!;
@@ -217,9 +219,10 @@ const FastifyFunctionsPlugin: FastifyPluginAsync<FastifyFunctionsOptions> = asyn
 			fastify.log.error(err, `Failed to register function at ${operation.module_path}`);
 		}
 	}
-
+	//@ts-ignore
 	fastify.addHook('onRequest', async (req, resp) => {
 		if (req.telemetry) {
+			//@ts-ignore
 			const routeConfig = req.routeConfig as FunctionRouteConfig;
 			const span = trace.getSpan(req.telemetry.context);
 			if (span) {

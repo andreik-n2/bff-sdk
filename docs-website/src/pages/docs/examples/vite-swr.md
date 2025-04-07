@@ -32,7 +32,7 @@ configureWunderGraphApplication({
 });
 ```
 
-What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by SWR [`@wundergraph/swr`](https://github.com/wundergraph/wundergraph/tree/main/packages/swr) package.
+What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by SWR [`@virgograph/swr`](https://github.com/wundergraph/wundergraph/tree/main/packages/swr) package.
 
 Next up is setting up the SWR hooks.
 
@@ -41,7 +41,7 @@ Next up is setting up the SWR hooks.
 
 import { createClient, Operations } from '../generated/client';
 
-import { createHooks } from '@wundergraph/swr';
+import { createHooks } from '@virgograph/swr';
 
 export const client = createClient();
 
@@ -182,15 +182,15 @@ export default App;
 You can configure the hooks globally by using the [SWRConfig](https://swr.vercel.app/docs/global-configuration) context.
 
 In case the context configuration isn't working, it's likely due to multiple versions of SWR being installed or due to how PNPM or Yarn PnP link packages.
-To resolve this you can import SWR directly from `@wundergraph/swr` to make sure the same instance is used.
+To resolve this you can import SWR directly from `@virgograph/swr` to make sure the same instance is used.
 
 ```ts
-import { SWRConfig, useSWRConfig } from '@wundergraph/swr';
+import { SWRConfig, useSWRConfig } from '@virgograph/swr';
 ```
 
 ## Learn more
 
-- [@wundergraph/swr reference](/docs/clients-reference/swr)
+- [@virgograph/swr reference](/docs/clients-reference/swr)
 - [SWR documentation](https://swr.vercel.app/)
 - [Vite documentation](https://vitejs.dev)
 

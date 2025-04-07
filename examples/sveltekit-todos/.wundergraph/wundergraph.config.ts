@@ -1,7 +1,7 @@
-import { authProviders, configureWunderGraphApplication, cors, introspect, templates } from '@wundergraph/sdk';
+import { authProviders, configureWunderGraphApplication, cors, introspect, templates } from '@virgograph/sdk';
 import operations from './wundergraph.operations';
 import server from './wundergraph.server';
-import { EnvironmentVariable } from '@wundergraph/sdk'
+import { EnvironmentVariable } from '@virgograph/sdk'
 
 const db = introspect.postgresql({
 	apiNamespace: 'db',

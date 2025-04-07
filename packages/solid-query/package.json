@@ -1,6 +1,6 @@
 {
-  "name": "@wundergraph/solid-query",
-  "version": "0.5.33",
+  "name": "@virgograph/solid-query",
+  "version": "0.6.0",
   "license": "Apache-2.0",
   "description": "WunderGraph Solid Query Integration",
   "main": "./dist/index.js",
@@ -29,11 +29,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/bff-sdk.git"
   },
   "peerDependencies": {
     "@tanstack/solid-query": "^4.29.1",
-    "@wundergraph/sdk": ">=0.110.0",
+    "@virgograph/sdk": ">=0.110.0",
     "solid-js": "^1.5.7"
   },
   "devDependencies": {
@@ -47,7 +47,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@types/jest": "^28.1.1",
     "@types/node-fetch": "2.6.2",
-    "@wundergraph/sdk": "workspace:*",
+    "@virgograph/sdk": "workspace:*",
     "babel-jest": "^29.4.2",
     "babel-preset-solid": "^1.6.10",
     "jest": "^29.6.1",

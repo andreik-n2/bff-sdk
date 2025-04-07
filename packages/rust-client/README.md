@@ -7,7 +7,7 @@ To enable it, add its generator to your WunderGraph application.
 
 ```typescript
 
-import { rustClient } from '@wundergraph/rust-client';
+import { rustClient } from '@virgograph/rust-client';
 ...
 
 configureWunderGraphApplication({

@@ -15,7 +15,7 @@ Our ORM is currently alpha so expect bugs and API changes. Please report bugs an
 Since the ORM is experimental you must explicitly opt-in to said functionality. Set `experimental.orm` to `true` in your `wundergraph.config.ts`.
 
 ```typescript
-import { configureWunderGraphApplication } from '@wundergraph/sdk';
+import { configureWunderGraphApplication } from '@virgograph/sdk';
 
 configureWunderGraphApplication({
   // ...

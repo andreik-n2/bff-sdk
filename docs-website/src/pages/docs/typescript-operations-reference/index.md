@@ -70,7 +70,7 @@ Import `createOperation` to create a query, mutation or subscription. `z` is a s
 Thanks to using zod to define the input schema, we're automatically creating a JSON Schema for input validation and the `input` argument to the handler function is type-safe.
 
 The `wunderctl up` command will automatically pick up the new operation, compile (transpile) the function and add it to the router of your WunderGraph Application.
-We've carefully crafted the `.wundergraph/generated/wundergraph.factory` file to be as type-safe as possible and only import the necessary modules from the `@wundergraph/sdk` package to keep the bundle size small.
+We've carefully crafted the `.wundergraph/generated/wundergraph.factory` file to be as type-safe as possible and only import the necessary modules from the `@virgograph/sdk` package to keep the bundle size small.
 WunderGraph internally uses `esbuild` to transpile the TypeScript code, so it's reasonably fast.
 
 We can now use curl to call this operation:
@@ -112,7 +112,7 @@ WunderGraph comes with a few built-in errors, which you can use to throw errors 
 - `InternalError`: Thrown when an internal error occurs
 
 ```typescript
-import { AuthorizationError, InternalError } from '@wundergraph/sdk/operations';
+import { AuthorizationError, InternalError } from '@virgograph/sdk/operations';
 import { createOperation, z } from '../generated/wundergraph.factory';
 
 export default createOperation.query({
@@ -129,7 +129,7 @@ Custom errors are defined by extending the `OperationError` class and must be pa
 
 ```typescript
 // .wundergraph/operations/math/divide.ts
-import { OperationError } from '@wundergraph/sdk/operations';
+import { OperationError } from '@virgograph/sdk/operations';
 import { createOperation, z } from '../generated/wundergraph.factory';
 
 export class DividedByZero extends OperationError {
@@ -173,7 +173,7 @@ Now, when we call this operation with `b` being `0`, we'll get the following err
 The generated clients are aware of the error codes, so you can handle them in a type-safe way:
 
 ```typescript
-import { ReponseError } from '@wundergraph/sdk/client';
+import { ReponseError } from '@virgograph/sdk/client';
 import { createClient } from '../.wundergraph/generated/client';
 
 const client = createClient();

@@ -48,7 +48,7 @@ query Dragons {
 Your operations will be compiled into RPC endpoints. The template will generate TypeScript client, using which we can create Svelte Query client utilities
 
 ```ts
-import { createSvelteClient } from '@wundergraph/svelte-query';
+import { createSvelteClient } from '@virgograph/svelte-query';
 import { createClient } from '../generated/client';
 import type { Operations } from '../generated/client';
 

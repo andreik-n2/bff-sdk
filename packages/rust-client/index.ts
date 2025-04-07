@@ -6,15 +6,15 @@ import Handlebars from 'handlebars';
 import { JSONSchema7 as JSONSchema, JSONSchema7Definition } from 'json-schema';
 import { capitalize } from 'lodash';
 
-import { OperationType } from '@wundergraph/protobuf';
-import { CodeGenerationConfig, GraphQLOperation, Template, TemplateOutputFile } from '@wundergraph/sdk';
-import { hasInput } from '@wundergraph/sdk/internal/codegen';
+import { OperationType } from '@virgograph/protobuf';
+import { CodeGenerationConfig, GraphQLOperation, Template, TemplateOutputFile } from '@virgograph/sdk';
+import { hasInput } from '@virgograph/sdk/internal/codegen';
 import {
 	configurationHash,
 	operationInputTypename,
 	operationResponseTypename,
-} from '@wundergraph/sdk/dist/codegen/templates/typescript/helpers';
-import Logger from '@wundergraph/sdk/internal/logger';
+} from '@virgograph/sdk/dist/codegen/templates/typescript/helpers';
+import Logger from '@virgograph/sdk/internal/logger';
 
 const logger = Logger.child({ plugin: 'rust-client' });
 

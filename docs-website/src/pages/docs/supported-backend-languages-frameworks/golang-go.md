@@ -14,7 +14,7 @@ To use it, follow these steps:
 In your `wundergraph.config.ts`, import the golang client generator:
 
 ```ts
-import { golangClient } from '@wundergraph/golang-client';
+import { golangClient } from '@virgograph/golang-client';
 ```
 
 Then, add it to the `codeGenerators` of `configureWunderGraphApplication`:

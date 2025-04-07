@@ -8,7 +8,7 @@ import {
 	GraphQLInputObjectType,
 	GraphQLNonNull,
 } from 'graphql';
-import { AuthenticationResponse, configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { AuthenticationResponse, configureWunderGraphServer } from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({
 	hooks: {

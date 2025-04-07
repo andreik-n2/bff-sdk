@@ -30,14 +30,14 @@ configureWunderGraphApplication({
 });
 ```
 
-What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by Solid Query [`@wundergraph/solid-query`](https://github.com/wundergraph/wundergraph/tree/main/packages/solid-query) package.
+What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by Solid Query [`@virgograph/solid-query`](https://github.com/wundergraph/wundergraph/tree/main/packages/solid-query) package.
 
 Next up is setting up the Solid Query hooks.
 
 ```ts
 // lib/wundergraph.ts
 import { createClient, Operations } from '../generated/client';
-import { createHooks } from '@wundergraph/solid-query';
+import { createHooks } from '@virgograph/solid-query';
 
 export const client = createClient();
 

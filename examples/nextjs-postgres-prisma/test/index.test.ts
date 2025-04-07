@@ -13,7 +13,7 @@ describe('Test User APIs', () => {
 			input: {
 				name: 'Jens',
 				bio: 'Founder@WunderGraph',
-				email: 'jens@wundergraph.com',
+				email: 'jens@virgograph.com',
 				title: 'Welcome to WunderGraph!',
 				content: 'This is WunderGraph =)',
 				published: true,
@@ -23,7 +23,7 @@ describe('Test User APIs', () => {
 		const result = await wg.client().query({
 			operationName: 'UserByEmail',
 			input: {
-				email: 'jens@wundergraph.com',
+				email: 'jens@virgograph.com',
 			},
 		});
 		expect(result.error).toBeFalsy();

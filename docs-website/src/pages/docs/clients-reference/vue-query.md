@@ -9,7 +9,7 @@ Vue Query is a data fetching library for Vue. With just one hook, you can signif
 ## Installation
 
 ```shell
-npm install @wundergraph/vue-query @tanstack/vue-query
+npm install @virgograph/vue-query @tanstack/vue-query
 ```
 
 ## Configuration
@@ -33,7 +33,7 @@ configureWunderGraphApplication({
 Now you can configure the hooks. Create a new file, for example `lib/wundergraph.ts` and add the following code:
 
 ```ts
-import { createHooks } from '@wundergraph/vue-query';
+import { createHooks } from '@virgograph/vue-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

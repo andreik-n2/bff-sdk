@@ -1,6 +1,6 @@
 # WunderGraph React Query Integration
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/react-query.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/react-query.svg)
 
 This package provides a type-safe integration of [React Query](https://tanstack.com/query/v4/docs/overview) with WunderGraph.
 React Query is a data fetching library for React. With just one hook, you can significantly simplify the data fetching logic in your project. And it also covered in all aspects of speed, correctness, and stability to help you build better experiences.
@@ -10,7 +10,7 @@ React Query is a data fetching library for React. With just one hook, you can si
 ## Getting Started
 
 ```shell
-npm install @wundergraph/react-query @tanstack/react-query
+npm install @virgograph/react-query @tanstack/react-query
 ```
 
 Before you can use the hooks, you need to modify your code generation to include the base typescript client.
@@ -34,7 +34,7 @@ Second, run `wunderctl generate` to generate the code.
 Now you can configure the hooks. Create a new file, for example `lib/wundergraph.ts` and add the following code:
 
 ```ts
-import { createHooks } from '@wundergraph/react-query';
+import { createHooks } from '@virgograph/react-query';
 import { createClient, Operations } from './components/generated/client';
 
 const client = createClient(); // Typesafe WunderGraph client

@@ -15,7 +15,7 @@ import ora from 'ora';
 
 const resolveLatestWundergraphRef = async () => {
 	try {
-		const tags = await getRepoTags('https://github.com/wundergraph/wundergraph', '@wundergraph/sdk');
+		const tags = await getRepoTags('https://github.com/wundergraph/wundergraph', '@virgograph/sdk');
 		return tags[tags.length - 1];
 	} catch (e: any) {
 		// If we run into API limits, download the main branch
@@ -138,7 +138,7 @@ export const getRepository = async ({
 			// Install the wundergraph sdk
 			const pm = packageManagerPrompt['packageManager'];
 			const command = pm === 'yarn' ? 'add' : 'install';
-			execSync(`${pm} ${command} @wundergraph/sdk`, { cwd: resolvedProjectPath });
+			execSync(`${pm} ${command} @virgograph/sdk`, { cwd: resolvedProjectPath });
 			spinner.succeed(chalk.green('Successfully installed wundergraph/sdk'));
 			exampleName = 'simple';
 		} else {

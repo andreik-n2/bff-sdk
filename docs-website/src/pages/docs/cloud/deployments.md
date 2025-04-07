@@ -127,7 +127,7 @@ As an example, let's check our [cloud-starter repository](https://github.com/wun
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@wundergraph/sdk": "^0.133.1"
+    "@virgograph/sdk": "^0.133.1"
   },
   "devDependencies": {
     "@types/node": "^14.14.37",
@@ -212,7 +212,7 @@ Let's check the `apps/api/package.json` file:
   },
   "author": "",
   "dependencies": {
-    "@wundergraph/sdk": "^0.133.1"
+    "@virgograph/sdk": "^0.133.1"
   },
   "devDependencies": {
     "@types/node": "^17.0.15",

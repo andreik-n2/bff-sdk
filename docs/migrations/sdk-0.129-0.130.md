@@ -15,7 +15,7 @@ import {
   EnvironmentVariable,
   WgEnv,
   LoggerLevel,
-} from '@wundergraph/sdk';
+} from '@virgograph/sdk';
 ```
 
 to
@@ -27,5 +27,5 @@ import {
   EnvironmentVariable,
   WgEnv,
   LoggerLevel,
-} from '@wundergraph/sdk/server'; // <--- /server added
+} from '@virgograph/sdk/server'; // <--- /server added
 ```

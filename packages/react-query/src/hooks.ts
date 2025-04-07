@@ -6,8 +6,8 @@ import {
 	QueryFunctionContext,
 } from '@tanstack/react-query';
 
-import { OperationsDefinition, LogoutOptions, Client } from '@wundergraph/sdk/client';
-import { serialize } from '@wundergraph/sdk/internal';
+import { OperationsDefinition, LogoutOptions, Client } from '@virgograph/sdk/client';
+import { serialize } from '@virgograph/sdk/internal';
 import {
 	QueryFetcher,
 	MutationFetcher,

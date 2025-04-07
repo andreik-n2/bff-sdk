@@ -11,10 +11,10 @@ create table if not exists Messages (
   message text not null
 );
 
-insert into Users (email, name) VALUES ('jens@wundergraph.com','Jens@WunderGraph');
-insert into Messages (user_id, message) VALUES ((select id from Users where email = 'jens@wundergraph.com'),'Hey, welcome to the WunderGraph!');
-insert into Messages (user_id, message) VALUES ((select id from Users where email = 'jens@wundergraph.com'),'This is WunderGraph!');
-insert into Messages (user_id, message) VALUES ((select id from Users where email = 'jens@wundergraph.com'),'WunderGraph!');
+insert into Users (email, name) VALUES ('jens@virgograph.com','Jens@WunderGraph');
+insert into Messages (user_id, message) VALUES ((select id from Users where email = 'jens@virgograph.com'),'Hey, welcome to the WunderGraph!');
+insert into Messages (user_id, message) VALUES ((select id from Users where email = 'jens@virgograph.com'),'This is WunderGraph!');
+insert into Messages (user_id, message) VALUES ((select id from Users where email = 'jens@virgograph.com'),'WunderGraph!');
 
 alter table Users add column updatedAt timestamptz not null default now();
 

@@ -12,7 +12,7 @@ WunderGraph supports Queries, Mutations as well as Subscriptions.
 To add a GraphQL data source, edit `.wundergraph/wundergraph.config.ts` and introspect the GraphQL server like the config below.
 
 ```typescript
-import { configureWunderGraphApplication, introspect } from '@wundergraph/sdk';
+import { configureWunderGraphApplication, introspect } from '@virgograph/sdk';
 
 const countries = introspect.graphql({
   apiNamespace: 'countries',

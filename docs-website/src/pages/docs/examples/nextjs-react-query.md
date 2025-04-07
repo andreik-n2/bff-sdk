@@ -39,7 +39,7 @@ configureWunderGraphApplication({
 });
 ```
 
-What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by the React Query [`@wundergraph/react-query`](https://github.com/wundergraph/wundergraph/tree/main/packages/react-query) package.
+What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by the React Query [`@virgograph/react-query`](https://github.com/wundergraph/wundergraph/tree/main/packages/react-query) package.
 
 ## Define an Operation
 
@@ -56,7 +56,7 @@ query Dragons {
 ## Install the React Query Client
 
 ```bash
-npm i @wundergraph/react-query @tanstack/react-query
+npm i @virgograph/react-query @tanstack/react-query
 ```
 
 Next up is setting up the React Query hooks.
@@ -66,7 +66,7 @@ Create a new `.ts` file for example `lib/wundergraph.ts` and add the following c
 ```ts
 import { createClient, Operations } from '../components/generated/client';
 
-import { createHooks } from '@wundergraph/react-query';
+import { createHooks } from '@virgograph/react-query';
 
 export const client = createClient();
 
@@ -107,7 +107,7 @@ That's it! You can now run the example with `npm run dev` and see the result in 
 
 ## Learn more
 
-- [@wundergraph/react-query reference](/docs/clients-reference/react-query)
+- [@virgograph/react-query reference](/docs/clients-reference/react-query)
 - [React Query documentation](https://tanstack.com/query/v4/docs/overview)
 - [Next.js client documentation](/docs/clients-reference/nextjs)
 

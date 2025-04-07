@@ -1,13 +1,13 @@
 # WunderGraph Metro Config
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/expo.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/expo.svg)
 
 Official WunderGraph Metro Config for React Native and Expo.
 
 ## Getting Started
 
 ```shell
-npm install @wundergraph/metro-config
+npm install @virgograph/metro-config
 ```
 
 ## Configuration
@@ -16,7 +16,7 @@ npm install @wundergraph/metro-config
 
 ```typescript
 // Learn more https://docs.expo.io/guides/customizing-metro
-const { wgMetroConfig } = require('@wundergraph/metro-config');
+const { wgMetroConfig } = require('@virgograph/metro-config');
 const { getDefaultConfig } = require('expo/metro-config');
 
 const config = getDefaultConfig(__dirname);
@@ -30,7 +30,7 @@ In case you have a custom Metro transformer configured, you can import the Wunde
 
 ```typescript
 // custom-transformer.js
-const { transform } = require('@wundergraph/metro-config/transformer');
+const { transform } = require('@virgograph/metro-config/transformer');
 
 module.exports = {
   transform(file) {
@@ -43,4 +43,4 @@ module.exports = {
 
 ## Usage
 
-After configuration the metro config you can use [`@wundergraph/swr`](https://docs.wundergraph.com/docs/clients-reference/swr) or [`@wundergraph/react-query`](https://docs.wundergraph.com/docs/clients-reference/react-query) in your React Native or Expo project.
+After configuration the metro config you can use [`@virgograph/swr`](https://docs.wundergraph.com/docs/clients-reference/swr) or [`@virgograph/react-query`](https://docs.wundergraph.com/docs/clients-reference/react-query) in your React Native or Expo project.

@@ -21,7 +21,7 @@ A new `wundergraph.env.ts` configuration where all available environment variabl
 
 ```ts
 import { z } from 'zod';
-import { configureEnv } from '@wundergraph/sdk';
+import { configureEnv } from '@virgograph/sdk';
 
 const schema = z.object({
   NODE_ENV: z.enum(['development', 'test', 'production']).default('development'),

@@ -1,4 +1,4 @@
-import { createSvelteClient } from '@wundergraph/svelte-query';
+import { createSvelteClient } from '@virgograph/svelte-query';
 import { createClient } from '../../.wundergraph/generated/client';
 import type { Operations } from '../../.wundergraph/generated/client';
 

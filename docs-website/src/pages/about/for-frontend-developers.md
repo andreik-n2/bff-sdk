@@ -46,8 +46,8 @@ WunderGraph supports multiple datasources, for this example we'll use PostgreSQL
 This could be your own database, or managed by Neon.tech or Supabase.
 
 ```ts {% filename="wundergraph.config.ts" %}
-import { configureWunderGraphApplication, introspect, authProviders, EnvironmentVariable } from '@wundergraph/sdk';
-import { NextJsTemplate } from '@wundergraph/nextjs/dist/template';
+import { configureWunderGraphApplication, introspect, authProviders, EnvironmentVariable } from '@virgograph/sdk';
+import { NextJsTemplate } from '@virgograph/nextjs/dist/template';
 import operations from './wundergraph.operations';
 import server from './wundergraph.server';
 

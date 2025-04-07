@@ -27,7 +27,7 @@ Here's an example of how the AWS request signing could be implemented:
 ```typescript
 // wundergraph.server.ts
 
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 
 export default configureWunderGraphServer(() => ({
   hooks: {

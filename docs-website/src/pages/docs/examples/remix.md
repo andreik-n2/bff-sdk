@@ -35,7 +35,7 @@ configureWunderGraphApplication({
 });
 ```
 
-What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by SWR [`@wundergraph/swr`](https://github.com/wundergraph/wundergraph/tree/main/packages/swr) package.
+What's notable here is that we're using `templates.typescript.client` to generate our base client that is used by SWR [`@virgograph/swr`](https://github.com/wundergraph/wundergraph/tree/main/packages/swr) package.
 
 Next up is setting up the client and SWR hooks.
 
@@ -44,7 +44,7 @@ Next up is setting up the client and SWR hooks.
 
 import { createClient, Operations } from '../generated/client';
 
-import { createHooks } from '@wundergraph/swr';
+import { createHooks } from '@virgograph/swr';
 
 export const client = createClient();
 
@@ -125,7 +125,7 @@ export default function Index() {
 
 ## Learn more
 
-- [@wundergraph/swr reference](/docs/clients-reference/swr)
+- [@virgograph/swr reference](/docs/clients-reference/swr)
 - [SWR documentation](https://swr.vercel.app/)
 - [Remix documentation](https://remix.run)
 

@@ -5,7 +5,7 @@ description: Reference documentation for the Svelte Query client.
 
 # WunderGraph Svelte Query Integration
 
-![wunderctl](https://img.shields.io/npm/v/@wundergraph/svelte-query.svg)
+![wunderctl](https://img.shields.io/npm/v/@virgograph/svelte-query.svg)
 
 This package provides a type-safe integration of [@tanstack/svelte-query](https://tanstack.com/query/latest/docs/svelte/overview) with WunderGraph.
 Svelte Query is a data fetching library for Svelte apps. With simple utilities, you can significantly simplify the data fetching logic in your project. And it also covered in all aspects of speed, correctness, and stability to help you build better experiences.
@@ -15,7 +15,7 @@ Svelte Query is a data fetching library for Svelte apps. With simple utilities, 
 ## Getting Started
 
 ```shell
-npm install @wundergraph/svelte-query @tanstack/svelte-query
+npm install @virgograph/svelte-query @tanstack/svelte-query
 ```
 
 Before you can use the utilities, you need to modify your code generation to include the base typescript client.
@@ -39,7 +39,7 @@ Second, run `wunderctl generate` to generate the code.
 Now you can use the utility functions.
 
 ```ts
-import { createSvelteClient } from '@wundergraph/svelte-query';
+import { createSvelteClient } from '@virgograph/svelte-query';
 import { createClient } from '../generated/client';
 import type { Operations } from '../generated/client';
 

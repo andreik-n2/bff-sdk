@@ -1,6 +1,6 @@
 {
-  "name": "@wundergraph/protobuf",
-  "version": "0.118.2",
+  "name": "@virgograph/protobuf",
+  "version": "0.121.0",
   "license": "Apache-2.0",
   "main": "./dist/wundernode_config.js",
   "types": "./dist/wundernode_config.d.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/bff-sdk.git"
   },
   "homepage": "https://wundergraph.com",
   "author": {

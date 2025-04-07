@@ -9,11 +9,11 @@
 If you have such import in your webhooks code:
 
 ```ts
-import { Logger } from '@wundergraph/sdk';
+import { Logger } from '@virgograph/sdk';
 ```
 
 Change it to next one:
 
 ```ts
-import { WebhookLogger } from '@wundergraph/sdk';
+import { WebhookLogger } from '@virgograph/sdk';
 ```

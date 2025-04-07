@@ -1,6 +1,6 @@
 import type { fetch } from '@whatwg-node/fetch';
 import type { GraphQLServerConfig } from './plugins/graphql';
-import type { ConfigurationVariable, WunderGraphConfiguration } from '@wundergraph/protobuf';
+import type { ConfigurationVariable, WunderGraphConfiguration } from '@virgograph/protobuf';
 import type { WebhooksConfig } from '../webhooks/types';
 import type { InputVariable } from '../configure/variables';
 import type { ListenOptions, LoggerLevel, ResolvedListenOptions } from '../configure/options';
@@ -56,7 +56,7 @@ export interface OperationHookFunction {
 /**
  * The custom context can be used to add custom properties to the request context.
  * ```ts
- * declare module "@wundergraph/sdk/server" {
+ * declare module "@virgograph/sdk/server" {
  * 	interface CustomContext {
  * 		global: {
  * 			foo: string;

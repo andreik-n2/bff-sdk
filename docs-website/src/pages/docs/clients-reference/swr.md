@@ -10,7 +10,7 @@ The SWR Client is our default client for React projects. It's a lightweight wrap
 > Note: The client depends on SWR version 2.0.0.
 
 ```bash
-npm i @wundergraph/swr swr
+npm i @virgograph/swr swr
 ```
 
 ## Configuration
@@ -39,7 +39,7 @@ Here we are creating fully typed SWR hooks based on the operations of our Wunder
 // lib/wundergraph.ts
 import { createClient, Operations } from '../generated/client';
 
-import { createHooks } from '@wundergraph/swr';
+import { createHooks } from '@virgograph/swr';
 
 export const client = createClient();
 

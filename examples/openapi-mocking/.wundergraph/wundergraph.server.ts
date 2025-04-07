@@ -1,4 +1,4 @@
-import { configureWunderGraphServer } from '@wundergraph/sdk/server';
+import { configureWunderGraphServer } from '@virgograph/sdk/server';
 
 let notes: Record<number, string> = {};
 

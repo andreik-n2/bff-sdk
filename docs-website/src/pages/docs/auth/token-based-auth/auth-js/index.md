@@ -66,7 +66,7 @@ This also assumes that you have installed NextAuth in `pages/api/auth/[...nextau
 Next, we can enable authentication for all operations.
 
 ```ts
-import { configureWunderGraphOperations } from '@wundergraph/sdk';
+import { configureWunderGraphOperations } from '@virgograph/sdk';
 import type { OperationsConfiguration } from './generated/wundergraph.operations';
 
 export default configureWunderGraphOperations<OperationsConfiguration>({
@@ -135,7 +135,7 @@ If you don't want to use middleware you can also use the `useAuthMiddleware` mid
 
 ```tsx {% filename="_app.tsx" %}
 import { Middleware } from 'swr';
-import { useAuthMiddleware } from '@wundergraph/nextjs';
+import { useAuthMiddleware } from '@virgograph/nextjs';
 import { withWunderGraph } from '../components/generated/nextjs';
 import { getToken } from 'next-auth/jwt';
 

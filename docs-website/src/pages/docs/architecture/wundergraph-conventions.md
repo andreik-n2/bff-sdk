@@ -39,7 +39,7 @@ Here's an example:
 ```typescript
 // wundergraph.config.ts
 
-import { EnvironmentVariable } from '@wundergraph/sdk';
+import { EnvironmentVariable } from '@virgograph/sdk';
 
 configureWunderGraphApplication({
   authentication: {
@@ -116,7 +116,7 @@ By default, when no options are passed to `wundergraph.config.ts` or `wundergrap
 To have a proper code completions for log level you could use exported type from our sdk
 
 ```typescript
-import { LoggerLevel } from '@wundergraph/sdk';
+import { LoggerLevel } from '@virgograph/sdk';
 
 const level: LoggerLevel = 'warning';
 ```
@@ -126,7 +126,7 @@ const level: LoggerLevel = 'warning';
 When you want to use default environment variables you don't have to type them manually as we are providing enum for that.
 
 ```typescript
-import { WgEnv } from '@wundergraph/sdk';
+import { WgEnv } from '@virgograph/sdk';
 import { EnvironmentVariable } from './variables';
 
 const varName = WgEnv.ServerPort; // WG_SERVER_PORT
