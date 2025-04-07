@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.3.3](https://github.com/andreik-n2/wg-sdk/compare/@wundergraph/orm@0.3.1...@wundergraph/orm@0.3.3) (2025-04-07)
+
+**Note:** Version bump only for package @wundergraph/orm
+
 ## [0.3.1](https://github.com/wundergraph/wundergraph/compare/@wundergraph/orm@0.3.0...@wundergraph/orm@0.3.1) (2023-07-28)
 
 ### Bug Fixes

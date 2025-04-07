@@ -1,6 +1,6 @@
 {
   "name": "@wundergraph/sdk",
-  "version": "0.184.2",
+  "version": "0.185.0",
   "license": "Apache-2.0",
   "exports": {
     ".": {
@@ -140,7 +140,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/wg-sdk.git"
   },
   "homepage": "https://wundergraph.com",
   "author": {
@@ -204,7 +204,7 @@
     "@prisma/generator-helper": "^3.9.2",
     "@whatwg-node/fetch": "^0.9.13",
     "@wundergraph/orm": "workspace:*",
-    "@wundergraph/protobuf": "workspace:^0.118.2",
+    "@wundergraph/protobuf": "workspace:^0.120.0",
     "@wundergraph/straightforward": "^4.2.5",
     "@wundergraph/wunderctl": "workspace:^0.180.0",
     "axios": "^0.26.1",

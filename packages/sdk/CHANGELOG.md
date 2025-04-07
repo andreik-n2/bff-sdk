@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.185.0](https://github.com/andreik-n2/wg-sdk/compare/@wundergraph/sdk@0.184.2...@wundergraph/sdk@0.185.0) (2025-04-07)
+
+### Features
+
+* **cookie:** add support for configurable cookie max length ([649c0b7](https://github.com/andreik-n2/wg-sdk/commit/649c0b71293c46e7421a281c754708befb47060f)) (@andreik-n2)
+
 ## [0.184.2](https://github.com/wundergraph/wundergraph/compare/@wundergraph/sdk@0.184.1...@wundergraph/sdk@0.184.2) (2024-05-15)
 
 **Note:** Version bump only for package @wundergraph/sdk

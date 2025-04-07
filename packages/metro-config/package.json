@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/wg-sdk.git"
   },
   "dependencies": {
     "event-source-polyfill": "^1.0.31",

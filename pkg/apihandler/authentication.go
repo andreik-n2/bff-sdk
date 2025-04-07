@@ -23,6 +23,7 @@ func authenticationHooks(api *Api, client *hooks.Client, log *zap.Logger) authen
 
 func loadUserConfiguration(api *Api, client *hooks.Client, insecureCookies bool, log *zap.Logger) (authentication.LoadUserConfig, error) {
 	var hashKey, blockKey, csrfSecret []byte
+	var maxLength int
 
 	if h := loadvariable.String(api.AuthenticationConfig.CookieBased.HashKey); h != "" {
 		hashKey = []byte(h)
@@ -42,11 +43,18 @@ func loadUserConfiguration(api *Api, client *hooks.Client, insecureCookies bool,
 		csrfSecret = fallback
 	}
 
+	if c, err := loadvariable.Int(api.AuthenticationConfig.CookieBased.MaxLength); err == nil && c > 0 {
+		maxLength = c
+	} else {
+		maxLength = 4096
+	}
+
 	if api == nil || api.HasCookieAuthEnabled() && (hashKey == nil || blockKey == nil || csrfSecret == nil) {
 		panic("API is nil or hashkey, blockkey, csrfsecret invalid: This should never have happened. Either validation didn't detect broken configuration, or someone broke the validation code")
 	}
 
 	cookie := securecookie.New(hashKey, blockKey)
+	cookie.MaxLength(maxLength)
 
 	var jwksProviders []*wgpb.JwksAuthProvider
 	if api.AuthenticationConfig.JwksBased != nil {

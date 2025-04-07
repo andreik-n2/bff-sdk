@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.19.4](https://github.com/andreik-n2/wg-sdk/compare/@wundergraph/swr@0.19.3...@wundergraph/swr@0.19.4) (2025-04-07)
+
+**Note:** Version bump only for package @wundergraph/swr
+
 ## [0.19.3](https://github.com/wundergraph/wundergraph/compare/@wundergraph/swr@0.19.2...@wundergraph/swr@0.19.3) (2024-05-15)
 
 **Note:** Version bump only for package @wundergraph/swr

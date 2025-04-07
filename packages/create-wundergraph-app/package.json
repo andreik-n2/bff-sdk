@@ -1,6 +1,6 @@
 {
   "name": "create-wundergraph-app",
-  "version": "0.6.0",
+  "version": "0.6.2",
   "license": "Apache-2.0",
   "description": "Create Wundergraph App CLI command",
   "main": "dist/src/index.js",
@@ -15,7 +15,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/wundergraph/wundergraph.git"
+    "url": "git+https://github.com/andreik-n2/wg-sdk.git"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org",

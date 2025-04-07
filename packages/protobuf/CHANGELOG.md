@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.120.0](https://github.com/andreik-n2/wg-sdk/compare/@wundergraph/protobuf@0.118.2...@wundergraph/protobuf@0.120.0) (2025-04-07)
+
+### Features
+
+* **cookie:** add support for configurable cookie max length ([649c0b7](https://github.com/andreik-n2/wg-sdk/commit/649c0b71293c46e7421a281c754708befb47060f)) (@andreik-n2)
+
 ## [0.118.2](https://github.com/wundergraph/wundergraph/compare/@wundergraph/protobuf@0.118.1...@wundergraph/protobuf@0.118.2) (2023-08-21)
 
 ### Bug Fixes
