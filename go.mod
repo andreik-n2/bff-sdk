@@ -32,7 +32,6 @@ require (
 	github.com/hetiansu5/urlquery v1.2.7
 	github.com/hyperboloide/lk v0.0.0-20230325114855-ce3fecd34798
 	github.com/iancoleman/orderedmap v0.3.0
-	github.com/jensneuse/goprisma v0.2.0
 	github.com/joho/godotenv v1.5.1
 	github.com/jxskiss/base62 v1.1.0
 	github.com/klauspost/compress v1.18.0

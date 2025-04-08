@@ -677,14 +677,6 @@ github.com/jensneuse/abstractlogger
 # github.com/jensneuse/byte-template v0.0.0-20200214152254-4f3cf06e5c68
 ## explicit; go 1.13
 github.com/jensneuse/byte-template
-# github.com/jensneuse/goprisma v0.2.0
-## explicit; go 1.16
-github.com/jensneuse/goprisma
-github.com/jensneuse/goprisma/lib
-github.com/jensneuse/goprisma/lib/darwin
-github.com/jensneuse/goprisma/lib/darwin-aarch64
-github.com/jensneuse/goprisma/lib/linux
-github.com/jensneuse/goprisma/lib/windows
 # github.com/jensneuse/pipeline v0.0.0-20200117120358-9fb4de085cd6
 ## explicit; go 1.13
 github.com/jensneuse/pipeline/pkg/pipe

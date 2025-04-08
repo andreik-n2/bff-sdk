@@ -34,9 +34,8 @@ type Bundler struct {
 	outExtension          map[string]string
 	fileLoaders           []string
 	buildContext          api.BuildContext
-	//buildResult           *api.BuildResult
-	onAfterBundle func(buildErr error, rebuild bool) error
-	onWatch       func(paths []string)
+	onAfterBundle         func(buildErr error, rebuild bool) error
+	onWatch               func(paths []string)
 
 	newWatchPath chan *watcher.WatchPath
 }
@@ -155,6 +154,17 @@ func (b *Bundler) Bundle() error {
 			return b.buildErr(ctxError.Errors)
 		}
 
+		if buildCtx == nil {
+			b.log.Error("Initial Build failed",
+				zap.String("bundlerName", b.name),
+				zap.String("error", "Build context is nil"),
+			)
+			if b.onAfterBundle != nil {
+				return b.onAfterBundle(fmt.Errorf("build context is nil"), false)
+			}
+			return fmt.Errorf("build context is nil")
+		}
+
 		buildResult := buildCtx.Rebuild()
 		if len(buildResult.Errors) != 0 {
 			b.log.Error("Initial Build failed",
@@ -181,9 +191,6 @@ func (b *Bundler) Bundle() error {
 
 func (b *Bundler) Watch(ctx context.Context) {
 	if len(b.watchPaths) == 0 {
-		return
-	}
-	if b.buildContext == nil {
 		return
 	}
 	if len(b.watchPaths) > 0 {
@@ -345,6 +352,14 @@ func (b *Bundler) runWatcher(ctx context.Context) {
 		err := w.Watch(ctx, func(paths []string) error {
 			if b.onWatch != nil {
 				b.onWatch(paths)
+			}
+
+			if b.buildContext == nil {
+				b.log.Warn("Bundler build context is nil",
+					zap.String("bundlerName", b.name),
+					zap.Strings("paths", paths),
+				)
+				return nil
 			}
 
 			buildResult := b.buildContext.Rebuild()
