@@ -3,6 +3,30 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.11.0 (2025-04-08)
+
+### Features
+
+* add esm support to react query ([#445](https://github.com/andreik-n2/bff-sdk/issues/445)) ([cd9ca7c](https://github.com/andreik-n2/bff-sdk/commit/cd9ca7c2ec9163bc33d921c4ad4cafca5fecc92b)) (@)
+* add json patch support, response zod schema for ts operations ([#689](https://github.com/andreik-n2/bff-sdk/issues/689)) ([02f40dc](https://github.com/andreik-n2/bff-sdk/commit/02f40dc21e63c1771ee7b002c94a396a52f85187)) (@)
+* add solid-js client ([#673](https://github.com/andreik-n2/bff-sdk/issues/673)) ([52a6595](https://github.com/andreik-n2/bff-sdk/commit/52a6595222cba6ae6c9424c4b6a734bc87909af3)) (@)
+* add upload profiles for S3 providers ([#476](https://github.com/andreik-n2/bff-sdk/issues/476)) ([6144545](https://github.com/andreik-n2/bff-sdk/commit/614454539133c7f235aea6aa72ade36059f41c97)) (@)
+* custom error support for typescript operations ([#759](https://github.com/andreik-n2/bff-sdk/issues/759)) ([7cfa815](https://github.com/andreik-n2/bff-sdk/commit/7cfa815a44b0b2a1184c2c50d0c4ea7cbb8066a7)) (@)
+* fix infinite loop when callbacks are not memoized ([#555](https://github.com/andreik-n2/bff-sdk/issues/555)) ([f9ed75f](https://github.com/andreik-n2/bff-sdk/commit/f9ed75fef9323c8cf49557e8c8017ddba2f41886)) (@)
+* make input required if there are required variables ([#551](https://github.com/andreik-n2/bff-sdk/issues/551)) ([00256bf](https://github.com/andreik-n2/bff-sdk/commit/00256bf456f0c733beb45a5cdbc258f84631975e)) (@)
+* react query client ([#340](https://github.com/andreik-n2/bff-sdk/issues/340)) ([c5769a4](https://github.com/andreik-n2/bff-sdk/commit/c5769a422970e8eaf626dd767cf09252789bcd1f)) (@)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@)
+
+### Bug Fixes
+
+* add isSubscribed to return types ([#591](https://github.com/andreik-n2/bff-sdk/issues/591)) ([1d13051](https://github.com/andreik-n2/bff-sdk/commit/1d13051be9277d25ddaaa66035f9504790f64165)) (@)
+* peer dependency warnings ([#1143](https://github.com/andreik-n2/bff-sdk/issues/1143)) ([1f9bec2](https://github.com/andreik-n2/bff-sdk/commit/1f9bec236179322697c20124e53615c8976d96e5)) (@)
+* prevent swallowing of input validation errors ([#529](https://github.com/andreik-n2/bff-sdk/issues/529)) ([39ea3fc](https://github.com/andreik-n2/bff-sdk/commit/39ea3fc3fbf96916f1165228194b8c915882b133)) (@)
+* produce JSONPatch patches with removals in the right order ([#1060](https://github.com/andreik-n2/bff-sdk/issues/1060)) ([461b6a4](https://github.com/andreik-n2/bff-sdk/commit/461b6a446a59f3b81e01a1840f151f716e138416)) (@)
+* update tanstack query ([#884](https://github.com/andreik-n2/bff-sdk/issues/884)) ([c8dcc42](https://github.com/andreik-n2/bff-sdk/commit/c8dcc42526af696df2636b7e861c227feb03a872)) (@)
+* upload types ([#723](https://github.com/andreik-n2/bff-sdk/issues/723)) ([5077a7d](https://github.com/andreik-n2/bff-sdk/commit/5077a7d2ab363d3bbbb1df35423e5ad799b1800f)) (@)
+
 ## 0.10.0 (2025-04-07)
 
 ### Features

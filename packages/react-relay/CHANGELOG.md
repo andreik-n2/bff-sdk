@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.0 (2025-04-08)
+
+### Features
+
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* relay client ([#791](https://github.com/andreik-n2/bff-sdk/issues/791)) ([f2ab5e5](https://github.com/andreik-n2/bff-sdk/commit/f2ab5e55df2e21f60c543bce8f70b3254deafbf9)) (@)
+* relay experimental Astro / SSG support ([#971](https://github.com/andreik-n2/bff-sdk/issues/971)) ([7d632fe](https://github.com/andreik-n2/bff-sdk/commit/7d632fef37fd46282d8de3005a3a12c3bd908e49)) (@)
+* relay todo list example ([#878](https://github.com/andreik-n2/bff-sdk/issues/878)) ([feb533c](https://github.com/andreik-n2/bff-sdk/commit/feb533ceb793e86ff5de0c62dac2254e2939d5b0)) (@)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@)
+
+### Bug Fixes
+
+* move wundergraph & relay to peer deps of relay package ([#865](https://github.com/andreik-n2/bff-sdk/issues/865)) ([e7bd98f](https://github.com/andreik-n2/bff-sdk/commit/e7bd98f669817dfe543d2eb08ce8764e0e7c7549)) (@)
+* peer dependency warnings ([#1143](https://github.com/andreik-n2/bff-sdk/issues/1143)) ([1f9bec2](https://github.com/andreik-n2/bff-sdk/commit/1f9bec236179322697c20124e53615c8976d96e5)) (@)
+* produce JSONPatch patches with removals in the right order ([#1060](https://github.com/andreik-n2/bff-sdk/issues/1060)) ([461b6a4](https://github.com/andreik-n2/bff-sdk/commit/461b6a446a59f3b81e01a1840f151f716e138416)) (@)
+* temporarily removed ESM package in react-relay to allow bundling in next.js ([#863](https://github.com/andreik-n2/bff-sdk/issues/863)) ([075a263](https://github.com/andreik-n2/bff-sdk/commit/075a263ac0a009a2897c7871428557c4dfb44413)) (@)
+
 ## 0.5.0 (2025-04-07)
 
 ### Features

@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [0.7.0](https://github.com/andreik-n2/bff-sdk/compare/create-wundergraph-app@0.6.0...create-wundergraph-app@0.7.0) (2025-04-08)
+
+### Features
+
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+
 ## [0.6.3](https://github.com/andreik-n2/bff-sdk/compare/create-wundergraph-app@0.6.0...create-wundergraph-app@0.6.3) (2025-04-07)
 
 **Note:** Version bump only for package create-wundergraph-app

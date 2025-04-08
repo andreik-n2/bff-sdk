@@ -3,6 +3,49 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.17.0 (2025-04-08)
+
+### Features
+
+* add auth middleware hook to nextjs client ([#795](https://github.com/andreik-n2/bff-sdk/issues/795)) ([77f92e3](https://github.com/andreik-n2/bff-sdk/commit/77f92e328028f15b6eede6084dae9318dca1a008)) (@)
+* add json patch support, response zod schema for ts operations ([#689](https://github.com/andreik-n2/bff-sdk/issues/689)) ([02f40dc](https://github.com/andreik-n2/bff-sdk/commit/02f40dc21e63c1771ee7b002c94a396a52f85187)) (@)
+* add tsup to build nextjs and swr packages ([#993](https://github.com/andreik-n2/bff-sdk/issues/993)) ([2685e03](https://github.com/andreik-n2/bff-sdk/commit/2685e03cf7e103ed634fc98963ce622cf700b398)) (@)
+* allow base url ([#13](https://github.com/andreik-n2/bff-sdk/issues/13)) ([901fc5f](https://github.com/andreik-n2/bff-sdk/commit/901fc5f75f73ceaa447eac76014b0e8f99ea0961)) (@)
+* **breaking:** the Next.js client now uses SWR ([#319](https://github.com/andreik-n2/bff-sdk/issues/319)) ([020cd74](https://github.com/andreik-n2/bff-sdk/commit/020cd74091517faedcd97071d48a19395cbcd9bf)) (@)
+* extract typescript client from nextjs ([#72](https://github.com/andreik-n2/bff-sdk/issues/72)) ([282797d](https://github.com/andreik-n2/bff-sdk/commit/282797dd4d28dce922cca8a3d5092d68c508f5bd)) (@)
+* implement all core integrations ([#1215](https://github.com/andreik-n2/bff-sdk/issues/1215)) ([9d191df](https://github.com/andreik-n2/bff-sdk/commit/9d191df094bd218cdf59dc9bdda7f48d5fafd9eb)) (@)
+* implement config first approach ([#151](https://github.com/andreik-n2/bff-sdk/issues/151)) ([803da0e](https://github.com/andreik-n2/bff-sdk/commit/803da0e51beb3a7b23ee826dfde835eccfa1c2dd)), closes [#190](https://github.com/andreik-n2/bff-sdk/issues/190) (@)
+* make typescript client typesafe ([#179](https://github.com/andreik-n2/bff-sdk/issues/179)) ([942b278](https://github.com/andreik-n2/bff-sdk/commit/942b2782255de3b9e6374500c7a8047de074e4ff)), closes [#188](https://github.com/andreik-n2/bff-sdk/issues/188) (@)
+* nextjs 14 support ([#1338](https://github.com/andreik-n2/bff-sdk/issues/1338)) ([a8cd3c6](https://github.com/andreik-n2/bff-sdk/commit/a8cd3c69c4394e6581c07d731957f51f10215f79)) (@)
+* react query client ([#340](https://github.com/andreik-n2/bff-sdk/issues/340)) ([c5769a4](https://github.com/andreik-n2/bff-sdk/commit/c5769a422970e8eaf626dd767cf09252789bcd1f)) (@)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* remove app/main from URL structure ([#335](https://github.com/andreik-n2/bff-sdk/issues/335)) ([e49e585](https://github.com/andreik-n2/bff-sdk/commit/e49e585528297126b93958105e80b68f1943d781)), closes [#333](https://github.com/andreik-n2/bff-sdk/issues/333) (@)
+* update SWR to v2 🥳 ([#446](https://github.com/andreik-n2/bff-sdk/issues/446)) ([8af6b99](https://github.com/andreik-n2/bff-sdk/commit/8af6b99f9e0e9da84586782ad5b9ad8e1072c987)) (@)
+* updated SWR to 2.2.0 ([#1109](https://github.com/andreik-n2/bff-sdk/issues/1109)) ([09ef6ef](https://github.com/andreik-n2/bff-sdk/commit/09ef6efa2d386598d94f8d0a3a22ec351e93ef16)) (@)
+* upgrade to nextjs 13 ([#504](https://github.com/andreik-n2/bff-sdk/issues/504)) ([45bc431](https://github.com/andreik-n2/bff-sdk/commit/45bc431243cc61765c2712b03e89818a1bb3d14a)) (@)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@)
+
+### Bug Fixes
+
+* add missing dependency to our nextjs package ([#432](https://github.com/andreik-n2/bff-sdk/issues/432)) ([d646d93](https://github.com/andreik-n2/bff-sdk/commit/d646d933bcc1a67301446fa44b4d27c934ab94da)) (@)
+* allow TS operations to override a requiredAuthentication with false ([#1151](https://github.com/andreik-n2/bff-sdk/issues/1151)) ([a6017cd](https://github.com/andreik-n2/bff-sdk/commit/a6017cd39f3c62ed0d658ac44495a0078be28691)) (@)
+* avoid feeding paths into applicationHash calculation ([#636](https://github.com/andreik-n2/bff-sdk/issues/636)) ([8542cf6](https://github.com/andreik-n2/bff-sdk/commit/8542cf6789de51711b05b0fbc4bb78d895e0e099)) (@)
+* **codegen:** auth / s3 code generation ([75a3a61](https://github.com/andreik-n2/bff-sdk/commit/75a3a61916617d1d62460225c9d179ec7c8e4798)) (@)
+* don't (re-)fetch user server & client-side when authentication is disabled ([#56](https://github.com/andreik-n2/bff-sdk/issues/56)) ([2d4bc4a](https://github.com/andreik-n2/bff-sdk/commit/2d4bc4a7e1823652f047703435282f12ace5ce7e)) (@)
+* ensure all hooks are called for live queries ([#67](https://github.com/andreik-n2/bff-sdk/issues/67)) ([e58dea4](https://github.com/andreik-n2/bff-sdk/commit/e58dea4d12ff51ea1ef5c338ef9f105343b09694)) (@)
+* fixed issue where createWunderGraphNext would not return correct… ([#1307](https://github.com/andreik-n2/bff-sdk/issues/1307)) ([62f54b1](https://github.com/andreik-n2/bff-sdk/commit/62f54b1a7fbfe23dc944b1c4ea0ee5332071208f)) (@)
+* generate all required templates ([#360](https://github.com/andreik-n2/bff-sdk/issues/360)) ([ce2f130](https://github.com/andreik-n2/bff-sdk/commit/ce2f130829dfc4e4c7e468fcdc364bc7adef00d2)) (@)
+* missing ts generator in nextjs package ([#1021](https://github.com/andreik-n2/bff-sdk/issues/1021)) ([06d6107](https://github.com/andreik-n2/bff-sdk/commit/06d610726d8096508dcd779913c7b1da9559c656)) (@)
+* move codegen template helpers out of internal ([#1136](https://github.com/andreik-n2/bff-sdk/issues/1136)) ([3fd393f](https://github.com/andreik-n2/bff-sdk/commit/3fd393f777ea92ba69b48a1a8502aca5b2e6ed48)) (@)
+* nextjs client fails hard when a page misses "withWunderGraph" ([#73](https://github.com/andreik-n2/bff-sdk/issues/73)) ([719ad5c](https://github.com/andreik-n2/bff-sdk/commit/719ad5ce9c3fe68dcf039528a0863fbf5adbdb38)) (@)
+* nextjs ssr ([fa95e4d](https://github.com/andreik-n2/bff-sdk/commit/fa95e4ddfdcee1c537aface4e0f976250dee22af)) (@)
+* **nextjs:** ssr ([7242584](https://github.com/andreik-n2/bff-sdk/commit/72425845ef9d74f832c557875b0936442e64bd67)) (@)
+* remove conditional export, update typescript ([e1bb2ec](https://github.com/andreik-n2/bff-sdk/commit/e1bb2ecfff2e684c0caa370ea9aee021804e42c1)) (@)
+
+### Performance Improvements
+
+* make wunderctl generate faster, add a few more trace log messages ([#1294](https://github.com/andreik-n2/bff-sdk/issues/1294)) ([7a88489](https://github.com/andreik-n2/bff-sdk/commit/7a884893f2e6055200275aa58957b089a8707798)) (@)
+
 ## 0.16.0 (2025-04-07)
 
 ### Features

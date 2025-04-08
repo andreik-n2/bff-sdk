@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.4.0 (2025-04-08)
+
+### Features
+
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@)
+* vue-query client ([#809](https://github.com/andreik-n2/bff-sdk/issues/809)) ([792f5c4](https://github.com/andreik-n2/bff-sdk/commit/792f5c4c0f26fa1e0107fa76a09cc3c95599dc44)) (@)
+
+### Bug Fixes
+
+* peer dependency warnings ([#1143](https://github.com/andreik-n2/bff-sdk/issues/1143)) ([1f9bec2](https://github.com/andreik-n2/bff-sdk/commit/1f9bec236179322697c20124e53615c8976d96e5)) (@)
+* produce JSONPatch patches with removals in the right order ([#1060](https://github.com/andreik-n2/bff-sdk/issues/1060)) ([461b6a4](https://github.com/andreik-n2/bff-sdk/commit/461b6a446a59f3b81e01a1840f151f716e138416)) (@)
+* update tanstack query ([#884](https://github.com/andreik-n2/bff-sdk/issues/884)) ([c8dcc42](https://github.com/andreik-n2/bff-sdk/commit/c8dcc42526af696df2636b7e861c227feb03a872)) (@)
+
 ## 0.3.0 (2025-04-07)
 
 ### Features

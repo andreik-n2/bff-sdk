@@ -3,6 +3,31 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.10.0 (2025-04-08)
+
+### Features
+
+* add golang client ([#170](https://github.com/andreik-n2/bff-sdk/issues/170)) ([a26bc32](https://github.com/andreik-n2/bff-sdk/commit/a26bc32d4a178134f893012ca4e2648460b4e7f8)) (@)
+* add graphql enums to generated typescript model ([#1015](https://github.com/andreik-n2/bff-sdk/issues/1015)) ([845f036](https://github.com/andreik-n2/bff-sdk/commit/845f03608d13bc86e19c21769cb67a157232c3bf)) (@)
+* add rust client ([#1266](https://github.com/andreik-n2/bff-sdk/issues/1266)) ([569a752](https://github.com/andreik-n2/bff-sdk/commit/569a7528fd68213e1b87feafa0d3e5ba40acb982)) (@)
+* align logging format hooks server and ([#240](https://github.com/andreik-n2/bff-sdk/issues/240)) ([e601d4c](https://github.com/andreik-n2/bff-sdk/commit/e601d4c1597a949c2c564a5b953b4424dae5ee7c)) (@)
+* custom error support for typescript operations ([#759](https://github.com/andreik-n2/bff-sdk/issues/759)) ([7cfa815](https://github.com/andreik-n2/bff-sdk/commit/7cfa815a44b0b2a1184c2c50d0c4ea7cbb8066a7)) (@)
+* make typescript client typesafe ([#179](https://github.com/andreik-n2/bff-sdk/issues/179)) ([942b278](https://github.com/andreik-n2/bff-sdk/commit/942b2782255de3b9e6374500c7a8047de074e4ff)), closes [#188](https://github.com/andreik-n2/bff-sdk/issues/188) (@)
+* provide a default baseURL in the Go client ([#680](https://github.com/andreik-n2/bff-sdk/issues/680)) ([0ac7144](https://github.com/andreik-n2/bff-sdk/commit/0ac7144b8c2b71d2489ea82be506c66bd9dcfdd4)) (@)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@)
+
+### Bug Fixes
+
+* avoid feeding paths into applicationHash calculation ([#636](https://github.com/andreik-n2/bff-sdk/issues/636)) ([8542cf6](https://github.com/andreik-n2/bff-sdk/commit/8542cf6789de51711b05b0fbc4bb78d895e0e099)) (@)
+* dont use workspace protocol in peer deps ([8e340b9](https://github.com/andreik-n2/bff-sdk/commit/8e340b915c5e5b692e047e796e1bc277c1442eb7)) (@)
+* incorrect go code generated from JSON models ([#249](https://github.com/andreik-n2/bff-sdk/issues/249)) ([0c17fce](https://github.com/andreik-n2/bff-sdk/commit/0c17fce4e7c0c8d431438bb43acd9011dc50a750)) (@)
+* move codegen template helpers out of internal ([#1136](https://github.com/andreik-n2/bff-sdk/issues/1136)) ([3fd393f](https://github.com/andreik-n2/bff-sdk/commit/3fd393f777ea92ba69b48a1a8502aca5b2e6ed48)) (@)
+
+### Performance Improvements
+
+* make wunderctl generate faster, add a few more trace log messages ([#1294](https://github.com/andreik-n2/bff-sdk/issues/1294)) ([7a88489](https://github.com/andreik-n2/bff-sdk/commit/7a884893f2e6055200275aa58957b089a8707798)) (@)
+
 ## 0.9.0 (2025-04-07)
 
 ### Features
