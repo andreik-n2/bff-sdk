@@ -263,7 +263,7 @@ importers:
   packages/golang-client:
     dependencies:
       '@virgograph/protobuf':
-        specifier: workspace:^0.122.0
+        specifier: workspace:^0.123.0
         version: link:../protobuf
       execa:
         specifier: 5.1.1
@@ -294,7 +294,7 @@ importers:
         specifier: ^1.3.4
         version: 1.3.4
       '@virgograph/sdk':
-        specifier: workspace:^0.187.0
+        specifier: workspace:^0.188.0
         version: link:../sdk
       typescript:
         specifier: ^5.1.6
@@ -334,7 +334,7 @@ importers:
   packages/nextjs:
     dependencies:
       '@virgograph/protobuf':
-        specifier: workspace:^0.122.0
+        specifier: workspace:^0.123.0
         version: link:../protobuf
       '@virgograph/swr':
         specifier: workspace:*
@@ -599,7 +599,7 @@ importers:
   packages/rust-client:
     dependencies:
       '@virgograph/protobuf':
-        specifier: workspace:^0.122.0
+        specifier: workspace:^0.123.0
         version: link:../protobuf
       execa:
         specifier: 5.1.1
@@ -630,7 +630,7 @@ importers:
         specifier: ^1.3.4
         version: 1.3.4
       '@virgograph/sdk':
-        specifier: workspace:^0.187.0
+        specifier: workspace:^0.188.0
         version: link:../sdk
       typescript:
         specifier: ^5.1.6
@@ -702,7 +702,7 @@ importers:
         specifier: workspace:*
         version: link:../orm
       '@virgograph/protobuf':
-        specifier: workspace:^0.122.0
+        specifier: workspace:^0.123.0
         version: link:../protobuf
       '@virgograph/wunderctl':
         specifier: workspace:^0.181.0
@@ -6038,7 +6038,7 @@ packages:
       '@graphql-mesh/types': 0.96.0(@graphql-mesh/store@0.96.0)(@graphql-tools/utils@9.2.1)(graphql@16.6.0)(tslib@2.6.2)
       '@graphql-tools/delegate': 10.0.3(graphql@16.6.0)
       '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
-      '@whatwg-node/fetch': 0.9.14
+      '@whatwg-node/fetch': 0.9.13
       dset: 3.1.3
       graphql: 16.6.0
       js-yaml: 4.1.0
@@ -8086,7 +8086,7 @@ packages:
       '@graphql-mesh/utils': 0.96.0(@graphql-mesh/cross-helpers@0.4.1)(@graphql-mesh/types@0.96.0)(@graphql-tools/utils@9.2.1)(graphql@16.6.0)(tslib@2.6.2)
       '@graphql-tools/utils': 9.2.1(graphql@16.6.0)
       '@json-schema-tools/meta-schema': 1.7.0
-      '@whatwg-node/fetch': 0.9.14
+      '@whatwg-node/fetch': 0.9.13
       ajv: 8.12.0
       ajv-formats: 2.1.1(ajv@8.12.0)
       dset: 3.1.3
@@ -11661,7 +11661,7 @@ packages:
   /axios@0.26.1:
     resolution: {integrity: sha512-fPwcX4EvnSHuInCMItEhAGnaSEXRBjtzh9fOtsE6E1G6p7vl7edEeZe11QHf18+6+9gR5PbKV/sGKNaD8YaMeA==}
     dependencies:
-      follow-redirects: 1.15.2
+      follow-redirects: 1.15.3
     transitivePeerDependencies:
       - debug
     dev: false
@@ -15966,16 +15966,6 @@ packages:
     resolution: {integrity: sha512-Rwix9pBtC1Nuy5wysTmKy+UjbDJpIfg8eHjw0rjZ1mX4GNLz1Bmd16uDpI3Gk1i70Fgcs8Csg2lPm8HULFg9DQ==}
     dev: false
 
-  /follow-redirects@1.15.2:
-    resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dev: false
-
   /follow-redirects@1.15.2(debug@4.3.4):
     resolution: {integrity: sha512-VQLG33o04KaQ8uYi2tVNbdrWp1QWxNNea+nmIB4EVM28v0hmP17z7aG1+wAkNzVq4KeXTq3221ye5qTJP91JwA==}
     engines: {node: '>=4.0'}
@@ -16408,6 +16398,7 @@ packages:
 
   /glob@6.0.4:
     resolution: {integrity: sha512-MKZeRNyYZAVVVG1oZeLaWie1uweH40m9AZwIwxyPbTSX4hHrVYSzLg0Ro5Z5R7XKkIX+Cc6oD1rqeDJnwsB8/A==}
+    deprecated: Glob versions prior to v9 are no longer supported
     requiresBuild: true
     dependencies:
       inflight: 1.0.6
@@ -16452,6 +16443,7 @@ packages:
   /glob@8.1.0:
     resolution: {integrity: sha512-r8hpEjiQEYlF2QU0df3dS+nxxSIreXQS1qRhMJM0Q5NDdR386C7jb7Hwwod8Fgiuex+k0GFjgft18yvxm5XoCQ==}
     engines: {node: '>=12'}
+    deprecated: Glob versions prior to v9 are no longer supported
     dependencies:
       fs.realpath: 1.0.0
       inflight: 1.0.6
@@ -17214,6 +17206,7 @@ packages:
 
   /inflight@1.0.6:
     resolution: {integrity: sha512-k92I/b08q4wvFscXCLvqfsHCrjrF7yiXsQuIVvVE7N82W3+aqpzuUdBbfhWcy/FZR3/4IgflMgKLOsvPDrGCJA==}
+    deprecated: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
     dependencies:
       once: 1.4.0
       wrappy: 1.0.2
@@ -20498,6 +20491,7 @@ packages:
 
   /lodash.isequal@4.5.0:
     resolution: {integrity: sha512-pDo3lu8Jhfjqls6GkMgpahsF9kCyayhgykjyLMNFTKWrpVdAQtYyB4muAMWozBB4ig/dtWAmsMxLEI8wuz+DYQ==}
+    deprecated: This package is deprecated. Use require('node:util').isDeepStrictEqual instead.
     dev: false
 
   /lodash.isfunction@3.0.9:
@@ -20535,6 +20529,7 @@ packages:
 
   /lodash.omit@4.5.0:
     resolution: {integrity: sha512-XeqSp49hNGmlkj2EJlfrQFIzQ6lXdNro9sddtQzcJY8QaoC2GO0DT7xaIokHeyM+mIT0mPMlPvkYzg2xCuHdZg==}
+    deprecated: This package is deprecated. Use destructuring assignment syntax instead.
     dev: false
 
   /lodash.set@4.3.2:
@@ -25182,11 +25177,13 @@ packages:
 
   /rimraf@2.2.8:
     resolution: {integrity: sha512-R5KMKHnPAQaZMqLOsyuyUmcIjSeDm+73eoqQpaXA7AZ22BL+6C+1mcUscgOsNd8WVlJuvlgAPsegcx7pjlV0Dg==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dev: false
 
   /rimraf@2.4.5:
     resolution: {integrity: sha512-J5xnxTyqaiw06JjMftq7L9ouA448dw/E7dKghkP9WpKNuwmARNNg+Gk8/u5ryb9N/Yo2+z3MCwuqFK/+qPOPfQ==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     requiresBuild: true
     dependencies:
@@ -25196,6 +25193,7 @@ packages:
 
   /rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
     dependencies:
       glob: 7.2.3
@@ -28943,7 +28941,7 @@ packages:
   /zod-to-json-schema@3.21.4(zod@3.22.3):
     resolution: {integrity: sha512-fjUZh4nQ1s6HMccgIeE0VP4QG/YRGPmyjO9sAh890aQKPEk3nqbfUXhMFaC+Dr5KvYBm8BCyvfpZf2jY9aGSsw==}
     peerDependencies:
-      zod: ^3.22.3
+      zod: ^3.21.4
     dependencies:
       zod: 3.22.3
     dev: false
@@ -28951,7 +28949,7 @@ packages:
   /zod-to-json-schema@3.21.4(zod@3.22.4):
     resolution: {integrity: sha512-fjUZh4nQ1s6HMccgIeE0VP4QG/YRGPmyjO9sAh890aQKPEk3nqbfUXhMFaC+Dr5KvYBm8BCyvfpZf2jY9aGSsw==}
     peerDependencies:
-      zod: ^3.22.3
+      zod: ^3.21.4
     dependencies:
       zod: 3.22.4
     dev: false
@@ -28967,6 +28965,7 @@ packages:
   file:packages/sdk:
     resolution: {directory: packages/sdk, type: directory}
     name: '@virgograph/sdk'
+    version: 0.188.0
     hasBin: true
     requiresBuild: true
     dependencies:

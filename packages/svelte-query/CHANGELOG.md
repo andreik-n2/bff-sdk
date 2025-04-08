@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.6.0 (2025-04-08)
+
+### Features
+
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* svelte query client ([#683](https://github.com/andreik-n2/bff-sdk/issues/683))Co-authored-by: Sergiy Petrunin <spetrunin@users.noreply.github.com> Co-authored-by: Eelco Wiersma <contact@pagebakers.nl> Co-authored-by: Pagebakers <eelco@appulse.nl> ([8b3dced](https://github.com/andreik-n2/bff-sdk/commit/8b3dced965c7da47a31edd852ca1416e34d570fb)) (@DaniAkash)
+* sveltekit & vite-svelte examples ([#805](https://github.com/andreik-n2/bff-sdk/issues/805)) ([094ae35](https://github.com/andreik-n2/bff-sdk/commit/094ae35d0b1fc3acd2aca2b952309367876c73d4)) (@DaniAkash)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@Pagebakers)
+
+### Bug Fixes
+
+* allow svelte 3 | 4 peer-dependency in @wundergraph/svelte-query … ([#1160](https://github.com/andreik-n2/bff-sdk/issues/1160)) ([892d21f](https://github.com/andreik-n2/bff-sdk/commit/892d21fe709d9e0394add7f1e6f78b86634613df)) (@leoalves)
+* peer dependency warnings ([#1143](https://github.com/andreik-n2/bff-sdk/issues/1143)) ([1f9bec2](https://github.com/andreik-n2/bff-sdk/commit/1f9bec236179322697c20124e53615c8976d96e5)) (@Pagebakers)
+* produce JSONPatch patches with removals in the right order ([#1060](https://github.com/andreik-n2/bff-sdk/issues/1060)) ([461b6a4](https://github.com/andreik-n2/bff-sdk/commit/461b6a446a59f3b81e01a1840f151f716e138416)) (@fiam)
+* svelte-query livequery config ([#829](https://github.com/andreik-n2/bff-sdk/issues/829)) ([42fe921](https://github.com/andreik-n2/bff-sdk/commit/42fe9219ae7bcd9dd87ce56b298bf57b2bbbcd2c)) (@DaniAkash)
+* update tanstack query ([#884](https://github.com/andreik-n2/bff-sdk/issues/884)) ([c8dcc42](https://github.com/andreik-n2/bff-sdk/commit/c8dcc42526af696df2636b7e861c227feb03a872)) (@Pagebakers)
+
 ## 0.5.0 (2025-04-08)
 
 ### Features

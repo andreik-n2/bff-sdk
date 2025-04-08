@@ -3,6 +3,23 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.8.0 (2025-04-08)
+
+### Features
+
+* add json patch support, response zod schema for ts operations ([#689](https://github.com/andreik-n2/bff-sdk/issues/689)) ([02f40dc](https://github.com/andreik-n2/bff-sdk/commit/02f40dc21e63c1771ee7b002c94a396a52f85187)) (@jensneuse)
+* add solid-js client ([#673](https://github.com/andreik-n2/bff-sdk/issues/673)) ([52a6595](https://github.com/andreik-n2/bff-sdk/commit/52a6595222cba6ae6c9424c4b6a734bc87909af3)) (@Pagebakers)
+* custom error support for typescript operations ([#759](https://github.com/andreik-n2/bff-sdk/issues/759)) ([7cfa815](https://github.com/andreik-n2/bff-sdk/commit/7cfa815a44b0b2a1184c2c50d0c4ea7cbb8066a7)) (@StarpTech)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@Pagebakers)
+
+### Bug Fixes
+
+* peer dependency warnings ([#1143](https://github.com/andreik-n2/bff-sdk/issues/1143)) ([1f9bec2](https://github.com/andreik-n2/bff-sdk/commit/1f9bec236179322697c20124e53615c8976d96e5)) (@Pagebakers)
+* produce JSONPatch patches with removals in the right order ([#1060](https://github.com/andreik-n2/bff-sdk/issues/1060)) ([461b6a4](https://github.com/andreik-n2/bff-sdk/commit/461b6a446a59f3b81e01a1840f151f716e138416)) (@fiam)
+* update tanstack query ([#884](https://github.com/andreik-n2/bff-sdk/issues/884)) ([c8dcc42](https://github.com/andreik-n2/bff-sdk/commit/c8dcc42526af696df2636b7e861c227feb03a872)) (@Pagebakers)
+* upload types ([#723](https://github.com/andreik-n2/bff-sdk/issues/723)) ([5077a7d](https://github.com/andreik-n2/bff-sdk/commit/5077a7d2ab363d3bbbb1df35423e5ad799b1800f)) (@Pagebakers)
+
 ## 0.7.0 (2025-04-08)
 
 ### Features

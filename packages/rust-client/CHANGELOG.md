@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.7.0 (2025-04-08)
+
+### Features
+
+* add Clone trait to Rust Client ([#1387](https://github.com/andreik-n2/bff-sdk/issues/1387)) ([2ff5f3b](https://github.com/andreik-n2/bff-sdk/commit/2ff5f3b0675e6c089b520d230493452e4d211fb7)) (@Aenimus)
+* add derive Clone to rust client types ([#1362](https://github.com/andreik-n2/bff-sdk/issues/1362)) ([3e25bd7](https://github.com/andreik-n2/bff-sdk/commit/3e25bd7b058a29e1aff4a71c18cd3b1830c355f9)) (@Aenimus)
+* add rust client ([#1266](https://github.com/andreik-n2/bff-sdk/issues/1266)) ([569a752](https://github.com/andreik-n2/bff-sdk/commit/569a7528fd68213e1b87feafa0d3e5ba40acb982)) (@fiam)
+* add support for oneOf in the rust client ([#1352](https://github.com/andreik-n2/bff-sdk/issues/1352)) ([b3b6288](https://github.com/andreik-n2/bff-sdk/commit/b3b62886740c0c5b27705841fd8aaa9b77ded7ab)) (@fiam)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+
+### Bug Fixes
+
+* openapi schema for typescript operations ([#1339](https://github.com/andreik-n2/bff-sdk/issues/1339)) ([5b7e84d](https://github.com/andreik-n2/bff-sdk/commit/5b7e84d01215bc09735fae8c2f26f43ef7734290)) (@Pagebakers)
+* recursive oas references in rust client generation ([#1379](https://github.com/andreik-n2/bff-sdk/issues/1379)) ([f25b833](https://github.com/andreik-n2/bff-sdk/commit/f25b8334b5d7590ffc0d495647d61281b0eb7305)) (@Aenimus)
+
 ## 0.6.0 (2025-04-08)
 
 ### Features

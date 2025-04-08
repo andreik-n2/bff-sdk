@@ -3,6 +3,56 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.123.0 (2025-04-08)
+
+### Features
+
+* add configurable per-source timeouts ([#232](https://github.com/andreik-n2/bff-sdk/issues/232)) ([bb3b6bd](https://github.com/andreik-n2/bff-sdk/commit/bb3b6bd31250b402fe0c9a099b0dad993976cf39)) (@fiam)
+* add post logout hook ([#196](https://github.com/andreik-n2/bff-sdk/issues/196)) ([6870130](https://github.com/andreik-n2/bff-sdk/commit/6870130b0c4e6fc269d81160994384c1d1cf6e59)) (@jensneuse)
+* add prisma datasource ([#605](https://github.com/andreik-n2/bff-sdk/issues/605)) ([2f0cfa5](https://github.com/andreik-n2/bff-sdk/commit/2f0cfa5e420080772a6552f4a256c7d71906f84a)) (@jensneuse)
+* add support for caching in function handlers ([#932](https://github.com/andreik-n2/bff-sdk/issues/932)) ([ce31c4c](https://github.com/andreik-n2/bff-sdk/commit/ce31c4c02cbfd121886cf4c8a0fe354ac19ed340)) (@fiam)
+* add support for custom claims ([#648](https://github.com/andreik-n2/bff-sdk/issues/648) ([682b88c](https://github.com/andreik-n2/bff-sdk/commit/682b88c115512878aa22b57d4ed67c07fd88726b)) (@fiam)
+* add support for custom claims of any type ([#911](https://github.com/andreik-n2/bff-sdk/issues/911)) ([c6f14f8](https://github.com/andreik-n2/bff-sdk/commit/c6f14f8d91db8bc908a85b20c6ef8f8561698078)) (@fiam)
+* add support for declaring a list of public claims ([#706](https://github.com/andreik-n2/bff-sdk/issues/706)) ([2223d5c](https://github.com/andreik-n2/bff-sdk/commit/2223d5c02f1eadaad7ecb6ac863bb2f9e34c926c)) (@fiam)
+* add support for disconnecting from Auth0 ([#525](https://github.com/andreik-n2/bff-sdk/issues/525)) ([7465fb2](https://github.com/andreik-n2/bff-sdk/commit/7465fb21a3618924c7dfb59a6a2f94c7d740f0f8)) (@fiam)
+* add support for feature usage telemetry ([#1096](https://github.com/andreik-n2/bff-sdk/issues/1096)) ([30a0b12](https://github.com/andreik-n2/bff-sdk/commit/30a0b129899d8296aa6a027d1ecafde469a0ead2)) (@fiam)
+* add support for injecting variables into nested paths ([#678](https://github.com/andreik-n2/bff-sdk/issues/678)) ([ce0a0a0](https://github.com/andreik-n2/bff-sdk/commit/ce0a0a09b4e739767b17f1ad391074f6ba597253)) (@fiam)
+* add support for uploads from anonymous users ([#632](https://github.com/andreik-n2/bff-sdk/issues/632)) ([485975b](https://github.com/andreik-n2/bff-sdk/commit/485975be55a8c1c82a4610431c7514d3c3c2dfe0)) (@fiam)
+* add support for using proxies in data sources ([#854](https://github.com/andreik-n2/bff-sdk/issues/854)) ([a472c46](https://github.com/andreik-n2/bff-sdk/commit/a472c463d6dbcb20b48444fdd4ce9c797c16feb2)) (@fiam)
+* add upload profiles for S3 providers ([#476](https://github.com/andreik-n2/bff-sdk/issues/476)) ([6144545](https://github.com/andreik-n2/bff-sdk/commit/614454539133c7f235aea6aa72ade36059f41c97)) (@fiam)
+* advanced hooks - dynamicTransport ([#1124](https://github.com/andreik-n2/bff-sdk/issues/1124)) ([6cbdeba](https://github.com/andreik-n2/bff-sdk/commit/6cbdebac0a775b638beeae8457d07dce829379bc)) (@Pagebakers)
+* eng 640 compose subgraphs without apollo dependencies ([#315](https://github.com/andreik-n2/bff-sdk/issues/315)) ([628a183](https://github.com/andreik-n2/bff-sdk/commit/628a18303acb47df5a10118b17a4e88916b2903a)) (@jensneuse)
+* implement config first approach ([#151](https://github.com/andreik-n2/bff-sdk/issues/151)) ([803da0e](https://github.com/andreik-n2/bff-sdk/commit/803da0e51beb3a7b23ee826dfde835eccfa1c2dd)), closes [#190](https://github.com/andreik-n2/bff-sdk/issues/190) (@)
+* implement internal graphql handler ([#853](https://github.com/andreik-n2/bff-sdk/issues/853)) ([ad42f5f](https://github.com/andreik-n2/bff-sdk/commit/ad42f5f9f23a0e6ec968a1c5fefb226f2b46254a)) (@thisisnithin)
+* implement userId for fromClaim directive ([#152](https://github.com/andreik-n2/bff-sdk/issues/152)) ([51df6e5](https://github.com/andreik-n2/bff-sdk/commit/51df6e50244bee9f5f8d579ff6f604e1a1c853d9)) (@jensneuse)
+* improve Cache-Control support ([#959](https://github.com/andreik-n2/bff-sdk/issues/959)) ([1b330d5](https://github.com/andreik-n2/bff-sdk/commit/1b330d5c0207264ae0f3868276011ff9a8d83a67)) (@fiam)
+* initial impl of nats kv ([#1057](https://github.com/andreik-n2/bff-sdk/issues/1057)) ([961f1f0](https://github.com/andreik-n2/bff-sdk/commit/961f1f0d14b95fc69a9a99ef637d6cd544750c08)) (@jensneuse)
+* make detecting invalid operations easier ([#374](https://github.com/andreik-n2/bff-sdk/issues/374)) ([45639db](https://github.com/andreik-n2/bff-sdk/commit/45639db0ae3adb8cac4f62b623b04061118f7bf7)) (@fiam)
+* make timeout during authentication configurable ([#1018](https://github.com/andreik-n2/bff-sdk/issues/1018)) ([b5f6b74](https://github.com/andreik-n2/bff-sdk/commit/b5f6b744cd4efef456b9004b4109f7624e467f41)) (@fiam)
+* oidc,  allow passing additional query parameters to the IDP ([#178](https://github.com/andreik-n2/bff-sdk/issues/178)) ([d015bb1](https://github.com/andreik-n2/bff-sdk/commit/d015bb150762cba7a46865e66f3de633e731de07)) (@YuriBuerov)
+* orm ([#963](https://github.com/andreik-n2/bff-sdk/issues/963)) ([8cd45a3](https://github.com/andreik-n2/bff-sdk/commit/8cd45a37f139e592f579c40e266ce128b8be1b5d)) (@Pagebakers)
+* otel instrumentation of wundernode and server ([#1004](https://github.com/andreik-n2/bff-sdk/issues/1004)) ([7b45975](https://github.com/andreik-n2/bff-sdk/commit/7b45975ca8fb41ff03cbcc84c42ec3536ad6db13)) (@StarpTech)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* remove app/main from URL structure ([#335](https://github.com/andreik-n2/bff-sdk/issues/335)) ([e49e585](https://github.com/andreik-n2/bff-sdk/commit/e49e585528297126b93958105e80b68f1943d781)), closes [#333](https://github.com/andreik-n2/bff-sdk/issues/333) (@fiam)
+* sdk, schema extension fields config ([#336](https://github.com/andreik-n2/bff-sdk/issues/336)) ([ca09b3c](https://github.com/andreik-n2/bff-sdk/commit/ca09b3cf2002763b7ea53a7d50f6dce50d08c120)) (@YuriBuerov)
+* **sdk:** ship compatible wunderctl in SDK ([#18](https://github.com/andreik-n2/bff-sdk/issues/18)) ([afea237](https://github.com/andreik-n2/bff-sdk/commit/afea23771191e049aab5ce56ce775775389e8770)) (@StarpTech)
+* sse subscriptions configuration ([#217](https://github.com/andreik-n2/bff-sdk/issues/217)) ([7bf72ef](https://github.com/andreik-n2/bff-sdk/commit/7bf72efd16a8bac422db32fe957e102395d7357c)) (@YuriBuerov)
+* subscriptions, ws connection init hook ([#243](https://github.com/andreik-n2/bff-sdk/issues/243)) ([2e4ae85](https://github.com/andreik-n2/bff-sdk/commit/2e4ae8506558165a9bf3ada4b8f45cee55a9f18d)) (@YuriBuerov)
+* tui + log handling ([#813](https://github.com/andreik-n2/bff-sdk/issues/813)) ([6bf7498](https://github.com/andreik-n2/bff-sdk/commit/6bf74980c69def43e4af8bdfdcc0fb5645a1025b)) (@StarpTech)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@Pagebakers)
+* use Prometheus to track and expose operation and API request counts ([#991](https://github.com/andreik-n2/bff-sdk/issues/991)) ([f949398](https://github.com/andreik-n2/bff-sdk/commit/f94939864c9ce7c3a9623fd5141fa486c4c9a55c)) (@fiam)
+
+### Bug Fixes
+
+* allow setting logging levels from command line ([#1141](https://github.com/andreik-n2/bff-sdk/issues/1141)) ([01100b7](https://github.com/andreik-n2/bff-sdk/commit/01100b7a508eaa9c8ceb6cac5998c9f0365e5fde)) (@fiam)
+* allow to configure internal and public node urls separately ([#207](https://github.com/andreik-n2/bff-sdk/issues/207)) ([c01bd9a](https://github.com/andreik-n2/bff-sdk/commit/c01bd9a1cedefbb5fd0ecde83f3b96b3dfee6f41)) (@)
+* custom int/float scalars usage in arguments ([#427](https://github.com/andreik-n2/bff-sdk/issues/427))Co-authored-by: Alberto García Hierro <alberto@garciahierro.com> Co-authored-by: Sergiy <818351+devsergiy@users.noreply.github.com> Co-authored-by: spetrunin <neyasut@gmail.com> ([2b424f3](https://github.com/andreik-n2/bff-sdk/commit/2b424f3daaabea25abb4a23139751ff0ab2adefe)) (@OLingard)
+* remove conditional export, update typescript ([e1bb2ec](https://github.com/andreik-n2/bff-sdk/commit/e1bb2ecfff2e684c0caa370ea9aee021804e42c1)) (@StarpTech)
+
+### Performance Improvements
+
+* improve config generation/loading performance ([#1070](https://github.com/andreik-n2/bff-sdk/issues/1070)) ([5ba5a7a](https://github.com/andreik-n2/bff-sdk/commit/5ba5a7a5c9302fdb73e9a6d15a82fcaf28db62fa)), closes [#1020](https://github.com/andreik-n2/bff-sdk/issues/1020) (@fiam)
+
 ## 0.122.0 (2025-04-08)
 
 ### Features

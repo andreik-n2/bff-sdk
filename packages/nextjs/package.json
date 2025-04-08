@@ -1,6 +1,6 @@
 {
   "name": "@virgograph/nextjs",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "license": "Apache-2.0",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -89,7 +89,7 @@
     "swr": "^2.2.0"
   },
   "dependencies": {
-    "@virgograph/protobuf": "workspace:^0.122.0",
+    "@virgograph/protobuf": "workspace:^0.123.0",
     "@virgograph/swr": "workspace:*",
     "handlebars": "^4.7.7",
     "react-ssr-prepass": "^1.5.0"

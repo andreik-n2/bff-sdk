@@ -3,6 +3,39 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 0.22.0 (2025-04-08)
+
+### Features
+
+* add auth example for swr ([#200](https://github.com/andreik-n2/bff-sdk/issues/200)) ([7a5f34e](https://github.com/andreik-n2/bff-sdk/commit/7a5f34e8c80141f400a9b6ed195d04a22a86c92b)) (@StarpTech)
+* add json patch support, response zod schema for ts operations ([#689](https://github.com/andreik-n2/bff-sdk/issues/689)) ([02f40dc](https://github.com/andreik-n2/bff-sdk/commit/02f40dc21e63c1771ee7b002c94a396a52f85187)) (@jensneuse)
+* add swr hooks for auth and file upload ([#195](https://github.com/andreik-n2/bff-sdk/issues/195)) ([a0b1bae](https://github.com/andreik-n2/bff-sdk/commit/a0b1bae6a18e30fcefc35bdde2f72326f3de1392)) (@StarpTech)
+* add tsup to build nextjs and swr packages ([#993](https://github.com/andreik-n2/bff-sdk/issues/993)) ([2685e03](https://github.com/andreik-n2/bff-sdk/commit/2685e03cf7e103ed634fc98963ce622cf700b398)) (@Pagebakers)
+* add upload profiles for S3 providers ([#476](https://github.com/andreik-n2/bff-sdk/issues/476)) ([6144545](https://github.com/andreik-n2/bff-sdk/commit/614454539133c7f235aea6aa72ade36059f41c97)) (@fiam)
+* allow forwarding query params on login ([#1370](https://github.com/andreik-n2/bff-sdk/issues/1370)) ([660a8d0](https://github.com/andreik-n2/bff-sdk/commit/660a8d0416b20a92f29fce3010e9e8f37dc50354)) (@jensneuse)
+* **breaking:** the Next.js client now uses SWR ([#319](https://github.com/andreik-n2/bff-sdk/issues/319)) ([020cd74](https://github.com/andreik-n2/bff-sdk/commit/020cd74091517faedcd97071d48a19395cbcd9bf)) (@Pagebakers)
+* custom error support for typescript operations ([#759](https://github.com/andreik-n2/bff-sdk/issues/759)) ([7cfa815](https://github.com/andreik-n2/bff-sdk/commit/7cfa815a44b0b2a1184c2c50d0c4ea7cbb8066a7)) (@StarpTech)
+* fix infinite loop when callbacks are not memoized ([#555](https://github.com/andreik-n2/bff-sdk/issues/555)) ([f9ed75f](https://github.com/andreik-n2/bff-sdk/commit/f9ed75fef9323c8cf49557e8c8017ddba2f41886)) (@Pagebakers)
+* improved SWR hooks api, useMutation result no longer cached and updated to SWR 2.0 ([#305](https://github.com/andreik-n2/bff-sdk/issues/305)) ([fc4848b](https://github.com/andreik-n2/bff-sdk/commit/fc4848b3f15b447a487b31bd3d152f134c6f3aeb)) (@Pagebakers)
+* make input required if there are required variables ([#551](https://github.com/andreik-n2/bff-sdk/issues/551)) ([00256bf](https://github.com/andreik-n2/bff-sdk/commit/00256bf456f0c733beb45a5cdbc258f84631975e)) (@Pagebakers)
+* make typescript client typesafe ([#179](https://github.com/andreik-n2/bff-sdk/issues/179)) ([942b278](https://github.com/andreik-n2/bff-sdk/commit/942b2782255de3b9e6374500c7a8047de074e4ff)), closes [#188](https://github.com/andreik-n2/bff-sdk/issues/188) (@Pagebakers)
+* nextjs 14 support ([#1338](https://github.com/andreik-n2/bff-sdk/issues/1338)) ([a8cd3c6](https://github.com/andreik-n2/bff-sdk/commit/a8cd3c69c4394e6581c07d731957f51f10215f79)) (@Pagebakers)
+* re-export SWR to prevent context issues ([#264](https://github.com/andreik-n2/bff-sdk/issues/264)) ([c05b341](https://github.com/andreik-n2/bff-sdk/commit/c05b341f64123d828caec4c95560163ce868ccd4)) (@Pagebakers)
+* react query client ([#340](https://github.com/andreik-n2/bff-sdk/issues/340)) ([c5769a4](https://github.com/andreik-n2/bff-sdk/commit/c5769a422970e8eaf626dd767cf09252789bcd1f)) (@Pagebakers)
+* reanme ([c74b583](https://github.com/andreik-n2/bff-sdk/commit/c74b58338b2342d1f66818282089f67b9a39465d)) (@andreik-n2)
+* remove app/main from URL structure ([#335](https://github.com/andreik-n2/bff-sdk/issues/335)) ([e49e585](https://github.com/andreik-n2/bff-sdk/commit/e49e585528297126b93958105e80b68f1943d781)), closes [#333](https://github.com/andreik-n2/bff-sdk/issues/333) (@fiam)
+* update SWR to v2 🥳 ([#446](https://github.com/andreik-n2/bff-sdk/issues/446)) ([8af6b99](https://github.com/andreik-n2/bff-sdk/commit/8af6b99f9e0e9da84586782ad5b9ad8e1072c987)) (@Pagebakers)
+* updated SWR to 2.2.0 ([#1109](https://github.com/andreik-n2/bff-sdk/issues/1109)) ([09ef6ef](https://github.com/andreik-n2/bff-sdk/commit/09ef6efa2d386598d94f8d0a3a22ec351e93ef16)) (@Pagebakers)
+* upgrade to typescript 5 ([#1135](https://github.com/andreik-n2/bff-sdk/issues/1135)) ([74cee5d](https://github.com/andreik-n2/bff-sdk/commit/74cee5db3ae8865d2bf1f1d7ab5c67fccbeeb798)) (@Pagebakers)
+
+### Bug Fixes
+
+* peer dependency warnings ([#1143](https://github.com/andreik-n2/bff-sdk/issues/1143)) ([1f9bec2](https://github.com/andreik-n2/bff-sdk/commit/1f9bec236179322697c20124e53615c8976d96e5)) (@Pagebakers)
+* prevent swallowing of input validation errors ([#529](https://github.com/andreik-n2/bff-sdk/issues/529)) ([39ea3fc](https://github.com/andreik-n2/bff-sdk/commit/39ea3fc3fbf96916f1165228194b8c915882b133)) (@Aenimus)
+* produce JSONPatch patches with removals in the right order ([#1060](https://github.com/andreik-n2/bff-sdk/issues/1060)) ([461b6a4](https://github.com/andreik-n2/bff-sdk/commit/461b6a446a59f3b81e01a1840f151f716e138416)) (@fiam)
+* **swr:** reset user cache after logout ([#197](https://github.com/andreik-n2/bff-sdk/issues/197)) ([48fdaa1](https://github.com/andreik-n2/bff-sdk/commit/48fdaa1966bf26519026bcfc59e5fc07cf6a9887)) (@StarpTech)
+* upload types ([#723](https://github.com/andreik-n2/bff-sdk/issues/723)) ([5077a7d](https://github.com/andreik-n2/bff-sdk/commit/5077a7d2ab363d3bbbb1df35423e5ad799b1800f)) (@Pagebakers)
+
 ## 0.21.0 (2025-04-08)
 
 ### Features
