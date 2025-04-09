@@ -38,8 +38,8 @@ jobs:
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v3
         with:
-          version: latest
-          distribution: goreleaser-pro
+          version: v2.8.0
+          #          distribution: goreleaser-pro
           install-only: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_GORELEASER }}
