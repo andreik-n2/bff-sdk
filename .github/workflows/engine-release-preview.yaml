@@ -36,14 +36,14 @@ jobs:
         run: make codegen-go
 
       - name: Install GoReleaser
-        uses: goreleaser/goreleaser-action@v3
+        uses: goreleaser/goreleaser-action@v6
         with:
           version: v2.8.2
           distribution: goreleaser-pro
           install-only: true
         env:
           GITHUB_TOKEN: ${{ secrets.GH_TOKEN_GORELEASER }}
-      #          GORELEASER_KEY: ${{ secrets.GORELEASER_KEY }}
+          GORELEASER_KEY: ${{ secrets.GORELEASER_KEY }}
 
       - name: Generate release summary
         working-directory: './cmd/wunderctl'
