@@ -38,7 +38,7 @@ jobs:
       - name: Install GoReleaser
         uses: goreleaser/goreleaser-action@v3
         with:
-          version: v2.8.0
+          version: v2.8.2
           distribution: goreleaser-pro
           install-only: true
         env:
