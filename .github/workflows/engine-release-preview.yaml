@@ -36,9 +36,9 @@ jobs:
         run: make codegen-go
 
       - name: Install GoReleaser
-        uses: goreleaser/goreleaser-action@v6
+        uses: goreleaser/goreleaser-action@v3
         with:
-          version: v2.8.2
+          version: v1.26.2
           distribution: goreleaser-pro
           install-only: true
         env:
